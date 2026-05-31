@@ -768,11 +768,11 @@
     }
 
     /* ── BOTTOM CTA (section 11) ── */
-    #cta { background: #212121; color: white; text-align: center; }
-    #cta .section-label { color: rgba(255,255,255,0.5); justify-content: center; }
-    #cta .section-label::before { background: rgba(255,255,255,0.5); }
-    #cta .section-heading { color: white; max-width: 700px; margin: 0 auto 1rem; }
-    #cta .section-sub { color: rgba(255,255,255,0.75); margin: 0 auto 2.5rem; text-align: center; }
+    #contact { background: #212121; color: white; text-align: center; }
+    #contact .section-label { color: rgba(255,255,255,0.5); justify-content: center; }
+    #contact .section-label::before { background: rgba(255,255,255,0.5); }
+    #contact .section-heading { color: white; max-width: 700px; margin: 0 auto 1rem; }
+    #contact .section-sub { color: rgba(255,255,255,0.75); margin: 0 auto 2rem; text-align: center; }
 
     .cta-actions {
       display: flex;
@@ -907,6 +907,170 @@
     .hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
     .hero-actions { animation: fadeUp 0.6s 0.3s ease both; }
 
+    /* ── CONTACT LAYOUT ── */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 3rem;
+      text-align: left;
+    }
+
+    .contact-left .contact-tagline {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-detail-icon {
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+    }
+
+    .contact-detail-text {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .contact-detail-text a {
+      color: #f59e0b;
+      text-decoration: none;
+    }
+    .contact-detail-text a:hover { text-decoration: underline; }
+
+    .contact-availability {
+      margin-top: 2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #f59e0b;
+      background: rgba(217,119,6,0.15);
+      padding: 0.4rem 1rem;
+      border-radius: 2rem;
+    }
+    .contact-availability::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: #f59e0b;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    /* ── CONTACT FORM ── */
+    .contact-form {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.45rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      color: white;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      -webkit-appearance: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #d97706;
+      background: rgba(255,255,255,0.09);
+    }
+
+    .form-group select option { background: #212121; color: white; }
+
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .form-submit {
+      width: 100%;
+      background: #d97706;
+      color: white;
+      border: none;
+      border-radius: 3rem;
+      padding: 0.9rem 2rem;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover { background: #b45309; transform: translateY(-2px); }
+
+    .form-note {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      text-align: center;
+      margin-top: 0.75rem;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      color: #f59e0b;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
     /* Scroll reveal */
     .reveal {
       opacity: 0;
@@ -957,16 +1121,17 @@
   <div id="trust">
     <div class="trust-inner">
       <span class="trust-label">Worked with agencies in</span>
-      <span class="trust-logo">Melbourne · Sydney · London · Dubai</span>
+       <span class="trust-logo">Melbourne · Sydney · London · Dubai</span>
       <div class="trust-logos">
         <a href="https://www.digitalpractice.co/" target="_blank" rel="noopener noreferrer" style="text-decoration:none"><span class="trust-logo">Digital Practice</span></a>
         <div class="trust-divider"></div>
         <a href="https://acsconsulting.com.au/" target="_blank" rel="noopener noreferrer" style="text-decoration:none"><span class="trust-logo">ACS Consulting</span></a>
         <div class="trust-divider"></div>
+       
       </div>
       <div class="trust-stats">
         <div class="trust-stat">
-          <strong>15+</strong>
+          <strong>8+</strong>
           <span>AU projects</span>
         </div>
         <div class="trust-stat">
@@ -1311,14 +1476,82 @@
     </div>
   </section>
 
-  <!-- ── 11. BOTTOM CTA ── -->
+  <!-- ── 11. CONTACT / CTA ── -->
   <section id="contact">
-    <div class="section-inner" style="text-align:center">
+    <div class="section-inner">
       <p class="section-label" style="justify-content:center">Work with me</p>
       <h2 class="section-heading">Got a project you'd<br><em>normally pass on?</em></h2>
-      <p class="section-sub">Send me the brief. No commitment — just a quick look. I'll tell you within 4 hours if I can take it on and what the timeline looks like.</p>
-      <div class="cta-actions">
-        <a href="mailto:hamid@hamidbuilds.dev?subject=Project Brief" class="btn-white">Send a brief →</a>
+      <p class="section-sub">Send me the brief. No commitment — just a quick look. I'll respond within 4 hours with a timeline and quote.</p>
+
+      <div class="contact-layout reveal">
+
+        <!-- Left: details -->
+        <div class="contact-left">
+          <p class="contact-tagline">
+            Most agency owners email me a brief on Monday and have a staging link by Friday. That's the usual timeline — and it stays under your brand the whole way.
+          </p>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">✉</div>
+            <div class="contact-detail-text">
+              <a href="mailto:info@hamidbuilds.dev">info@hamidbuilds.dev</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">⏱</div>
+            <div class="contact-detail-text">Response within 4 hours (AEST business hours)</div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🔒</div>
+            <div class="contact-detail-text">100% white-label — your clients never know I exist</div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🇦🇺</div>
+            <div class="contact-detail-text">Working with AU agencies across Melbourne, Sydney & beyond</div>
+          </div>
+          <div class="contact-availability">1 spot currently open</div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact-form" id="contactForm">
+          <div class="form-success" id="formSuccess">
+            Thanks — I'll be in touch within 4 hours. 👋
+          </div>
+          <div id="formFields">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your name</label>
+                <input type="text" id="fname" placeholder="Sarah" />
+              </div>
+              <div class="form-group">
+                <label>Agency name</label>
+                <input type="text" id="fagency" placeholder="Creative Co." />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="femail" placeholder="sarah@agencyname.com.au" />
+            </div>
+            <div class="form-group">
+              <label>Project type</label>
+              <select id="ftype">
+                <option value="" disabled selected>Select one</option>
+                <option>WordPress website</option>
+                <option>WooCommerce / eCommerce</option>
+                <option>Webflow site</option>
+                <option>Shopify store</option>
+                <option>Landing page</option>
+                <option>Custom / Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Brief</label>
+              <textarea id="fbrief" placeholder="Tell me what the client needs — industry, pages, any design files, deadline..."></textarea>
+            </div>
+            <button class="form-submit" onclick="submitForm()">Send brief →</button>
+            <p class="form-note">No spam. No sales calls. Just a direct reply from Hamid.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1328,8 +1561,8 @@
     <div class="footer-inner">
       <div class="footer-brand">Hamid — Web Developer</div>
       <ul class="footer-links">
-        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-        <li><a href="mailto:hamid@hamidbuilds.dev">hamid@hamidbuilds.dev</a></li>
+        <li><a href="https://www.linkedin.com/in/hamidaliasad/" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:info@hamidbuilds.dev">info@hamidbuilds.dev</a></li>
         <li><a href="#work">Work</a></li>
       </ul>
       <div class="footer-status">Available for new partners</div>
@@ -1362,7 +1595,33 @@
     }, { threshold: 0.12 });
     reveals.forEach(r => observer.observe(r));
 
-    // Smooth active nav
+    // Contact form
+    function submitForm() {
+      const name    = document.getElementById('fname').value.trim();
+      const agency  = document.getElementById('fagency').value.trim();
+      const email   = document.getElementById('femail').value.trim();
+      const type    = document.getElementById('ftype').value;
+      const brief   = document.getElementById('fbrief').value.trim();
+
+      if (!name || !email || !brief) {
+        const empties = [];
+        if (!name)  empties.push('name');
+        if (!email) empties.push('email');
+        if (!brief) empties.push('brief');
+        alert('Please fill in: ' + empties.join(', '));
+        return;
+      }
+
+      const subject = encodeURIComponent(`Project Brief from ${agency || name}`);
+      const body    = encodeURIComponent(
+        `Name: ${name}\nAgency: ${agency || '—'}\nEmail: ${email}\nProject type: ${type || '—'}\n\nBrief:\n${brief}`
+      );
+
+      window.location.href = `mailto:info@hamidbuilds.dev?subject=${subject}&body=${body}`;
+
+      document.getElementById('formFields').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }
     const sections = document.querySelectorAll('section[id], #trust');
     const navLinks = document.querySelectorAll('.nav-links a');
     const navObs = new IntersectionObserver((entries) => {
