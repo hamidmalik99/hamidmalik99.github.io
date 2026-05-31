@@ -410,9 +410,13 @@
     /* ── CASE STUDIES (section 6) ── */
     .work-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       margin-top: 3.5rem;
+    }
+
+    @media (min-width: 900px) {
+      .work-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
     .work-card {
@@ -1061,55 +1065,125 @@
       <p class="section-sub">Each site built under the agency's brand. Their client, their win — I just did the build.</p>
       <div class="work-grid reveal">
         <div class="work-card">
+          <a href="https://sammeltax.com.au/" target="_blank" rel="noopener">
           <div class="work-thumb work-thumb-1">
-            <div class="work-thumb-label">Trades Business — Melbourne</div>
+            <div class="work-thumb-label">Tax Law Firm — Australia</div>
           </div>
+          </a>
           <div class="work-body">
             <div class="work-tags">
               <span class="work-tag">WordPress</span>
-              <span class="work-tag">Melbourne</span>
+              <span class="work-tag">🇦🇺 Australia</span>
             </div>
-            <div class="work-title">Local plumbing company website with quote form & booking</div>
-            <div class="work-outcome">✦ Delivered in 6 days</div>
+            <div class="work-title">Nicole Sammel Tax Lawyers — specialist tax law firm site with services, blog & contact</div>
+            <div class="work-outcome"><a href="https://sammeltax.com.au/" target="_blank" rel="noopener" style="color:inherit">✦ sammeltax.com.au →</a></div>
           </div>
         </div>
         <div class="work-card">
+          <a href="https://illuminaenergy.com.au/" target="_blank" rel="noopener">
           <div class="work-thumb work-thumb-2">
-            <div class="work-thumb-label">Health Clinic — Sydney</div>
+            <div class="work-thumb-label">Solar Energy — Australia</div>
           </div>
-          <div class="work-body">
-            <div class="work-tags">
-              <span class="work-tag">Webflow</span>
-              <span class="work-tag">Sydney</span>
-            </div>
-            <div class="work-title">Physio clinic with online bookings and patient portal integration</div>
-            <div class="work-outcome">✦ Delivered in 8 days</div>
-          </div>
-        </div>
-        <div class="work-card">
-          <div class="work-thumb work-thumb-3">
-            <div class="work-thumb-label">Café Brand — Perth</div>
-          </div>
-          <div class="work-body">
-            <div class="work-tags">
-              <span class="work-tag">WooCommerce</span>
-              <span class="work-tag">Perth</span>
-            </div>
-            <div class="work-title">Café & online store with menu, events, and gift vouchers</div>
-            <div class="work-outcome">✦ Delivered in 9 days</div>
-          </div>
-        </div>
-        <div class="work-card">
-          <div class="work-thumb work-thumb-4">
-            <div class="work-thumb-label">Law Firm — Brisbane</div>
-          </div>
+          </a>
           <div class="work-body">
             <div class="work-tags">
               <span class="work-tag">WordPress</span>
-              <span class="work-tag">Brisbane</span>
+              <span class="work-tag">🇦🇺 Australia</span>
             </div>
-            <div class="work-title">Boutique law firm with practice area pages and Calendly booking</div>
-            <div class="work-outcome">✦ Delivered in 7 days</div>
+            <div class="work-title">Illumina Energy — solar installation company with lead gen & quote system</div>
+            <div class="work-outcome"><a href="https://illuminaenergy.com.au/" target="_blank" rel="noopener" style="color:inherit">✦ illuminaenergy.com.au →</a></div>
+          </div>
+        </div>
+        <div class="work-card">
+          <a href="https://buonconstruction.com/" target="_blank" rel="noopener">
+          <div class="work-thumb work-thumb-3">
+            <div class="work-thumb-label">Construction — UK</div>
+          </div>
+          </a>
+          <div class="work-body">
+            <div class="work-tags">
+              <span class="work-tag">WordPress</span>
+              <span class="work-tag">🇬🇧 UK</span>
+            </div>
+            <div class="work-title">Buon Construction — home renovation & builders site with project gallery</div>
+            <div class="work-outcome"><a href="https://buonconstruction.com/" target="_blank" rel="noopener" style="color:inherit">✦ buonconstruction.com →</a></div>
+          </div>
+        </div>
+        <div class="work-card">
+          <a href="https://homecomfort.me/" target="_blank" rel="noopener">
+          <div class="work-thumb work-thumb-4">
+            <div class="work-thumb-label">Home Services — Dubai</div>
+          </div>
+          </a>
+          <div class="work-body">
+            <div class="work-tags">
+              <span class="work-tag">WordPress</span>
+              <span class="work-tag">Dubai</span>
+            </div>
+            <div class="work-title">Home Comfort — HVAC & maintenance services site with service pages & booking</div>
+            <div class="work-outcome"><a href="https://homecomfort.me/" target="_blank" rel="noopener" style="color:inherit">✦ homecomfort.me →</a></div>
+          </div>
+        </div>
+        <div class="work-card">
+          <a href="https://pashashisha.uk/" target="_blank" rel="noopener">
+          <div class="work-thumb work-thumb-1" style="background: linear-gradient(135deg, #2d1b4e 0%, #4a2c6e 100%);">
+            <div class="work-thumb-label" style="color:rgba(255,255,255,0.5)">Hospitality — UK</div>
+          </div>
+          </a>
+          <div class="work-body">
+            <div class="work-tags">
+              <span class="work-tag">WordPress</span>
+              <span class="work-tag">🇬🇧 UK</span>
+            </div>
+            <div class="work-title">Pasha Shisha — premium shisha lounge brand with menu, bookings & locations</div>
+            <div class="work-outcome"><a href="https://pashashisha.uk/" target="_blank" rel="noopener" style="color:inherit">✦ pashashisha.uk →</a></div>
+          </div>
+        </div>
+        <div class="work-card">
+          <a href="https://dc10rooms.co.uk/" target="_blank" rel="noopener">
+          <div class="work-thumb work-thumb-2" style="background: linear-gradient(135deg, #1a2a3a 0%, #2c4a6e 100%);">
+            <div class="work-thumb-label" style="color:rgba(255,255,255,0.5)">Accommodation — UK</div>
+          </div>
+          </a>
+          <div class="work-body">
+            <div class="work-tags">
+              <span class="work-tag">WordPress</span>
+              <span class="work-tag">🇬🇧 UK</span>
+            </div>
+            <div class="work-title">DC10 Rooms — boutique accommodation site with room listings & booking flow</div>
+            <div class="work-outcome"><a href="https://dc10rooms.co.uk/" target="_blank" rel="noopener" style="color:inherit">✦ dc10rooms.co.uk →</a></div>
+          </div>
+        </div>
+        <div class="work-card">
+          <a href="https://proluxepaintingservices.com.au/" target="_blank" rel="noopener">
+          <div class="work-thumb" style="padding:0; overflow:hidden; position:relative;">
+            <img src="https://api.microlink.io/?url=https://proluxepaintingservices.com.au&screenshot=true&meta=false&embed=screenshot.url" alt="Proluxe Painting Services" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;" onerror="this.style.display='none';this.parentNode.querySelector('.work-thumb-fallback').style.display='flex';" />
+            <div class="work-thumb-fallback" style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;background:linear-gradient(135deg,#fff3e0,#ffe0b2);font-family:var(--serif);font-style:italic;color:rgba(15,15,14,0.35);">Painting Services — Australia</div>
+          </div>
+          </a>
+          <div class="work-body">
+            <div class="work-tags">
+              <span class="work-tag">WordPress</span>
+              <span class="work-tag">🇦🇺 Australia</span>
+            </div>
+            <div class="work-title">Proluxe Painting Services — trades site with quote request & service pages</div>
+            <div class="work-outcome"><a href="https://proluxepaintingservices.com.au/" target="_blank" rel="noopener" style="color:inherit">✦ proluxepaintingservices.com.au →</a></div>
+          </div>
+        </div>
+        <div class="work-card">
+          <a href="https://thebricklane.com.au/" target="_blank" rel="noopener">
+          <div class="work-thumb" style="padding:0; overflow:hidden; position:relative;">
+            <img src="https://api.microlink.io/?url=https://thebricklane.com.au&screenshot=true&meta=false&embed=screenshot.url" alt="The Brick Lane" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;" onerror="this.style.display='none';this.parentNode.querySelector('.work-thumb-fallback').style.display='flex';" />
+            <div class="work-thumb-fallback" style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;background:linear-gradient(135deg,#fce4ec,#f8bbd0);font-family:var(--serif);font-style:italic;color:rgba(15,15,14,0.35);">Restaurant — Australia</div>
+          </div>
+          </a>
+          <div class="work-body">
+            <div class="work-tags">
+              <span class="work-tag">WordPress</span>
+              <span class="work-tag">🇦🇺 Australia</span>
+            </div>
+            <div class="work-title">The Brick Lane — Australian restaurant with menu, reservations & location pages</div>
+            <div class="work-outcome"><a href="https://thebricklane.com.au/" target="_blank" rel="noopener" style="color:inherit">✦ thebricklane.com.au →</a></div>
           </div>
         </div>
       </div>
@@ -1247,7 +1321,7 @@
       <h2 class="section-heading">Got a project you'd<br><em>normally pass on?</em></h2>
       <p class="section-sub">Send me the brief. No commitment — just a quick look. I'll tell you within 4 hours if I can take it on and what the timeline looks like.</p>
       <div class="cta-actions">
-        <a href="mailto:info@hamidbuilds.dev?subject=Project Brief" class="btn-white">Send a brief →</a>
+        <a href="mailto:hamid@hamidbuilds.dev?subject=Project Brief" class="btn-white">Send a brief →</a>
         <a href="https://calendly.com" target="_blank" class="btn-outline-white">Book a 15-min call</a>
       </div>
     </div>
@@ -1258,8 +1332,8 @@
     <div class="footer-inner">
       <div class="footer-brand">Hamid — Web Developer</div>
       <ul class="footer-links">
-        <li><a href="www.linkedin.com/in/hamidaliasad/" target="_blank">LinkedIn</a></li>
-        <li><a href="mailto:info@hamidbuilds.dev">info@hamidbuilds.dev</a></li>
+        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:hamid@hamidbuilds.dev">hamid@hamidbuilds.dev</a></li>
         <li><a href="#work">Work</a></li>
       </ul>
       <div class="footer-status">Available for new partners</div>
