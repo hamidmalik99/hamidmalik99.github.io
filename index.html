@@ -132,7 +132,7 @@
       border-radius: 2rem;
       margin-bottom: 2rem;
     }
-    .hero-eyebrow::before {
+    .-eyebrow::before {
       content: '';
       width: 7px; height: 7px;
       background: #d97706;
@@ -144,7 +144,7 @@
       50% { opacity: 0.5; transform: scale(0.8); }
     }
 
-    .hero-headline {
+    .-headline {
       font-family: var(--serif);
       font-size: clamp(2.8rem, 6.5vw, 5.5rem);
       line-height: 1.08;
@@ -153,12 +153,12 @@
       max-width: 780px;
       margin-bottom: 1.6rem;
     }
-    .hero-headline em {
+    .-headline em {
       font-style: italic;
       color: var(--accent);
     }
 
-    .hero-sub {
+    .-sub {
       font-size: clamp(1rem, 1.8vw, 1.2rem);
       color: var(--ink-muted);
       max-width: 520px;
@@ -166,7 +166,7 @@
       margin-bottom: 2.8rem;
     }
 
-    .hero-actions {
+    .-actions {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
@@ -902,10 +902,10 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    .hero-eyebrow { animation: fadeUp 0.6s ease both; }
-    .hero-headline { animation: fadeUp 0.6s 0.1s ease both; }
-    .hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
-    .hero-actions { animation: fadeUp 0.6s 0.3s ease both; }
+    .-eyebrow { animation: fadeUp 0.6s ease both; }
+    .-headline { animation: fadeUp 0.6s 0.1s ease both; }
+    .-sub { animation: fadeUp 0.6s 0.2s ease both; }
+    .-actions { animation: fadeUp 0.6s 0.3s ease both; }
 
     /* ── CONTACT LAYOUT ── */
     .contact-layout {
@@ -1100,13 +1100,13 @@
     </div>
   </nav>
 
-  <!-- ── 2. HERO ── -->
-  <section id="hero">
-    <div class="hero-eyebrow">Available for new agency partners</div>
-    <h1 class="hero-headline">
+  <!-- ── 2.  ── -->
+  <section id="">
+    <div class="-eyebrow">Available for new agency partners</div>
+    <h1 class="-headline">
       The dedicated web developer<br>
-      for <em>Australian</em><br>
-      marketing agencies.
+      for <em>marketing</em><br>
+       agencies.
     </h1>
     <p class="hero-sub">
       You handle strategy and clients. I handle the build — under your brand, on your timeline. Invisible to your clients, invaluable to your pipeline.
