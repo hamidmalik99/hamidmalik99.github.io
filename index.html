@@ -111,95 +111,69 @@
     }
 
     /* ── HERO ── */
-    #hero {
-      padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 5vw, 4rem) clamp(4rem, 7vw, 6rem);
-      max-width: 1100px;
-      margin: 0 auto;
-      position: relative;
-    }
+    /* ── UPDATED HERO LAYOUT ── */
+#hero {
+  padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 5vw, 4rem) clamp(4rem, 7vw, 6rem);
+  max-width: 1200px; /* Expanded slightly to account for the two columns */
+  margin: 0 auto;
+  position: relative;
+  
+  /* Flexbox settings for side-by-side layout */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
 
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #b45309;
-      background: #fef3c7;
-      padding: 0.35rem 0.9rem;
-      border-radius: 2rem;
-      margin-bottom: 2rem;
-    }
-    .-eyebrow::before {
-      content: '';
-      width: 7px; height: 7px;
-      background: #d97706;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
-    }
+/* Container wrapping the left side text content */
+.hero-content {
+  flex: 1;
+  max-width: 650px;
+}
 
-    .hero-headline {
-      font-family: var(--serif);
-      font-size: clamp(2.4rem, 4.5vw, 4.2rem);
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-      max-width: 780px;
-      margin-bottom: 1.6rem;
-    }
-    .-headline em {
-      font-style: italic;
-      color: var(--accent);
-    }
+/* Container wrapping the right side visual element */
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+}
 
-    .hero-sub {
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
-      color: var(--ink-muted);
-      max-width: 520px;
-      line-height: 1.7;
-      margin-bottom: 2rem;
-    }
+/* Styling if you choose to use a GIF */
+.hero-gif {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
 
-    .hero-actions {
- display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-top: 2.5rem;
-    }
+/* Styling if you choose to use an Emoji instead */
+.hero-emoji {
+  font-size: clamp(5rem, 10vw, 8rem);
+  line-height: 1;
+  animation: float 4s ease-in-out infinite;
+}
 
-    .btn-primary {
-      background: var(--ink);
-      color: var(--paper);
-      padding: 0.85rem 2rem;
-      border-radius: 3rem;
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-      letter-spacing: 0.01em;
-    }
-    .btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
+/* Gentle floating animation for the emoji */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
 
-    .btn-secondary {
-      background: transparent;
-      color: var(--ink);
-      padding: 0.85rem 2rem;
-      border-radius: 3rem;
-      border: 1.5px solid var(--border);
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: border-color 0.2s, transform 0.15s;
-    }
-    .btn-secondary:hover { border-color: var(--ink); transform: translateY(-2px); }
-
+/* Stack them vertically on mobile devices */
+@media (max-width: 900px) {
+  #hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+  .hero-visual {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
     /* ── TRUST BAR ── */
     #trust {
       background: var(--ink);
@@ -1102,19 +1076,28 @@
   </nav>
 
   <!-- ── 2.  ── -->
+  <!-- ── 2. HERO (WITH GIF) ── -->
   <section id="hero">
-    <div class="-eyebrow">Available for new agency partners</div>
-    <h1 class="-headline">
-      The dedicated web developer<br>
-      for <em>marketing</em> agencies.
-    </h1>
-    <p class="hero-sub">
-      You handle strategy and clients. I handle the build — under your brand, on your timeline. Invisible to your clients, invaluable to your pipeline.
-    </p>
-    
-    <div class="hero-actions">
-      <a href="#work" class="btn-primary">See my work</a>
-      <a href="#contact" class="btn-secondary">Let's talk →</a>
+    <!-- Left Column: Text Content -->
+    <div class="hero-content">
+      <div class="hero-eyebrow hero-animate-1">Available for new agency partners</div>
+      <h1 class="hero-headline hero-animate-2">
+        The dedicated web developer<br>
+        for <em>marketing</em> agencies.
+      </h1>
+      <p class="hero-sub hero-animate-3">
+        You handle strategy and clients. I handle the build — under your brand, on your timeline. Invisible to your clients, invaluable to your pipeline.
+      </p>
+      <div class="hero-actions hero-animate-4">
+        <a href="#stack" class="btn-primary">Our Capabilities</a>
+        <a href="#contact" class="btn-secondary">Let's talk →</a>
+      </div>
+    </div>
+
+    <!-- Right Column: Visual Component -->
+    <div class="hero-visual hero-animate-3">
+      <!-- Replace the src URL with your actual hosted GIF path -->
+      <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3BvOTZpMms1N3N5MmR3YnNnbm96bms0bW9pZHB0YnY0Z3R4Y2ZtMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3zhxq2ttgN6rEw8SDx/giphy.gif" alt="Developer illustration" class="hero-gif" />
     </div>
   </section>
 
