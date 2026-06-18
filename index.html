@@ -1,2429 +1,313 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-
-  <meta charset="UTF-8" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Hamid — Web Developer for Australian Agencies</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
-
-  <style>
-
-    :root {
-
-      --ink: #212121;
-
-      --ink-muted: #5a5a5a;
-
-      --ink-faint: #9a9a9a;
-
-      --paper: #fafaf9;
-
-      --paper-warm: #f4f0e8;
-
-      --accent: #d97706;
-
-      --accent-light: #fef3c7;
-
-      --teal: #b45309;
-
-      --teal-light: #fef9ee;
-
-      --card-bg: #ffffff;
-
-      --border: rgba(33,33,33,0.10);
-
-      --serif: 'Instrument Serif', Georgia, serif;
-
-      --sans: 'DM Sans', system-ui, sans-serif;
-
-    }
-
-
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-
-
-    html { scroll-behavior: smooth; }
-
-
-
-    body {
-
-      font-family: var(--sans);
-
-      background: var(--paper);
-
-      color: var(--ink);
-
-      font-size: 16px;
-
-      line-height: 1.6;
-
-      -webkit-font-smoothing: antialiased;
-
-    }
-
-
-
-    /* ── NAV ── */
-
-    nav {
-
-      position: sticky;
-
-      top: 0;
-
-      z-index: 100;
-
-      background: rgba(250, 250, 249, 0.92);
-
-      backdrop-filter: blur(12px);
-
-      -webkit-backdrop-filter: blur(12px);
-
-      border-bottom: 1px solid var(--border);
-
-      padding: 0 clamp(1.5rem, 5vw, 4rem);
-
-      height: 60px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-    }
-
-
-
-    .nav-logo {
-
-      font-family: var(--serif);
-
-      font-size: 1.15rem;
-
-      font-weight: 400;
-
-      color: var(--ink);
-
-      letter-spacing: -0.01em;
-
-      text-decoration: none;
-
-    }
-
-    .nav-logo em {
-
-      font-style: italic;
-
-      color: var(--accent);
-
-    }
-
-
-
-    .nav-links {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 2rem;
-
-      list-style: none;
-
-    }
-
-
-
-    .nav-links a {
-
-      font-size: 0.82rem;
-
-      font-weight: 500;
-
-      letter-spacing: 0.04em;
-
-      text-transform: uppercase;
-
-      color: var(--ink-muted);
-
-      text-decoration: none;
-
-      transition: color 0.2s;
-
-    }
-
-    .nav-links a:hover { color: var(--ink); }
-
-
-
-    .nav-cta {
-
-      background: var(--ink) !important;
-
-      color: var(--paper) !important;
-
-      padding: 0.45rem 1.1rem !important;
-
-      border-radius: 2rem !important;
-
-      font-size: 0.8rem !important;
-
-      text-transform: none !important;
-
-      letter-spacing: 0.01em !important;
-
-      transition: background 0.2s, transform 0.15s !important;
-
-    }
-
-    .nav-cta:hover { background: var(--accent) !important; transform: translateY(-1px); }
-
-
-
-    .nav-hamburger {
-
-      display: none;
-
-      flex-direction: column;
-
-      gap: 5px;
-
-      cursor: pointer;
-
-      padding: 4px;
-
-    }
-
-    .nav-hamburger span {
-
-      width: 22px; height: 2px;
-
-      background: var(--ink);
-
-      border-radius: 2px;
-
-      transition: all 0.3s;
-
-    }
-
-
-
-    /* ── HERO ── */
-
-    #hero {
-
-      padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 5vw, 4rem) clamp(4rem, 7vw, 6rem);
-
-      max-width: 1100px;
-
-      margin: 0 auto;
-
-      position: relative;
-
-    }
-
-
-
-    .hero-eyebrow {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 0.5rem;
-
-      font-size: 0.78rem;
-
-      font-weight: 500;
-
-      letter-spacing: 0.06em;
-
-      text-transform: uppercase;
-
-      color: #b45309;
-
-      background: #fef3c7;
-
-      padding: 0.35rem 0.9rem;
-
-      border-radius: 2rem;
-
-      margin-bottom: 2rem;
-
-    }
-
-    .-eyebrow::before {
-
-      content: '';
-
-      width: 7px; height: 7px;
-
-      background: #d97706;
-
-      border-radius: 50%;
-
-      animation: pulse 2s infinite;
-
-    }
-
-    @keyframes pulse {
-
-      0%, 100% { opacity: 1; transform: scale(1); }
-
-      50% { opacity: 0.5; transform: scale(0.8); }
-
-    }
-
-
-
-    .-headline {
-
-      font-family: var(--serif);
-
-      font-size: clamp(2.8rem, 6.5vw, 5.5rem);
-
-      line-height: 1.08;
-
-      letter-spacing: -0.02em;
-
-      color: var(--ink);
-
-      max-width: 780px;
-
-      margin-bottom: 1.6rem;
-
-    }
-
-    .-headline em {
-
-      font-style: italic;
-
-      color: var(--accent);
-
-    }
-
-
-
-    .-sub {
-
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
-
-      color: var(--ink-muted);
-
-      max-width: 520px;
-
-      line-height: 1.7;
-
-      margin-bottom: 2rem;
-
-    }
-
-
-
-    .-actions {
-
- display: flex;
-
-      gap: 1rem;
-
-      flex-wrap: wrap;
-
-      align-items: center;
-
-      margin-top: 2.5rem;
-
-    }
-
-
-
-    .btn-primary {
-
-      background: var(--ink);
-
-      color: var(--paper);
-
-      padding: 0.85rem 2rem;
-
-      border-radius: 3rem;
-
-      font-size: 0.95rem;
-
-      font-weight: 500;
-
-      text-decoration: none;
-
-      transition: background 0.2s, transform 0.15s;
-
-      letter-spacing: 0.01em;
-
-    }
-
-    .btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
-
-
-
-    .btn-secondary {
-
-      background: transparent;
-
-      color: var(--ink);
-
-      padding: 0.85rem 2rem;
-
-      border-radius: 3rem;
-
-      border: 1.5px solid var(--border);
-
-      font-size: 0.95rem;
-
-      font-weight: 500;
-
-      text-decoration: none;
-
-      transition: border-color 0.2s, transform 0.15s;
-
-    }
-
-    .btn-secondary:hover { border-color: var(--ink); transform: translateY(-2px); }
-
-
-
-    /* ── TRUST BAR ── */
-
-    #trust {
-
-      background: var(--ink);
-
-      color: var(--paper);
-
-      padding: 2.2rem clamp(1.5rem, 5vw, 4rem);
-
-    }
-
-
-
-    .trust-inner {
-
-      max-width: 1100px;
-
-      margin: 0 auto;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      gap: 2rem;
-
-      flex-wrap: wrap;
-
-    }
-
-
-
-    .trust-label {
-
-      font-size: 0.75rem;
-
-      font-weight: 500;
-
-      letter-spacing: 0.07em;
-
-      text-transform: uppercase;
-
-      color: var(--ink-faint);
-
-      white-space: nowrap;
-
-      flex-shrink: 0;
-
-    }
-
-
-
-    .trust-logos {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 2.5rem;
-
-      flex-wrap: wrap;
-
-    }
-
-
-
-    .trust-logo {
-
-      font-family: var(--serif);
-
-      font-size: 1.05rem;
-
-      font-style: italic;
-
-      color: rgba(247,245,239,0.5);
-
-      letter-spacing: -0.01em;
-
-    }
-
-
-
-    .trust-divider {
-
-      width: 1px;
-
-      height: 28px;
-
-      background: rgba(247,245,239,0.12);
-
-    }
-
-
-
-    .trust-stats {
-
-      display: flex;
-
-      gap: 2.5rem;
-
-      flex-wrap: wrap;
-
-    }
-
-
-
-    .trust-stat {
-
-      text-align: center;
-
-    }
-
-    .trust-stat strong {
-
-      display: block;
-
-      font-family: var(--serif);
-
-      font-size: 1.5rem;
-
-      font-style: italic;
-
-      color: #f59e0b;
-
-    }
-
-    .trust-stat span {
-
-      font-size: 0.72rem;
-
-      color: var(--ink-faint);
-
-      letter-spacing: 0.04em;
-
-      text-transform: uppercase;
-
-    }
-
-
-
-    /* ── SECTIONS COMMON ── */
-
-    section {
-
-      padding: clamp(2.5rem, 4vw, 3.5rem) clamp(1.5rem, 5vw, 4rem);
-
-    }
-
-
-
-    .section-inner {
-
-      max-width: 1100px;
-
-      margin: 0 auto;
-
-    }
-
-
-
-    .section-label {
-
-      font-size: 0.72rem;
-
-      font-weight: 600;
-
-      letter-spacing: 0.1em;
-
-      text-transform: uppercase;
-
-      color: var(--ink-faint);
-
-      margin-bottom: 1rem;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 0.6rem;
-
-    }
-
-    .section-label::before {
-
-      content: '';
-
-      width: 20px; height: 1px;
-
-      background: var(--ink-faint);
-
-    }
-
-
-
-    .section-heading {
-
-      font-family: var(--serif);
-
-      font-size: clamp(1.9rem, 3.5vw, 3rem);
-
-      line-height: 1.15;
-
-      letter-spacing: -0.02em;
-
-      margin-bottom: 1rem;
-
-    }
-
-    .section-heading em { font-style: italic; color: var(--accent); }
-
-
-
-    .section-sub {
-
-      font-size: 1rem;
-
-      color: var(--ink-muted);
-
-      max-width: 520px;
-
-      line-height: 1.7;
-
-    }
-
-
-
-    /* ── WHAT THIS MEANS (section 4) ── */
-
-    #value { background: var(--paper-warm); }
-
-
-
-    .value-grid {
-
-      display: grid;
-
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
-      gap: 1.5px;
-
-      margin-top: 3.5rem;
-
-      background: var(--border);
-
-      border: 1.5px solid var(--border);
-
-      border-radius: 16px;
-
-      overflow: hidden;
-
-    }
-
-
-
-    .value-card {
-
-      background: var(--paper);
-
-      padding: 2.5rem 2rem;
-
-      transition: background 0.25s;
-
-      position: relative;
-
-    }
-
-    .value-card:hover { background: var(--card-bg); }
-
-
-
-    .value-number {
-
-      font-family: var(--serif);
-
-      font-size: 3.5rem;
-
-      font-style: italic;
-
-      color: var(--accent-light);
-
-      line-height: 1;
-
-      margin-bottom: 1rem;
-
-    }
-
-
-
-    .value-title {
-
-      font-size: 1.05rem;
-
-      font-weight: 600;
-
-      color: var(--ink);
-
-      margin-bottom: 0.5rem;
-
-      line-height: 1.35;
-
-    }
-
-
-
-    .value-desc {
-
-      font-size: 0.9rem;
-
-      color: var(--ink-muted);
-
-      line-height: 1.65;
-
-    }
-
-
-
-    /* ── TECH STACK (section 5) ── */
-
-    #stack { background: #212121; color: var(--paper); }
-
-    #stack .section-label { color: rgba(250,250,249,0.35); }
-
-    #stack .section-label::before { background: rgba(250,250,249,0.35); }
-
-    #stack .section-heading { color: var(--paper); }
-
-    #stack .section-sub { color: rgba(250,250,249,0.55); }
-
-
-
-    .stack-grid {
-
-      display: grid;
-
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-
-      gap: 1px;
-
-      margin-top: 3.5rem;
-
-      background: rgba(250,250,249,0.08);
-
-      border: 1px solid rgba(250,250,249,0.08);
-
-      border-radius: 16px;
-
-      overflow: hidden;
-
-    }
-
-
-
-    .stack-group {
-
-      background: rgba(250,250,249,0.03);
-
-      padding: 2rem 1.8rem;
-
-      transition: background 0.25s;
-
-    }
-
-    .stack-group:hover { background: rgba(250,250,249,0.06); }
-
-
-
-    .stack-group-title {
-
-      font-size: 0.72rem;
-
-      font-weight: 600;
-
-      letter-spacing: 0.1em;
-
-      text-transform: uppercase;
-
-      color: #f59e0b;
-
-      margin-bottom: 1.1rem;
-
-    }
-
-
-
-    .stack-tags {
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 0.5rem;
-
-    }
-
-
-
-    .stack-tag {
-
-      font-size: 0.82rem;
-
-      color: rgba(250,250,249,0.75);
-
-      background: rgba(250,250,249,0.07);
-
-      padding: 0.3rem 0.75rem;
-
-      border-radius: 2rem;
-
-      border: 1px solid rgba(250,250,249,0.08);
-
-    }
-
-
-
-    /* ── CASE STUDIES (section 6) ── */
-
-    .work-grid {
-
-      display: grid;
-
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-      gap: 1.5rem;
-
-      margin-top: 3.5rem;
-
-    }
-
-
-
-    @media (min-width: 900px) {
-
-      .work-grid { grid-template-columns: repeat(3, 1fr); }
-
-    }
-
-
-
-    .work-card {
-
-      background: var(--card-bg);
-
-      border-radius: 14px;
-
-      overflow: hidden;
-
-      border: 1.5px solid var(--border);
-
-      transition: transform 0.25s, box-shadow 0.25s;
-
-    }
-
-    .work-card:hover {
-
-      transform: translateY(-4px);
-
-      box-shadow: 0 20px 40px rgba(15,15,14,0.1);
-
-    }
-
-
-
-    .work-thumb {
-
-      width: 100%;
-
-      aspect-ratio: 16/9;
-
-      background: var(--paper-warm);
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      font-family: var(--serif);
-
-      font-style: italic;
-
-      font-size: 1.1rem;
-
-      color: var(--ink-faint);
-
-      position: relative;
-
-      overflow: hidden;
-
-    }
-
-
-
-    .work-thumb-1 { background: linear-gradient(135deg, #e8edff 0%, #c5d1ff 100%); }
-
-    .work-thumb-2 { background: linear-gradient(135deg, #e0f2ee 0%, #b2dfdb 100%); }
-
-    .work-thumb-3 { background: linear-gradient(135deg, #fef3e2 0%, #ffe0b2 100%); }
-
-    .work-thumb-4 { background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); }
-
-
-
-    .work-thumb-label {
-
-      font-family: var(--serif);
-
-      font-style: italic;
-
-      font-size: 1.25rem;
-
-      color: rgba(15,15,14,0.35);
-
-      text-align: center;
-
-      padding: 1rem;
-
-    }
-
-
-
-    .work-body { padding: 1.5rem; }
-
-
-
-    .work-tags {
-
-      display: flex;
-
-      gap: 0.5rem;
-
-      flex-wrap: wrap;
-
-      margin-bottom: 0.9rem;
-
-    }
-
-
-
-    .work-tag {
-
-      font-size: 0.72rem;
-
-      font-weight: 500;
-
-      letter-spacing: 0.04em;
-
-      text-transform: uppercase;
-
-      color: var(--ink-muted);
-
-      background: var(--paper-warm);
-
-      padding: 0.25rem 0.65rem;
-
-      border-radius: 2rem;
-
-    }
-
-
-
-    .work-title {
-
-      font-size: 1.05rem;
-
-      font-weight: 600;
-
-      color: var(--ink);
-
-      margin-bottom: 0.4rem;
-
-    }
-
-
-
-    .work-outcome {
-
-      font-size: 0.85rem;
-
-      color: #d97706;
-
-      font-weight: 500;
-
-    }
-
-
-
-    /* ── HOW IT WORKS (section 7) ── */
-
-    #process { background: var(--paper-warm); }
-
-
-
-    .process-note {
-
-      display: inline-block;
-
-      font-size: 0.85rem;
-
-      color: var(--ink-muted);
-
-      background: var(--paper);
-
-      border: 1px solid var(--border);
-
-      border-radius: 2rem;
-
-      padding: 0.45rem 1.1rem;
-
-      margin-top: 1rem;
-
-    }
-
-    .process-note strong { color: var(--ink); }
-
-
-
-    .process-steps {
-
-      display: grid;
-
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-
-      gap: 0;
-
-      margin-top: 3.5rem;
-
-      position: relative;
-
-    }
-
-
-
-    .process-step {
-
-      padding: 2.5rem 2rem;
-
-      position: relative;
-
-    }
-
-
-
-    .process-step::after {
-
-      content: '→';
-
-      position: absolute;
-
-      right: -10px;
-
-      top: 50%;
-
-      transform: translateY(-50%);
-
-      font-size: 1.5rem;
-
-      color: var(--ink-faint);
-
-    }
-
-    .process-step:last-child::after { display: none; }
-
-
-
-    .process-num {
-
-      font-family: var(--serif);
-
-      font-size: 4rem;
-
-      font-style: italic;
-
-      color: var(--accent-light);
-
-      line-height: 1;
-
-      margin-bottom: 1rem;
-
-    }
-
-
-
-    .process-title {
-
-      font-size: 1.05rem;
-
-      font-weight: 600;
-
-      color: var(--ink);
-
-      margin-bottom: 0.5rem;
-
-    }
-
-
-
-    .process-desc {
-
-      font-size: 0.875rem;
-
-      color: var(--ink-muted);
-
-      line-height: 1.65;
-
-    }
-
-
-
-    .process-callout {
-
-      margin-top: 2.5rem;
-
-      padding: 1.5rem 2rem;
-
-      background: var(--ink);
-
-      color: var(--paper);
-
-      border-radius: 12px;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 1.5rem;
-
-      flex-wrap: wrap;
-
-    }
-
-    .process-callout p {
-
-      font-family: var(--serif);
-
-      font-size: 1.05rem;
-
-      font-style: italic;
-
-      flex: 1;
-
-    }
-
-    .process-callout span {
-
-      font-size: 0.8rem;
-
-      color: #d97706;
-
-      font-weight: 600;
-
-      letter-spacing: 0.04em;
-
-      background: rgba(217,119,6,0.15);
-
-      padding: 0.4rem 1rem;
-
-      border-radius: 2rem;
-
-      white-space: nowrap;
-
-    }
-
-
-
-    /* ── ABOUT (section 8) ── */
-
-    .about-layout {
-
-      display: grid;
-
-      grid-template-columns: 1fr 1.6fr;
-
-      gap: 5rem;
-
-      align-items: start;
-
-      margin-top: 3.5rem;
-
-    }
-
-
-
-    .about-photo {
-
-      aspect-ratio: 4/5;
-
-      background: var(--paper-warm);
-
-      border-radius: 16px;
-
-      overflow: hidden;
-
-      border: 1.5px solid var(--border);
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      font-family: var(--serif);
-
-      font-style: italic;
-
-      color: var(--ink-faint);
-
-      font-size: 1rem;
-
-      position: relative;
-
-    }
-
-
-
-    .about-photo-placeholder {
-
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: center;
-
-      gap: 0.5rem;
-
-      color: var(--ink-faint);
-
-    }
-
-    .about-photo-placeholder svg {
-
-      width: 48px; height: 48px;
-
-      stroke: var(--ink-faint);
-
-    }
-
-
-
-    .about-text p {
-
-      font-size: 1.05rem;
-
-      color: var(--ink-muted);
-
-      line-height: 1.75;
-
-      margin-bottom: 1.2rem;
-
-    }
-
-
-
-    .about-text p strong {
-
-      color: var(--ink);
-
-      font-weight: 600;
-
-    }
-
-
-
-    .about-chips {
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 0.6rem;
-
-      margin-top: 2rem;
-
-    }
-
-
-
-    .about-chip {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 0.5rem;
-
-      font-size: 0.82rem;
-
-      font-weight: 500;
-
-      color: var(--ink);
-
-      background: var(--paper-warm);
-
-      border: 1px solid var(--border);
-
-      padding: 0.45rem 1rem;
-
-      border-radius: 2rem;
-
-    }
-
-    .about-chip-dot {
-
-      width: 7px; height: 7px;
-
-      background: #d97706;
-
-      border-radius: 50%;
-
-    }
-
-
-
-    /* ── FAQ (section 9) ── */
-
-    #faq { background: var(--paper-warm); }
-
-
-
-    .faq-list {
-
-      margin-top: 3rem;
-
-      display: flex;
-
-      flex-direction: column;
-
-      gap: 0;
-
-      border: 1.5px solid var(--border);
-
-      border-radius: 14px;
-
-      overflow: hidden;
-
-      background: var(--card-bg);
-
-    }
-
-
-
-    .faq-item {
-
-      border-bottom: 1px solid var(--border);
-
-    }
-
-    .faq-item:last-child { border-bottom: none; }
-
-
-
-    .faq-q {
-
-      width: 100%;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-      padding: 1.4rem 1.8rem;
-
-      background: none;
-
-      border: none;
-
-      cursor: pointer;
-
-      font-family: var(--sans);
-
-      font-size: 0.95rem;
-
-      font-weight: 600;
-
-      color: var(--ink);
-
-      text-align: left;
-
-      gap: 1rem;
-
-      transition: background 0.2s;
-
-    }
-
-    .faq-q:hover { background: var(--paper-warm); }
-
-
-
-    .faq-icon {
-
-      flex-shrink: 0;
-
-      width: 22px; height: 22px;
-
-      border-radius: 50%;
-
-      border: 1.5px solid var(--border);
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      font-size: 1rem;
-
-      color: var(--ink-muted);
-
-      transition: transform 0.3s;
-
-    }
-
-
-
-    .faq-a {
-
-      max-height: 0;
-
-      overflow: hidden;
-
-      transition: max-height 0.35s ease, padding 0.35s;
-
-      font-size: 0.9rem;
-
-      color: var(--ink-muted);
-
-      line-height: 1.7;
-
-      padding: 0 1.8rem;
-
-    }
-
-    .faq-item.open .faq-a {
-
-      max-height: 200px;
-
-      padding: 0 1.8rem 1.4rem;
-
-    }
-
-    .faq-item.open .faq-icon { transform: rotate(45deg); }
-
-
-
-    /* ── TESTIMONIALS (section 10) ── */
-
-    .testimonials-grid {
-
-      display: grid;
-
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-      gap: 1.5rem;
-
-      margin-top: 3.5rem;
-
-    }
-
-
-
-    .testimonial-card {
-
-      background: var(--card-bg);
-
-      border: 1.5px solid var(--border);
-
-      border-radius: 14px;
-
-      padding: 2rem;
-
-      transition: transform 0.2s;
-
-    }
-
-    .testimonial-card:hover { transform: translateY(-3px); }
-
-
-
-    .testimonial-quote {
-
-      font-size: 2.5rem;
-
-      font-family: var(--serif);
-
-      font-style: italic;
-
-      color: var(--accent-light);
-
-      line-height: 1;
-
-      margin-bottom: 0.8rem;
-
-    }
-
-
-
-    .testimonial-text {
-
-      font-size: 0.95rem;
-
-      color: var(--ink);
-
-      line-height: 1.7;
-
-      margin-bottom: 1.2rem;
-
-      font-style: italic;
-
-    }
-
-
-
-    .testimonial-author {
-
-      font-size: 0.82rem;
-
-      font-weight: 600;
-
-      color: var(--ink-muted);
-
-    }
-
-
-
-    .testimonial-placeholder {
-
-      border-style: dashed;
-
-      opacity: 0.55;
-
-    }
-
-
-
-    /* ── BOTTOM CTA (section 11) ── */
-
-    #contact { background: #212121; color: white; text-align: center; }
-
-    #contact .section-label { color: rgba(255,255,255,0.5); justify-content: center; }
-
-    #contact .section-label::before { background: rgba(255,255,255,0.5); }
-
-    #contact .section-heading { color: white; max-width: 700px; margin: 0 auto 1rem; }
-
-    #contact .section-sub { color: rgba(255,255,255,0.75); margin: 0 auto 2rem; text-align: center; }
-
-
-
-    .cta-actions {
-
-      display: flex;
-
-      gap: 1rem;
-
-      justify-content: center;
-
-      flex-wrap: wrap;
-
-    }
-
-
-
-    .btn-white {
-
-      background: #d97706;
-
-      color: white;
-
-      padding: 0.9rem 2.2rem;
-
-      border-radius: 3rem;
-
-      font-size: 0.95rem;
-
-      font-weight: 600;
-
-      text-decoration: none;
-
-      transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
-
-    }
-
-    .btn-white:hover { background: #b45309; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
-
-
-
-    .btn-outline-white {
-
-      background: transparent;
-
-      color: white;
-
-      padding: 0.9rem 2.2rem;
-
-      border-radius: 3rem;
-
-      border: 1.5px solid rgba(255,255,255,0.5);
-
-      font-size: 0.95rem;
-
-      font-weight: 500;
-
-      text-decoration: none;
-
-      transition: border-color 0.2s, transform 0.15s;
-
-    }
-
-    .btn-outline-white:hover { border-color: white; transform: translateY(-2px); }
-
-
-
-    /* ── FOOTER (section 12) ── */
-
-    footer {
-
-      background: var(--ink);
-
-      color: var(--paper);
-
-      padding: 2.5rem clamp(1.5rem, 5vw, 4rem);
-
-    }
-
-
-
-    .footer-inner {
-
-      max-width: 1100px;
-
-      margin: 0 auto;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      flex-wrap: wrap;
-
-      gap: 1.5rem;
-
-    }
-
-
-
-    .footer-brand {
-
-      font-family: var(--serif);
-
-      font-size: 1rem;
-
-      font-style: italic;
-
-      color: var(--paper);
-
-    }
-
-
-
-    .footer-links {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 1.5rem;
-
-      list-style: none;
-
-      flex-wrap: wrap;
-
-    }
-
-
-
-    .footer-links a {
-
-      font-size: 0.82rem;
-
-      color: var(--ink-faint);
-
-      text-decoration: none;
-
-      transition: color 0.2s;
-
-    }
-
-    .footer-links a:hover { color: var(--paper); }
-
-
-
-    .footer-status {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 0.5rem;
-
-      font-size: 0.78rem;
-
-      font-weight: 500;
-
-      color: #d97706;
-
-      background: rgba(217,119,6,0.18);
-
-      padding: 0.35rem 0.9rem;
-
-      border-radius: 2rem;
-
-    }
-
-    .footer-status::before {
-
-      content: '';
-
-      width: 7px; height: 7px;
-
-      background: #f59e0b;
-
-      border-radius: 50%;
-
-      animation: pulse 2.5s infinite;
-
-    }
-
-
-
-    /* ── RESPONSIVE ── */
-
-    @media (max-width: 768px) {
-
-      .nav-links { display: none; }
-
-      .nav-hamburger { display: flex; }
-
-      .nav-links.open {
-
-        display: flex;
-
-        flex-direction: column;
-
-        position: absolute;
-
-        top: 60px;
-
-        left: 0; right: 0;
-
-        background: var(--paper);
-
-        border-bottom: 1px solid var(--border);
-
-        padding: 1.5rem;
-
-        gap: 1.2rem;
-
-        z-index: 99;
-
-      }
-
-      .nav-links.open a { font-size: 1rem; }
-
-
-
-      .about-layout {
-
-        grid-template-columns: 1fr;
-
-        gap: 2.5rem;
-
-      }
-
-      .about-photo { aspect-ratio: 3/2; max-width: 300px; }
-
-
-
-      .process-step::after { display: none; }
-
-
-
-      .trust-inner { flex-direction: column; gap: 1.5rem; }
-
-
-
-      .footer-inner { flex-direction: column; align-items: flex-start; }
-
-    }
-
-
-
-    /* ── ANIMATIONS ── */
-
-    @keyframes fadeUp {
-
-      from { opacity: 0; transform: translateY(24px); }
-
-      to   { opacity: 1; transform: translateY(0); }
-
-    }
-
-
-
-    .-eyebrow { animation: fadeUp 0.6s ease both; }
-
-    .-headline { animation: fadeUp 0.6s 0.1s ease both; }
-
-    .-sub { animation: fadeUp 0.6s 0.2s ease both; }
-
-    .-actions { animation: fadeUp 0.6s 0.3s ease both; }
-
-
-
-    /* ── CONTACT LAYOUT ── */
-
-    .contact-layout {
-
-      display: grid;
-
-      grid-template-columns: 1fr 1.2fr;
-
-      gap: 4rem;
-
-      align-items: start;
-
-      margin-top: 3rem;
-
-      text-align: left;
-
-    }
-
-
-
-    .contact-left .contact-tagline {
-
-      font-family: var(--serif);
-
-      font-size: 1.05rem;
-
-      font-style: italic;
-
-      color: rgba(255,255,255,0.6);
-
-      line-height: 1.7;
-
-      margin-bottom: 2rem;
-
-    }
-
-
-
-    .contact-detail {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 0.75rem;
-
-      margin-bottom: 1rem;
-
-    }
-
-
-
-    .contact-detail-icon {
-
-      width: 36px; height: 36px;
-
-      background: rgba(255,255,255,0.07);
-
-      border-radius: 8px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      flex-shrink: 0;
-
-      font-size: 0.9rem;
-
-    }
-
-
-
-    .contact-detail-text {
-
-      font-size: 0.9rem;
-
-      color: rgba(255,255,255,0.7);
-
-    }
-
-
-
-    .contact-detail-text a {
-
-      color: #f59e0b;
-
-      text-decoration: none;
-
-    }
-
-    .contact-detail-text a:hover { text-decoration: underline; }
-
-
-
-    .contact-availability {
-
-      margin-top: 2rem;
-
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 0.5rem;
-
-      font-size: 0.78rem;
-
-      font-weight: 500;
-
-      color: #f59e0b;
-
-      background: rgba(217,119,6,0.15);
-
-      padding: 0.4rem 1rem;
-
-      border-radius: 2rem;
-
-    }
-
-    .contact-availability::before {
-
-      content: '';
-
-      width: 7px; height: 7px;
-
-      background: #f59e0b;
-
-      border-radius: 50%;
-
-      animation: pulse 2s infinite;
-
-    }
-
-
-
-    /* ── CONTACT FORM ── */
-
-    .contact-form {
-
-      background: rgba(255,255,255,0.05);
-
-      border: 1px solid rgba(255,255,255,0.1);
-
-      border-radius: 16px;
-
-      padding: 2rem;
-
-    }
-
-
-
-    .form-row {
-
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 1rem;
-
-    }
-
-
-
-    .form-group {
-
-      margin-bottom: 1rem;
-
-    }
-
-
-
-    .form-group label {
-
-      display: block;
-
-      font-size: 0.75rem;
-
-      font-weight: 500;
-
-      letter-spacing: 0.05em;
-
-      text-transform: uppercase;
-
-      color: rgba(255,255,255,0.5);
-
-      margin-bottom: 0.45rem;
-
-    }
-
-
-
-    .form-group input,
-
-    .form-group select,
-
-    .form-group textarea {
-
-      width: 100%;
-
-      background: rgba(255,255,255,0.06);
-
-      border: 1px solid rgba(255,255,255,0.12);
-
-      border-radius: 8px;
-
-      padding: 0.75rem 1rem;
-
-      font-family: var(--sans);
-
-      font-size: 0.9rem;
-
-      color: white;
-
-      outline: none;
-
-      transition: border-color 0.2s, background 0.2s;
-
-      -webkit-appearance: none;
-
-    }
-
-
-
-    .form-group input::placeholder,
-
-    .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
-
-
-
-    .form-group input:focus,
-
-    .form-group select:focus,
-
-    .form-group textarea:focus {
-
-      border-color: #d97706;
-
-      background: rgba(255,255,255,0.09);
-
-    }
-
-
-
-    .form-group select option { background: #212121; color: white; }
-
-
-
-    .form-group textarea { resize: vertical; min-height: 100px; }
-
-
-
-    .form-submit {
-
-      width: 100%;
-
-      background: #d97706;
-
-      color: white;
-
-      border: none;
-
-      border-radius: 3rem;
-
-      padding: 0.9rem 2rem;
-
-      font-family: var(--sans);
-
-      font-size: 0.95rem;
-
-      font-weight: 600;
-
-      cursor: pointer;
-
-      transition: background 0.2s, transform 0.15s;
-
-      margin-top: 0.5rem;
-
-    }
-
-    .form-submit:hover { background: #b45309; transform: translateY(-2px); }
-
-
-
-    .form-note {
-
-      font-size: 0.75rem;
-
-      color: rgba(255,255,255,0.35);
-
-      text-align: center;
-
-      margin-top: 0.75rem;
-
-    }
-
-
-
-    .form-success {
-
-      display: none;
-
-      text-align: center;
-
-      padding: 2rem;
-
-      color: #f59e0b;
-
-      font-family: var(--serif);
-
-      font-style: italic;
-
-      font-size: 1.1rem;
-
-    }
-
-
-
-    @media (max-width: 768px) {
-
-      .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
-
-      .form-row { grid-template-columns: 1fr; }
-
-    }
-
-
-
-    /* Scroll reveal */
-
-    .reveal {
-
-      opacity: 0;
-
-      transform: translateY(20px);
-
-      transition: opacity 0.6s ease, transform 0.6s ease;
-
-    }
-
-    .reveal.visible {
-
-      opacity: 1;
-
-      transform: translateY(0);
-
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-
-
-  <!-- ── 1. NAV ── -->
-
-  <nav>
-
-    <a href="#" class="nav-logo">Hamid<em>.</em>dev</a>
-
-    <ul class="nav-links" id="navLinks">
-
-      <li><a href="#value">Services</a></li>
-
-      <li><a href="#work">Work</a></li>
-
-      <li><a href="#process">Process</a></li>
-
-      <li><a href="#about">About</a></li>
-
-      <li><a href="#contact" class="nav-cta">Let's talk →</a></li>
-
-    </ul>
-
-    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
-
-      <span></span><span></span><span></span>
-
-    </div>
-
-  </nav>
-
-
-
-  <!-- ── 2.  ── -->
-
-  <section id="">
-
-    <div class="-eyebrow">Available for new agency partners</div>
-
-    <h1 class="-headline">
-
-      The dedicated web developer<br>
-
-      for <em>marketing</em> agencies.
-
-    </h1>
-
-    <p class="hero-sub">
-
-      You handle strategy and clients. I handle the build — under your brand, on your timeline. Invisible to your clients, invaluable to your pipeline.
-
-    </p>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Billing Blueprint | Healthcare RCM Education & Resources</title>
+    <meta name="description" content="Master healthcare revenue cycle management. Premium digital products, ebooks, and educational resources designed to optimize your RCM workflow.">
     
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Plus Jakarta Sans for High-End Medical/Corporate Feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        rcm: {
+                            navy: '#0F1E36',     // Deep trustworthy clinical navy
+                            blue: '#1E40AF',     // Professional authority blue
+                            teal: '#0D9488',     // Optimization accent teal
+                            slate: '#F8FAFC',    // Ultra-clean background light
+                            text: '#334155'      // Highly readable body slate
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-rcm-slate text-rcm-text font-sans antialiased">
 
-    <div class="hero-actions">
+    <!-- STICKY HEADER -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col group">
+                <span class="text-rcm-navy font-heading text-xl font-extrabold tracking-tight group-hover:text-rcm-teal transition-colors">THE BILLING <span class="text-rcm-blue">BLUEPRINT</span></span>
+                <span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold -mt-1">Healthcare RCM Education</span>
+            </a>
 
-      <a href="#work" class="btn-primary">See my work</a>
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex space-x-8 text-xs uppercase font-bold tracking-wider text-slate-500">
+                <a href="#products" class="hover:text-rcm-blue transition-colors py-2">Ebooks & Resources</a>
+                <a href="#coming-soon" class="hover:text-rcm-blue transition-colors py-2">Upcoming Courses</a>
+                <a href="#about" class="hover:text-rcm-blue transition-colors py-2">About</a>
+                <a href="#contact" class="hover:text-rcm-blue transition-colors py-2">Inquiries</a>
+            </nav>
 
-      <a href="#contact" class="btn-secondary">Let's talk →</a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ── 3. TRUST BAR ── -->
-
-  <div id="trust">
-
-    <div class="trust-inner">
-
-      <span class="trust-label">Worked with agencies in</span>
-
-      <span class="trust-logo">Melbourne · Sydney · London · Dubai</span>
-
-      <div class="trust-logos">
-
-        <a href="https://www.digitalpractice.co/" target="_blank" rel="noopener noreferrer" style="text-decoration:none"><span class="trust-logo">Digital Practice</span></a>
-
-        <div class="trust-divider"></div>
-
-        <a href="https://acsconsulting.com.au/" target="_blank" rel="noopener noreferrer" style="text-decoration:none"><span class="trust-logo">ACS Consulting</span></a>
-
-        <div class="trust-divider"></div>
-
-        
-
-      </div>
-
-      <div class="trust-stats">
-
-        <div class="trust-stat">
-
-          <strong>30+</strong>
-
-          <span>AU projects</span>
-
+            <!-- Direct CTA to Stan Store -->
+            <div>
+                <a href="https://stan.store/thebillingblueprint" target="_blank" rel="noopener noreferrer" class="bg-rcm-blue hover:bg-rcm-navy text-white text-xs uppercase font-bold tracking-wider px-5 py-3 rounded-md transition-all shadow-md shadow-rcm-blue/10">
+                    Browse Stan Store &rarr;
+                </a>
+            </div>
         </div>
+    </header>
 
-        <div class="trust-stat">
+    <main>
+        <!-- HERO SECTION -->
+        <section class="relative bg-rcm-navy text-white py-24 lg:py-32 overflow-hidden">
+            <!-- Subtle architectural structural accent grid -->
+            <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#334155_1px,transparent_1px),linear-gradient(to_bottom,#334155_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(13,148,136,0.15),transparent_50%)]"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <span class="inline-flex items-center bg-rcm-teal/20 text-rcm-teal text-xs font-bold tracking-wider px-3 py-1.5 rounded-full border border-rcm-teal/30">
+                            Digital Guides & RCM Optimization Assets
+                        </span>
+                        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                            Master Healthcare <br><span class="text-rcm-teal">Revenue Cycle Management.</span>
+                        </h1>
+                        <p class="text-slate-300 text-base sm:text-lg font-light max-w-xl leading-relaxed">
+                            Stop leaving money on the table. Access premium educational assets, tailored templates, and step-by-step blueprints designed to refine your financial performance and billing infrastructure.
+                        </p>
+                        <div class="pt-4 flex flex-wrap gap-4">
+                            <a href="#products" class="bg-rcm-teal hover:bg-white text-white hover:text-rcm-navy font-bold text-xs uppercase tracking-widest px-8 py-4 rounded transition-all shadow-lg shadow-rcm-teal/10">
+                                View Core Products
+                            </a>
+                            <a href="https://stan.store/thebillingblueprint" target="_blank" rel="noopener noreferrer" class="bg-white/5 border border-white/10 hover:border-white/30 text-white font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded transition-all">
+                                Go to Stan Store
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Right Graphic Frame Placeholder for Ebook Mockups -->
+                    <div class="lg:col-span-5 relative flex justify-center">
+                        <div class="w-72 h-96 bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm relative shadow-2xl flex flex-col justify-between">
+                            <div class="h-48 w-full bg-slate-800 rounded-lg flex items-center justify-center border border-white/5">
+                                <span class="text-xs text-slate-400 font-mono">[ Ebook Mockup Frame ]</span>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="h-4 w-2/3 bg-slate-700 rounded"></div>
+                                <div class="h-3 w-full bg-slate-800 rounded"></div>
+                                <div class="h-3 w-1/2 bg-slate-800 rounded"></div>
+                            </div>
+                            <div class="h-8 w-full bg-rcm-teal/20 text-rcm-teal text-[10px] font-bold uppercase tracking-wider rounded flex items-center justify-center">
+                                Available On Stan Store
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <strong>5</strong>
+        <!-- FEATURED PRODUCTS / EBOOKS SECTION -->
+        <section id="products" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 space-y-2">
+                    <span class="text-rcm-blue text-xs font-bold uppercase tracking-widest block">Immediate Downloads</span>
+                    <h2 class="font-heading text-3xl font-extrabold tracking-tight text-rcm-navy sm:text-4xl">Featured Ebooks & Resources</h2>
+                    <p class="text-slate-500 max-w-2xl font-light text-sm">Select from our vetted, structural toolkits to instantly optimize coding accuracy, claim management metrics, and operational yield.</p>
+                </div>
 
-          <span>Countries</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product Guide Card 1 -->
+                    <div class="bg-rcm-slate rounded-xl border border-slate-200/80 p-6 flex flex-col justify-between hover:shadow-md transition-all group">
+                        <div class="space-y-4">
+                            <div class="aspect-[4/5] bg-slate-200 rounded-lg mb-4 flex items-center justify-center text-slate-400 text-xs font-mono border border-slate-300/40">
+                                [ Ebook Cover Image ]
+                            </div>
+                            <span class="inline-block bg-rcm-blue/10 text-rcm-blue text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">Comprehensive Guide</span>
+                            <h3 class="font-heading text-lg font-bold text-rcm-navy">The RCM Master Blueprint</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed font-light">An all-inclusive visual blueprint tracing claim lifecycles from pre-authorization validation frameworks down to structured appeals handling.</p>
+                        </div>
+                        <div class="pt-6">
+                            <a href="https://stan.store/thebillingblueprint" target="_blank" rel="noopener noreferrer" class="w-full bg-white group-hover:bg-rcm-blue border border-slate-300 group-hover:border-rcm-blue text-rcm-navy group-hover:text-white font-bold text-xs uppercase tracking-wider py-3 px-4 rounded text-center block transition-all">
+                                Instant Download &rarr;
+                            </a>
+                        </div>
+                    </div>
 
+                    <!-- Product Guide Card 2 -->
+                    <div class="bg-rcm-slate rounded-xl border border-slate-200/80 p-6 flex flex-col justify-between hover:shadow-md transition-all group">
+                        <div class="space-y-4">
+                            <div class="aspect-[4/5] bg-slate-200 rounded-lg mb-4 flex items-center justify-center text-slate-400 text-xs font-mono border border-slate-300/40">
+                                [ Toolkit Template Mockup ]
+                            </div>
+                            <span class="inline-block bg-rcm-teal/10 text-rcm-teal text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">Operational Kits</span>
+                            <h3 class="font-heading text-lg font-bold text-rcm-navy">Denial Appeals Framework</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed font-light">Ready-to-use structural appeal text matrices and system architectures engineered to successfully overturn commercial insurance denials.</p>
+                        </div>
+                        <div class="pt-6">
+                            <a href="https://stan.store/thebillingblueprint" target="_blank" rel="noopener noreferrer" class="w-full bg-white group-hover:bg-rcm-blue border border-slate-300 group-hover:border-rcm-blue text-rcm-navy group-hover:text-white font-bold text-xs uppercase tracking-wider py-3 px-4 rounded text-center block transition-all">
+                                Instant Download &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Guide Card 3 -->
+                    <div class="bg-rcm-slate rounded-xl border border-slate-200/80 p-6 flex flex-col justify-between hover:shadow-md transition-all group">
+                        <div class="space-y-4">
+                            <div class="aspect-[4/5] bg-slate-200 rounded-lg mb-4 flex items-center justify-center text-slate-400 text-xs font-mono border border-slate-300/40">
+                                [ Checklist Mockup ]
+                            </div>
+                            <span class="inline-block bg-slate-200 text-slate-600 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">Quick Audits</span>
+                            <h3 class="font-heading text-lg font-bold text-rcm-navy">Daily Claims Compliance Matrix</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed font-light">A clean operational execution checklist built for billers to scan clean claims constraints prior to electronic system submission.</p>
+                        </div>
+                        <div class="pt-6">
+                            <a href="https://stan.store/thebillingblueprint" target="_blank" rel="noopener noreferrer" class="w-full bg-white group-hover:bg-rcm-blue border border-slate-300 group-hover:border-rcm-blue text-rcm-navy group-hover:text-white font-bold text-xs uppercase tracking-wider py-3 px-4 rounded text-center block transition-all">
+                                Instant Download &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- "COMING SOON" EDUCATIONAL OFFERINGS SECTION -->
+        <section id="coming-soon" class="py-24 bg-rcm-navy text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-16 space-y-2">
+                    <span class="text-rcm-teal text-xs font-bold uppercase tracking-widest block">The Next Pipeline</span>
+                    <h2 class="font-heading text-3xl font-extrabold tracking-tight sm:text-4xl">Future Curriculums & Courses</h2>
+                    <p class="text-slate-400 font-light text-sm">We are expanding our educational ecosystem. Take a look at the comprehensive corporate trainings and specialized modules currently inside our production track.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Upcoming Feature 1 -->
+                    <div class="bg-white/5 rounded-xl border border-white/5 p-8 relative overflow-hidden group">
+                        <div class="absolute top-4 right-4 bg-rcm-teal/20 text-rcm-teal text-[9px] uppercase font-mono tracking-widest font-bold px-2 py-1 rounded border border-rcm-teal/30">
+                            In Production
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-2">Advanced Medical Billing Masterclass</h3>
+                        <p class="text-slate-400 text-xs font-light leading-relaxed max-w-md">
+                            A completely on-demand audio and video lecture blueprint covering complex clinical claims mapping, specialty modifier logic, and modern clearinghouse automation protocols.
+                        </p>
+                    </div>
+
+                    <!-- Upcoming Feature 2 -->
+                    <div class="bg-white/5 rounded-xl border border-white/5 p-8 relative overflow-hidden group">
+                        <div class="absolute top-4 right-4 bg-rcm-blue/20 text-rcm-blue text-[9px] uppercase font-mono tracking-widest font-bold px-2 py-1 rounded border border-rcm-blue/30">
+                            Curriculum Mapping
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-2">RCM Systems Interactive Bootcamps</h3>
+                        <p class="text-slate-400 text-xs font-light leading-relaxed max-w-md">
+                            Live group cohorts focused on system integration audits, compliance regulations, and dashboard analytics to scale institutional billing agency workflows.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6">
+                        <span class="text-rcm-blue text-xs font-bold uppercase tracking-widest block">Corporate Profile</span>
+                        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-rcm-navy sm:text-4xl">Bridging the Gap Between Claims & Revenue</h2>
+                        <div class="h-1 w-12 bg-rcm-teal rounded-full"></div>
+                        <p class="text-slate-600 text-sm leading-relaxed font-light">
+                            <strong>The Billing Blueprint</strong> was founded with a singular strategic goal: to translate highly complex medical compliance rules and financial systems into clear, actionable digital toolkits.
+                        </p>
+                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed font-light">
+                            We support clinical operators, medical administrative teams, and independent billers by eliminating outdated information. Our materials prioritize exact tactical workflow optimizations that secure higher clean-claim rates and faster operational cycles.
+                        </p>
+                    </div>
+                    <!-- Performance Values Block -->
+                    <div class="bg-rcm-slate p-8 rounded-xl border border-slate-200/60 grid grid-cols-2 gap-6">
+                        <div class="space-y-1">
+                            <div class="font-heading text-2xl font-black text-rcm-navy">100%</div>
+                            <div class="text-[9px] uppercase tracking-wider font-bold text-slate-400">Digital Deliverability</div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="font-heading text-2xl font-black text-rcm-navy">RCM</div>
+                            <div class="text-[9px] uppercase tracking-wider font-bold text-slate-400">Specialized Domain</div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="font-heading text-2xl font-black text-rcm-navy">Direct</div>
+                            <div class="text-[9px] uppercase tracking-wider font-bold text-slate-400">Stan Store Purchases</div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="font-heading text-2xl font-black text-rcm-navy">Clean</div>
+                            <div class="text-[9px] uppercase tracking-wider font-bold text-slate-400">Operational Focus</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INQUIRY FORM / CONTACT SECTION -->
+        <section id="contact" class="py-24 bg-rcm-slate border-t border-slate-200">
+            <div class="max-w-2xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12 space-y-2">
+                    <h2 class="font-heading text-3xl font-extrabold tracking-tight text-rcm-navy">Corporate & Educational Inquiries</h2>
+                    <p class="text-slate-500 text-sm font-light">Have questions about our resources or bulk corporate site licensing? Message our team directly.</p>
+                </div>
+
+                <form class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm space-y-6" onsubmit="event.preventDefault();">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold tracking-wider text-slate-500 mb-2">Your Name</label>
+                            <input type="text" required placeholder="Alex Morgan" class="w-full border border-slate-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-rcm-teal bg-slate-50 transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold tracking-wider text-slate-500 mb-2">Email Address</label>
+                            <input type="email" required placeholder="alex@healthcare.com" class="w-full border border-slate-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-rcm-teal bg-slate-50 transition-all">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold tracking-wider text-slate-500 mb-2">Inquiry Intent</label>
+                        <select class="w-full border border-slate-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-rcm-teal bg-slate-50 text-slate-700 transition-all">
+                            <option>General Resource Question</option>
+                            <option>Stan Store Access Support</option>
+                            <option>Corporate Biller Training Licensing</option>
+                            <option>Partnership Proposal</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold tracking-wider text-slate-500 mb-2">Message Detail</label>
+                        <textarea rows="4" required placeholder="Provide detail regarding your training or operational requirements..." class="w-full border border-slate-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-rcm-teal bg-slate-50 transition-all"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-rcm-navy hover:bg-rcm-teal text-white font-bold py-4 px-4 rounded text-xs uppercase tracking-widest transition-all duration-300 shadow-md">
+                        Submit Official Inquiry
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SYSTEM -->
+    <footer class="bg-rcm-navy text-slate-400 text-xs py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex flex-col text-center sm:text-left">
+                <span class="text-white font-heading font-extrabold text-lg tracking-tight">THE BILLING <span class="text-rcm-teal">BLUEPRINT</span></span>
+                <span class="text-[9px] uppercase tracking-widest text-slate-500 font-bold">Premium Revenue Cycle Education</span>
+            </div>
+            
+            <div class="flex space-x-6 font-medium">
+                <a href="https://stan.store/thebillingblueprint" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Stan Store</a>
+                <a href="#products" class="hover:text-white transition-colors">Ebooks</a>
+                <a href="#coming-soon" class="hover:text-white transition-colors">Courses</a>
+            </div>
+
+            <div class="text-slate-500 text-[11px] text-center sm:text-right font-light">
+                &copy; 2026 The Billing Blueprint. All Rights Reserved. Optimization Frameworks.
+            </div>
         </div>
+    </footer>
 
-        <div class="trust-stat">
-
-          <strong>100%</strong>
-
-          <span>White-label</span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- ── 4. WHAT THIS MEANS FOR YOUR AGENCY ── -->
-
-  <section id="value">
-
-    <div class="section-inner">
-
-      <p class="section-label">For your agency</p>
-
-      <h2 class="section-heading">What this means<br>for <em>your</em> business</h2>
-
-      <p class="section-sub">Not about me. About what your agency can do the moment we partner.</p>
-
-      <div class="value-grid reveal">
-
-        <div class="value-card">
-
-          <div class="value-number">01</div>
-
-          <div class="value-title">Say yes to every web project</div>
-
-          <p class="value-desc">Never turn down a client because you don't have build capacity. I expand your offering without adding headcount. You quote, I build.</p>
-
-        </div>
-
-        <div class="value-card">
-
-          <div class="value-number">02</div>
-
-          <div class="value-title">Keep 50–60% margin</div>
-
-          <p class="value-desc">You set the rate your client pays. My pricing is fixed and predictable — which means strong, consistent margins on every project you pass to me.</p>
-
-        </div>
-
-        <div class="value-card">
-
-          <div class="value-number">03</div>
-
-          <div class="value-title">One dev, not a rotating team</div>
-
-          <p class="value-desc">Every project comes to me directly. No account managers, no handoffs, no "let me check with the team." You get consistency and accountability.</p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ── 5. TECH STACK ── -->
-
-  <section id="stack">
-
-    <div class="section-inner">
-
-      <p class="section-label">Capabilities</p>
-
-      <h2 class="section-heading" style="color:var(--paper)">What agencies need me to build</h2>
-
-      <p class="section-sub">Grouped by what your clients actually ask for — not by what looks good on a CV.</p>
-
-      <div class="stack-grid reveal">
-
-        <div class="stack-group">
-
-          <div class="stack-group-title">CMS / Websites</div>
-
-          <div class="stack-tags">
-
-            <span class="stack-tag">WordPress</span>
-
-            <span class="stack-tag">WooCommerce</span>
-
-            <span class="stack-tag">Webflow</span>
-
-            <span class="stack-tag">Shopify</span>
-
-          </div>
-
-        </div>
-
-        <div class="stack-group">
-
-          <div class="stack-group-title">Front-end</div>
-
-          <div class="stack-tags">
-
-            <span class="stack-tag">HTML / CSS / JS</span>
-
-            <span class="stack-tag">React</span>
-
-            <span class="stack-tag">Tailwind CSS</span>
-
-            <span class="stack-tag">Landing pages</span>
-
-          </div>
-
-        </div>
-
-        <div class="stack-group">
-
-          <div class="stack-group-title">Performance & SEO</div>
-
-          <div class="stack-tags">
-
-            <span class="stack-tag">Core Web Vitals</span>
-
-            <span class="stack-tag">GTmetrix</span>
-
-            <span class="stack-tag">Schema markup</span>
-
-            <span class="stack-tag">Clean code</span>
-
-          </div>
-
-        </div>
-
-        <div class="stack-group">
-
-          <div class="stack-group-title">Integrations</div>
-
-          <div class="stack-tags">
-
-            <span class="stack-tag">HubSpot</span>
-
-            <span class="stack-tag">Mailchimp</span>
-
-            <span class="stack-tag">GA4</span>
+</body>
+</html>
