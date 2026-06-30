@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Direct Booking Tips for STR Owners | Hamid.dev</title>
+  <meta name="description" content="Practical guides for short-term rental owners who want to stop paying Airbnb fees and start taking direct bookings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:       #0f1c2e;
+      --navy-mid:   #162236;
+      --navy-light: #1e3150;
+      --sand:       #f5ede0;
+      --gold:       #c9922a;
+      --gold-light: #e8b84b;
+      --white:      #ffffff;
+      --text-muted: rgba(255,255,255,0.55);
+      --text-dim:   rgba(255,255,255,0.35);
+      --border-light: rgba(255,255,255,0.08);
+      --border-sand:  rgba(201,146,42,0.25);
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--navy); color: var(--white); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(1.5rem, 5vw, 4rem); height: 64px; background: rgba(15,28,46,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border-light); }
+    .nav-logo { font-family: var(--serif); font-size: 1.2rem; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.82rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-btn { background: var(--gold); color: var(--navy); padding: 0.5rem 1.2rem; border-radius: 2rem; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    .nav-btn:hover { background: var(--gold-light); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .nav-hamburger span { width: 22px; height: 2px; background: var(--white); border-radius: 2px; }
+
+    /* BLOG HEADER */
+    .blog-header {
+      padding: 9rem clamp(1.5rem, 5vw, 4rem) 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .blog-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .blog-eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--gold); }
+    .blog-heading { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.5rem); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .blog-heading em { font-style: italic; color: var(--gold); }
+    .blog-sub { font-size: 1rem; color: var(--text-muted); max-width: 520px; line-height: 1.75; }
+
+    /* BLOG GRID */
+    .blog-grid-wrap { padding: 0 clamp(1.5rem, 5vw, 4rem) 6rem; max-width: 1200px; margin: 0 auto; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+
+    /* POST CARD */
+    .post-card { background: var(--navy-mid); border: 1px solid var(--border-light); border-radius: 16px; overflow: hidden; transition: transform 0.2s, border-color 0.2s; text-decoration: none; display: flex; flex-direction: column; }
+    .post-card:hover { transform: translateY(-4px); border-color: var(--border-sand); }
+    .post-card-thumb { aspect-ratio: 16/9; display: flex; align-items: flex-end; padding: 1.5rem; position: relative; overflow: hidden; }
+    .post-card-thumb-1 { background: linear-gradient(160deg, #1a2f4a 0%, #0d1e33 100%); }
+    .post-card-thumb-2 { background: linear-gradient(160deg, #1e2d1a 0%, #0d1e0d 100%); }
+    .post-card-thumb-3 { background: linear-gradient(160deg, #2d1e0d 0%, #1e130a 100%); }
+    .post-thumb-stat { font-family: var(--serif); font-size: 3rem; font-weight: 700; color: rgba(255,255,255,0.08); position: absolute; top: 1rem; right: 1.5rem; line-height: 1; }
+    .post-tag { display: inline-block; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); background: rgba(201,146,42,0.15); border: 1px solid rgba(201,146,42,0.2); padding: 0.25rem 0.65rem; border-radius: 2rem; }
+    .post-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .post-meta { font-size: 0.75rem; color: var(--text-dim); margin-bottom: 0.75rem; }
+    .post-title { font-family: var(--serif); font-size: 1.2rem; line-height: 1.35; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
+    .post-excerpt { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; flex: 1; }
+    .post-read-more { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; font-weight: 600; color: var(--gold); margin-top: 1.2rem; text-decoration: none; transition: gap 0.2s; }
+    .post-card:hover .post-read-more { gap: 0.7rem; }
+
+    /* ARTICLE PAGE */
+    .article-wrap { display: none; }
+    .article-wrap.active { display: block; }
+    .article-header { padding: 9rem clamp(1.5rem, 5vw, 4rem) 3rem; max-width: 800px; margin: 0 auto; }
+    .article-back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: var(--text-muted); text-decoration: none; margin-bottom: 2.5rem; transition: color 0.2s; cursor: pointer; background: none; border: none; font-family: var(--sans); }
+    .article-back:hover { color: var(--white); }
+    .article-tag { display: inline-block; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); background: rgba(201,146,42,0.12); border: 1px solid rgba(201,146,42,0.2); padding: 0.3rem 0.75rem; border-radius: 2rem; margin-bottom: 1.2rem; }
+    .article-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; margin-bottom: 1rem; }
+    .article-title em { font-style: italic; color: var(--gold); font-weight: 400; }
+    .article-meta { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-light); }
+    .article-body { max-width: 800px; margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 4rem) 6rem; }
+    .article-body p { font-size: 1.02rem; color: rgba(255,255,255,0.78); line-height: 1.85; margin-bottom: 1.5rem; }
+    .article-body h2 { font-family: var(--serif); font-size: 1.7rem; font-weight: 600; line-height: 1.25; letter-spacing: -0.01em; margin: 3rem 0 1rem; color: var(--white); }
+    .article-body h3 { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; line-height: 1.3; margin: 2rem 0 0.75rem; color: var(--white); }
+    .article-body strong { color: var(--white); font-weight: 600; }
+    .article-body em { font-style: italic; color: var(--gold); }
+    .article-body ul, .article-body ol { margin: 1rem 0 1.5rem 1.5rem; }
+    .article-body li { font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.75; margin-bottom: 0.5rem; }
+    .article-callout { background: rgba(201,146,42,0.08); border: 1px solid rgba(201,146,42,0.2); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+    .article-callout p { color: rgba(255,255,255,0.85); margin-bottom: 0; font-size: 0.95rem; }
+    .article-stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2.5rem 0; }
+    .article-stat { background: var(--navy-mid); border: 1px solid var(--border-light); border-radius: 10px; padding: 1.2rem; text-align: center; }
+    .article-stat-num { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 0.3rem; }
+    .article-stat-label { font-size: 0.75rem; color: var(--text-muted); line-height: 1.4; }
+    .article-cta-box { background: var(--navy-mid); border: 1px solid var(--border-sand); border-radius: 14px; padding: 2rem; margin: 3rem 0; text-align: center; }
+    .article-cta-box h3 { font-family: var(--serif); font-size: 1.4rem; margin-bottom: 0.75rem; }
+    .article-cta-box p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .btn-gold { background: var(--gold); color: var(--navy); padding: 0.85rem 2rem; border-radius: 3rem; font-size: 0.9rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.2s; }
+    .btn-gold:hover { background: var(--gold-light); }
+    .article-divider { height: 1px; background: var(--border-light); margin: 3rem 0; }
+
+    /* FOOTER */
+    footer { background: var(--navy); border-top: 1px solid var(--border-light); padding: 2rem clamp(1.5rem, 5vw, 4rem); }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-brand { font-family: var(--serif); font-style: italic; color: var(--white); }
+    .footer-brand span { color: var(--gold); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a { font-size: 0.82rem; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy-mid); border-bottom: 1px solid var(--border-light); padding: 1.5rem; gap: 1.2rem; z-index: 99; }
+      .article-stat-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">Hamid<span>.</span>dev</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#features">What you get</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="index.html#contact" class="nav-btn">Get started →</a></li>
+    </ul>
+    <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- BLOG INDEX -->
+  <div id="blogIndex">
+    <div class="blog-header">
+      <div class="blog-eyebrow">The direct booking playbook</div>
+      <h1 class="blog-heading">Guides for STR owners who want<br><em>more profit, less platform.</em></h1>
+      <p class="blog-sub">Practical, no-fluff articles on direct booking, OTA fees, calendar sync, and automation for short-term rental owners.</p>
+    </div>
+
+    <div class="blog-grid-wrap">
+      <div class="blog-grid">
+
+        <!-- POST 1 -->
+        <a class="post-card" href="#" onclick="showPost('post1'); return false;">
+          <div class="post-card-thumb post-card-thumb-1">
+            <div class="post-thumb-stat">15.5%</div>
+            <span class="post-tag">OTA Fees</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">June 2026 · 8 min read</div>
+            <div class="post-title">How Much Is Airbnb Really Taking From You? (The Number Most Hosts Don't Know)</div>
+            <p class="post-excerpt">Airbnb's 15.5% host fee sounds abstract until you run the actual numbers. Here's exactly what it costs the average STR owner — and what you could do with that money instead.</p>
+            <span class="post-read-more">Read article →</span>
+          </div>
+        </a>
+
+        <!-- POST 2 -->
+        <a class="post-card" href="#" onclick="showPost('post2'); return false;">
+          <div class="post-card-thumb post-card-thumb-2">
+            <div class="post-thumb-stat">Sync</div>
+            <span class="post-tag">Calendar Sync</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">June 2026 · 7 min read</div>
+            <div class="post-title">How to Run a Direct Booking Site Alongside Airbnb Without Getting Double Bookings</div>
+            <p class="post-excerpt">The biggest fear STR owners have about going direct is double bookings. Here's exactly how two-way calendar sync works — and why it's simpler than you think.</p>
+            <span class="post-read-more">Read article →</span>
+          </div>
+        </a>
+
+        <!-- POST 3 -->
+        <a class="post-card" href="#" onclick="showPost('post3'); return false;">
+          <div class="post-card-thumb post-card-thumb-3">
+            <div class="post-thumb-stat">Auto</div>
+            <span class="post-tag">Automation</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">June 2026 · 6 min read</div>
+            <div class="post-title">The STR Review Automation Stack: How Every New Airbnb Review Can Post Itself to Your Website and Social Media</div>
+            <p class="post-excerpt">Most STR owners get great reviews and do nothing with them. Here's how to set up a system where every new review automatically builds your direct booking presence — while you sleep.</p>
+            <span class="post-read-more">Read article →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- POST 1 -->
+  <div class="article-wrap" id="post1">
+    <div class="article-header">
+      <button class="article-back" onclick="showBlog()">← Back to blog</button>
+      <div class="article-tag">OTA Fees</div>
+      <h1 class="article-title">How Much Is Airbnb <em>Really</em> Taking From You?<br>The Number Most Hosts Don't Know</h1>
+      <div class="article-meta">June 2026 · 8 min read · by Hamid</div>
+    </div>
+    <div class="article-body">
+      <p>Most STR owners know Airbnb takes a fee. What they don't know is the actual number — written out in dollars — that leaves their account every single month and goes to a platform they don't own, can't control, and that could suspend them tomorrow without warning.</p>
+      <p>Let's fix that. Here's the exact math, applied to real scenarios, so you can see what Airbnb is actually costing you.</p>
+
+      <h2>Airbnb's 2026 fee structure</h2>
+      <p>Airbnb operates two fee models. If you use a property management software (PMS) like Hostaway, Guesty, or Lodgify, you're on the <strong>host-only fee model</strong> — which means Airbnb charges you <strong>15.5% of your total payout</strong>. That includes your nightly rate, your cleaning fee, and any other charges.</p>
+      <p>If you manage your listings directly through Airbnb without a PMS, you may still be on the split-fee model where you pay around 3% and guests pay 14–16%. But as Airbnb continues pushing hosts toward professional tools, more STR owners are landing on the 15.5% model without fully realising it.</p>
+
+      <div class="article-callout">
+        <p><strong>Key point:</strong> The 15.5% is calculated on your <em>total</em> payout — not just the nightly rate. If a guest pays $2,200 (including cleaning fee), Airbnb takes $341 from that single booking. The cleaning fee you charge to cover your actual costs still triggers the platform commission.</p>
+      </div>
+
+      <h2>The real annual cost at different revenue levels</h2>
+      <p>Here's what that 15.5% looks like at different scales:</p>
+
+      <div class="article-stat-row">
+        <div class="article-stat">
+          <div class="article-stat-num">$6,200</div>
+          <div class="article-stat-label">paid to Airbnb at $40K annual revenue</div>
+        </div>
+        <div class="article-stat">
+          <div class="article-stat-num">$12,400</div>
+          <div class="article-stat-label">paid to Airbnb at $80K annual revenue</div>
+        </div>
+        <div class="article-stat">
+          <div class="article-stat-num">$18,600</div>
+          <div class="article-stat-label">paid to Airbnb at $120K annual revenue</div>
+        </div>
+      </div>
+
+      <p>At $40,000 in annual bookings — a single mid-range property doing decent occupancy — you're handing $6,200 to Airbnb every year. That's a second property down payment, a full renovation budget, or two years of mortgage payments gone to a platform you don't own.</p>
+      <p>Over five years at $80K revenue, that's <strong>$62,000</strong> in Airbnb fees. Not hypothetical. Just the math.</p>
+
+      <h2>What you're actually paying for</h2>
+      <p>To be fair, Airbnb does provide something for that fee: discovery. New guests who've never heard of you find your property through Airbnb's search. That's genuinely valuable — especially when you're starting out or in a competitive market.</p>
+      <p>But here's the thing most hosts don't think about: <strong>every repeat guest who re-books through Airbnb costs you the full 15.5% again</strong>. Someone who stayed with you last summer and loved it — they search for your property, find it on Airbnb, and book through the platform. You pay $300 in commission for a guest who already knew you existed. That's not discovery. That's a recurring tax on your own guest relationships.</p>
+
+      <div class="article-callout">
+        <p>Short-term rental operators globally lose over <strong>$1 billion annually</strong> in OTA fees on repeat guests alone — guests who already knew the host and would have booked direct given the option.</p>
+      </div>
+
+      <h2>The direct booking alternative</h2>
+      <p>A direct booking website doesn't mean leaving Airbnb. The smart play — used by the most profitable STR operators — is to keep your Airbnb listing for discovery while capturing repeat guests and referrals through your own site at 0% commission.</p>
+      <p>Even converting 30–40% of your bookings to direct over 12–18 months puts thousands back in your pocket annually. At $80K revenue, moving 40% of bookings to direct at 0% commission (vs 15.5%) saves you roughly <strong>$4,960 per year</strong> — on the same number of nights at the same prices.</p>
+      <p>Payment processing via Stripe adds around 2.9% on direct bookings — but that's still a net saving of over 12% per booking compared to Airbnb's host-only fee.</p>
+
+      <h2>What to do with that number</h2>
+      <p>Use the calculator on our homepage to run your own numbers. Put in your actual monthly revenue and your current commission rate. The number that comes back is what's leaving your account every month that doesn't have to.</p>
+      <p>Then decide whether a direct booking website — starting from $800 as a one-time cost — makes sense against what you're currently giving away.</p>
+      <p>For most STR owners with consistent bookings, the site pays for itself within two to three direct bookings. After that, every direct reservation is pure margin recovery.</p>
+
+      <div class="article-divider"></div>
+
+      <div class="article-cta-box">
+        <h3>See exactly what you're losing</h3>
+        <p>Use our free fee calculator to run your personal numbers — then get a quote for a direct booking site that pays for itself.</p>
+        <a href="index.html#contact" class="btn-gold">Get started from $800 →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- POST 2 -->
+  <div class="article-wrap" id="post2">
+    <div class="article-header">
+      <button class="article-back" onclick="showBlog()">← Back to blog</button>
+      <div class="article-tag">Calendar Sync</div>
+      <h1 class="article-title">How to Run a Direct Booking Site<br>Alongside Airbnb <em>Without Getting<br>Double Bookings</em></h1>
+      <div class="article-meta">June 2026 · 7 min read · by Hamid</div>
+    </div>
+    <div class="article-body">
+      <p>The number one reason STR owners don't launch a direct booking site is the fear of double bookings. Two guests, one property, same night — it's a nightmare scenario that ends with a frantic cancellation, a damaged review, and a very unhappy traveller.</p>
+      <p>That fear is understandable. And it was a legitimate concern back when calendar sync was manual or unreliable. In 2026, it isn't. Here's exactly how two-way calendar sync works — and why, when set up correctly, it eliminates the double booking problem entirely.</p>
+
+      <h2>The single source of truth principle</h2>
+      <p>The key to running multiple booking channels without chaos is establishing one system as your master calendar. Everything else reads from and writes to that master. When a booking comes in from any source — your direct site, Airbnb, VRBO — it immediately blocks those dates across all other channels.</p>
+      <p>For most STR owners, this master calendar is their property management system (PMS) — Hostaway, Lodgify, Guesty, or OwnerRez. The direct booking website connects to this PMS. So does Airbnb. So does VRBO. They all talk to the same calendar.</p>
+
+      <h2>How two-way sync actually works</h2>
+      <p>Here's the flow when a guest books through your direct booking site:</p>
+      <ol>
+        <li>Guest selects dates and completes booking on your direct site</li>
+        <li>Your booking engine sends the reservation to your PMS instantly</li>
+        <li>Your PMS immediately blocks those dates in Airbnb's calendar via API</li>
+        <li>Your PMS immediately blocks those dates in VRBO's calendar via API</li>
+        <li>Both OTA listings now show unavailable for those dates — in seconds</li>
+      </ol>
+      <p>The same happens in reverse. A guest books on Airbnb — your direct site calendar updates immediately and those dates can't be double-booked.</p>
+
+      <div class="article-callout">
+        <p><strong>The key word is API.</strong> A proper integration uses Airbnb's and VRBO's official APIs — not iCal feeds. iCal sync has a 15–30 minute delay, which creates a small window for double bookings. API sync is near-instantaneous. Any direct booking site I build uses API connections, not iCal.</p>
+      </div>
+
+      <h2>What about platforms without API access?</h2>
+      <p>Some smaller platforms and older setups use iCal instead of a direct API connection. In these cases, the sync delay is typically 15–30 minutes. To eliminate risk on these channels, you can either:</p>
+      <ul>
+        <li>Set a 1-hour booking buffer in your PMS that triggers when a new reservation comes in</li>
+        <li>Turn off instant booking on the lower-traffic channel and use a 24-hour request window instead</li>
+        <li>Move to a PMS that has native API access to your channels (Hostaway and Guesty both cover all major platforms)</li>
+      </ul>
+      <p>For most STR owners with Airbnb as their primary channel, the API sync is available and should be the default setup.</p>
+
+      <h2>What channels can be synced?</h2>
+      <p>The platforms I build connect with:</p>
+      <ul>
+        <li><strong>Airbnb</strong> — API sync, instant updates</li>
+        <li><strong>VRBO / HomeAway</strong> — API sync, instant updates</li>
+        <li><strong>Booking.com</strong> — API sync via most PMS platforms</li>
+        <li><strong>Hostaway</strong> — native integration, full two-way sync</li>
+        <li><strong>Lodgify</strong> — direct integration</li>
+        <li><strong>Guesty</strong> — direct integration</li>
+        <li><strong>OwnerRez</strong> — direct integration</li>
+      </ul>
+      <p>If you use a platform not on this list, let me know — I've worked with most channel managers and can usually find a clean integration path.</p>
+
+      <h2>The bottom line on double bookings</h2>
+      <p>When set up correctly with API-level sync through a proper PMS, running a direct booking site alongside Airbnb is no more risky than running Airbnb and VRBO simultaneously — which thousands of STR owners do every day without incident.</p>
+      <p>The risk isn't in having multiple channels. The risk is in having poorly configured sync. A properly built direct booking site eliminates that risk from day one.</p>
+
+      <div class="article-divider"></div>
+
+      <div class="article-cta-box">
+        <h3>Ready to go multi-channel without the headache?</h3>
+        <p>I handle all the sync setup. You approve the staging site, we go live, and your calendars stay in sync automatically from that day forward.</p>
+        <a href="index.html#contact" class="btn-gold">Let's set it up →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- POST 3 -->
+  <div class="article-wrap" id="post3">
+    <div class="article-header">
+      <button class="article-back" onclick="showBlog()">← Back to blog</button>
+      <div class="article-tag">Automation</div>
+      <h1 class="article-title">The STR Review Automation Stack:<br>How Every New Airbnb Review Can<br><em>Post Itself to Your Website and Social Media</em></h1>
+      <div class="article-meta">June 2026 · 6 min read · by Hamid</div>
+    </div>
+    <div class="article-body">
+      <p>You work hard to give guests a great experience. They leave a glowing 5-star review on Airbnb. And then... nothing happens. The review sits on your Airbnb profile, visible only to people already browsing Airbnb — the platform you're trying to reduce your dependence on.</p>
+      <p>Here's what most STR owners don't realise: every review you earn is a marketing asset. A real person, in their own words, saying your property is worth staying at. That's the most persuasive content you'll ever have — and it's sitting unused.</p>
+      <p>This post walks through the review automation stack I build for STR clients — how it works, what it connects, and why it turns every happy guest into a continuous marketing moment without any ongoing effort from you.</p>
+
+      <h2>What the automation does</h2>
+      <p>When a new review is submitted on Airbnb, the system:</p>
+      <ol>
+        <li>Detects the new review via your PMS or a webhook connection</li>
+        <li>Pulls the review text, star rating, and guest first name</li>
+        <li>Automatically adds it to your direct booking website's review section</li>
+        <li>Creates a formatted social media post with the review content</li>
+        <li>Schedules or immediately posts that content to Instagram and/or Facebook</li>
+      </ol>
+      <p>You get a notification. You don't have to do anything else.</p>
+
+      <h2>Why this matters for direct bookings</h2>
+      <p>When a potential guest lands on your direct booking site, they're making a trust decision. They're considering booking with you rather than through Airbnb — without Airbnb's review system, payment protection, and familiar interface. Reviews on your own site are the single most effective thing you can show them to make that decision easier.</p>
+      <p>An auto-updating review feed means your site always shows recent social proof. A guest visiting in October sees reviews from September guests. That recency matters — it tells them the property is actively hosted, well maintained, and delivering on its promise right now.</p>
+
+      <div class="article-callout">
+        <p><strong>The social media angle:</strong> STR owners who post consistently to Instagram and Facebook get meaningful referral traffic to their direct booking site. But most don't post consistently because creating content takes time. Review automation solves this — every review becomes a post, every post drives awareness, every awareness touchpoint is a potential direct booking.</p>
+      </div>
+
+      <h2>What the tech stack looks like</h2>
+      <p>The specific tools depend on your existing setup, but here's a typical configuration:</p>
+      <ul>
+        <li><strong>Airbnb / PMS (Hostaway, Lodgify, Guesty)</strong> — source of new reviews</li>
+        <li><strong>Make (formerly Integromat) or Zapier</strong> — the automation layer that detects new reviews and triggers actions</li>
+        <li><strong>Your direct booking website</strong> — receives and displays the review automatically</li>
+        <li><strong>Buffer or Meta Business Suite</strong> — receives the formatted post and publishes to Instagram and Facebook</li>
+      </ul>
+      <p>The whole automation runs in the background once it's configured. No monthly manual work. No copy-pasting reviews. No remembering to post.</p>
+
+      <h2>Can you customise how reviews appear?</h2>
+      <p>Yes. You can set filters so only reviews above a certain star rating (e.g., 4 stars and above) trigger the automation. You can set a review format template for social posts. You can add your property's branding, a call-to-action link to your direct booking site, and relevant hashtags. The automation follows the rules you set — it doesn't post anything you wouldn't approve manually.</p>
+
+      <h2>What about VRBO reviews?</h2>
+      <p>VRBO reviews can be pulled into the same automation depending on your PMS setup. Hostaway and Guesty aggregate reviews from multiple platforms, which means the automation can pull from both Airbnb and VRBO in a single flow.</p>
+
+      <h2>The compounding effect</h2>
+      <p>After 6 months of this running, your direct booking site has dozens of recent, real reviews displayed prominently. Your Instagram has consistent weekly posts showing happy guests and their words. Potential guests Googling your property name find your site's review section ranking in search results. Each of those touchpoints moves a potential guest closer to booking direct — at 0% commission.</p>
+      <p>That's the compounding effect of automation. One piece of infrastructure, set up once, that keeps working and building your direct booking presence without any ongoing input from you.</p>
+
+      <div class="article-divider"></div>
+
+      <div class="article-cta-box">
+        <h3>Want this set up for your properties?</h3>
+        <p>Review automation is included in the Growth package — along with your direct booking site, calendar sync, and guest email capture.</p>
+        <a href="index.html#pricing" class="btn-gold">See what's included →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Hamid<span>.</span>dev</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="mailto:hamid@hamidbuilds.dev">hamid@hamidbuilds.dev</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    function showPost(id) {
+      document.getElementById('blogIndex').style.display = 'none';
+      document.querySelectorAll('.article-wrap').forEach(a => a.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showBlog() {
+      document.getElementById('blogIndex').style.display = 'block';
+      document.querySelectorAll('.article-wrap').forEach(a => a.classList.remove('active'));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Handle browser back button
+    window.addEventListener('popstate', showBlog);
+  </script>
+</body>
+</html>
