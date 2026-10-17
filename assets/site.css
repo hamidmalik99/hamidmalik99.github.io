@@ -309,3 +309,28 @@ p{margin:0}
 .author-box a{font-weight:700;font-size:15px;color:var(--gold-ink)}
 @media (max-width:640px){.prose{font-size:17px}.takeaways,.answer-box{padding:22px}.post-card-big .post-card-top{min-height:120px}.post-card-big .post-card-body{padding:24px}}
 .page-hero p.post-cat{color:var(--navy-900);margin-top:0;font-size:12px}
+
+/* Industry pages */
+.pains{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:20px}
+.pain{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;border-top:4px solid var(--gold)}
+.pain h3{font-size:21px;margin-bottom:10px}
+.pain p{color:var(--muted);font-size:16px}
+.includes{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start}
+.includes-copy{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.includes-copy h2{font-weight:800;font-size:clamp(30px,4vw,42px);line-height:1.1}
+.includes-copy .ticks{margin-top:8px;font-size:17px}
+.includes-side{flex:1 1 320px;min-width:0;background:var(--navy-800);color:#fff;border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:16px}
+.includes-side h3{color:#fff;font-size:22px}
+.includes-side ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:12px;color:var(--body-dark)}
+.includes-side strong{color:#fff}
+.includes-side .btn{align-self:flex-start}
+.ind-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:24px}
+.ind-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;border-top:4px solid var(--navy-800)}
+.ind-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(11,22,40,.10);color:inherit;border-top-color:var(--gold)}
+.ind-card .eyebrow{font-size:12px}
+.ind-card h3{font-size:24px}
+.ind-card p{color:var(--muted);font-size:16px}
+.ind-card .post-more{margin-top:auto}
+.industry-box{margin-top:40px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.industry-box p:not(.eyebrow){color:#253350;font-size:17px}
+.page-hero .hero-meta{color:var(--muted-dark);font-size:15px}

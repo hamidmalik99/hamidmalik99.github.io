@@ -76,7 +76,7 @@ i = re.sub(r'(data-project-count>)[^<]*(<)', r'\g<1>%d\2' % len(P), i)
 open('index.html', 'w', encoding='utf-8').write(i)
 
 today = datetime.date.today().isoformat()
-urls = [('/', '1.0'), ('/work.html', '0.8'), ('/blog/', '0.7')] + [('/blog/%s.html' % q['slug'], '0.6') for q in json.load(open('posts.json', encoding='utf-8'))]
+urls = [('/', '1.0'), ('/work.html', '0.8'), ('/industries/', '0.8')] + [('/industries/%s/' % q['slug'], '0.8') for q in json.load(open('industries.json', encoding='utf-8'))] + [('/blog/', '0.7')] + [('/blog/%s.html' % q['slug'], '0.6') for q in json.load(open('posts.json', encoding='utf-8'))]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 sm += ''.join('  <url><loc>%s%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>\n' % (SITE, u, today, pr) for u, pr in urls)
 sm += '</urlset>\n'
