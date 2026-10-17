@@ -1,932 +1,315 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hamid Ali Asad — Websites & Automation Specialist</title>
-  <meta name="description" content="Portfolio and 50+ case studies of Hamid Ali Asad. Websites, WooCommerce, Webflow, and custom integrations with AI tools, Make, and Zapier." />
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,800;1,900&family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #0A0A0A;
-      color: #F5F5F5;
-      margin: 0;
-      overflow-x: hidden;
-    }
-    .font-mono {
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .font-display {
-      font-family: 'Syne', sans-serif;
-    }
-    ::selection {
-      background-color: #CCFF00;
-      color: #000000;
-    }
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #0A0A0A;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #262626;
-      border-radius: 3px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #CCFF00;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamid Ali Asad — White-Label WordPress Developer for Agencies &amp; Small Businesses</title>
+<meta name="description" content="WordPress, Elementor and WooCommerce builds plus SEO. White-label development for agencies and done-for-you websites for small businesses. 100+ sites across Australia, UK, US and New Zealand.">
+<link rel="canonical" href="https://hamidbuilds.dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hamid Ali Asad — WordPress sites and SEO, shipped on your deadline">
+<meta property="og:description" content="White-label WordPress development for agencies. Done-for-you websites for small businesses.">
+<meta property="og:url" content="https://hamidbuilds.dev/">
+<meta property="og:site_name" content="hamidbuilds.dev">
+<meta property="og:image" content="https://hamidbuilds.dev/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hamid Ali Asad — WordPress sites and SEO, shipped on your deadline">
+<meta name="twitter:description" content="White-label WordPress development for agencies. Done-for-you websites for small businesses.">
+<meta name="twitter:image" content="https://hamidbuilds.dev/assets/og-image.png">
+<meta name="author" content="Hamid Ali Asad">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0B1628">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23E2B04A'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial' font-weight='800' font-size='30' fill='%230B1628'%3Ehb%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "hamidbuilds.dev",
+  "founder": {"@type": "Person", "name": "Hamid Ali Asad", "jobTitle": "WordPress Developer & SEO Specialist", "image": "https://hamidbuilds.dev/assets/hamid-960.webp"},
+  "image": "https://hamidbuilds.dev/assets/og-image.png",
+  "priceRange": "$$",
+  "url": "https://hamidbuilds.dev/",
+  "email": "hamidaliasad16@gmail.com",
+  "telephone": "+923077138743",
+  "address": {"@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK"},
+  "areaServed": ["AU", "GB", "US", "NZ", "FR"],
+  "knowsAbout": ["WordPress", "Elementor", "WooCommerce", "Shopify", "Technical SEO", "Local SEO"]
+}
+</script>
 </head>
-<body class="bg-[#0A0A0A] text-[#F5F5F5] antialiased">
-  <div id="app"></div>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-  <!-- Embedded Portfolio Data & Application Engine -->
-  <script>
-    window.__PORTFOLIO_DATA__ = {"profile":{"name":"Hamid Ali Asad","title":"Websites & Automation Specialist","headline":"Hi — I’m Hamid Ali Asad","subheading":"I build websites and automate workflows for businesses that need things done right the first time. 50+ sites delivered across Australia, UK, and the US — WordPress, WooCommerce, Webflow, and custom integrations with AI tools, Make, and Zapier.","email":"hamidaliasad16@gmail.com","location":"Available Globally (AU, UK, US timezone aligned)","availability":"Available for new projects & retainers","stats":{"projectsDelivered":"50+","regionsCovered":"Australia, UK, US","satisfactionRate":"99.4%","uptimeAverage":"99.98%"},"specialties":["WordPress & WooCommerce","Webflow Development","Make & Zapier Automations","AI Integrations & LLMs","High-Speed Site Migrations","CRM & Database Sync","Custom PHP / API Pipelines","Performance Optimization"],"socials":{"github":"https://github.com","linkedin":"https://linkedin.com","resumeUrl":"#","email":"mailto:hamidaliasad16@gmail.com"}},"projects":[{"id":"cantilever-engineers","name":"Cantilever Engineers","category":"Structural Engineering","region":"Australia","countryCode":"AU","featured":true,"summary":"High-performance corporate engineering platform with interactive project portfolio and automated client enquiry routing.","challenge":"Legacy site was sluggish, failed to display complex CAD/render galleries on mobile, and lost high-value structural tender enquiries in unmonitored inboxes.","solution":"Designed and built a custom responsive WordPress engine with WebP pipeline, interactive CAD project showcase, and a Make.com pipeline routing tenders to Pipedrive CRM.","techStack":["WordPress","Custom PHP","Tailwind","Make.com","Pipedrive API","Cloudflare CDN"],"outcomes":["Page load time slashed from 4.8s to 0.75s","180% increase in qualified commercial tender inquiries","Zero lost leads with automated instant Slack & CRM notification"],"metrics":[{"label":"Speed Score","value":"99/100"},{"label":"Inquiry Growth","value":"+180%"},{"label":"Tender Value Tracked","value":"$4.2M"}],"accentColor":"#4f46e5","imageBg":"linear-gradient(135deg, #1e1e38 0%, #2d2b55 100%)","deliverables":["Custom Theme","CRM Webhook Automation","Interactive Project Filter","SEO Overhaul"],"testimonial":{"quote":"Hamid engineered our site with the exact precision our structural firm requires. Inquiries doubled within 60 days.","author":"David Vance","role":"Principal Engineer","company":"Cantilever Engineers"},"liveUrl":"https://cantileverengineers.com.au","liveDomain":"cantileverengineers.com.au"},{"id":"sda-structures","name":"SDA Structures","category":"Structural Engineering","region":"Australia","countryCode":"AU","featured":true,"summary":"Architectural structural engineering showcase featuring case studies, team credentials, and automated RFP intakes.","challenge":"Required a minimal, high-aesthetic showcase that loaded instantly while hosting high-res project imagery and compliance certifications.","solution":"Developed a Webflow-powered responsive framework with automated image compression, dynamic CMS collections, and Zapier webhook integration.","techStack":["Webflow","Zapier","Airtable","Custom JavaScript","GSAP"],"outcomes":["Sub-second page loads despite 200+ high-res architectural renders","Streamlined bid submissions with instant document processing"],"metrics":[{"label":"Load Time","value":"0.8s"},{"label":"Asset Compression","value":"74%"}],"accentColor":"#0ea5e9","imageBg":"linear-gradient(135deg, #0c2136 0%, #173854 100%)","deliverables":["Webflow CMS Architecture","Client Portal","Document Auto-Storage"],"liveUrl":"https://sdastructures.com.au","liveDomain":"sdastructures.com.au"},{"id":"designeng","name":"DesignEng","category":"Structural Engineering","region":"Australia","countryCode":"AU","featured":false,"summary":"Technical engineering consultancy portal with dynamic service estimators and multi-city project archives.","challenge":"Clients needed to request preliminary structural feasibility estimates without endless email ping-pong.","solution":"Engineered an interactive feasibility calculation widget connecting to Google Sheets and SendGrid via Make.com.","techStack":["WordPress","Alpine.js","Make.com","Google Sheets API","SendGrid"],"outcomes":["Automated 65% of preliminary scope estimations","Saved 12 engineering hours/week"],"metrics":[{"label":"Hours Saved/Wk","value":"12 hrs"},{"label":"Instant Quotes","value":"1,400+"}],"accentColor":"#2563eb","imageBg":"linear-gradient(135deg, #111d33 0%, #1e3357 100%)","deliverables":["Custom Calculator Widget","Automated PDF Quote Dispatch","WordPress Build"],"liveUrl":"https://designeng.com.au","liveDomain":"designeng.com.au"},{"id":"melbourne-structural","name":"Melbourne Structural","category":"Structural Engineering","region":"Australia","countryCode":"AU","featured":false,"summary":"Local authority compliant structural engineering portal with inspection booking and calendar synchronization.","challenge":"Needed automated on-site structural inspection booking with geo-fenced calendar availability across greater Melbourne.","solution":"Implemented Calendly enterprise integration with custom WordPress theme and automated pre-inspection compliance checklist emails.","techStack":["WordPress","WooCommerce Bookings","Zapier","Google Maps API","Twilio SMS"],"outcomes":["3x increase in residential inspection bookings","SMS reminders reduced customer no-shows to under 1%"],"metrics":[{"label":"No-Show Rate","value":"<1%"},{"label":"Bookings","value":"+210%"}],"accentColor":"#3b82f6","imageBg":"linear-gradient(135deg, #0f2347 0%, #1c3d75 100%)","deliverables":["Booking System","SMS Automation","Local SEO Schema"],"liveUrl":"https://melbournestructural.com.au","liveDomain":"melbournestructural.com.au"},{"id":"pentanet","name":"Pentanet","category":"ISP","region":"Australia","countryCode":"AU","featured":true,"summary":"Next-gen telecommunications & fixed-wireless internet service portal with automated address qualification check.","challenge":"High drop-off rates on broadband signup due to slow multi-step coverage checks and manual address validation.","solution":"Built an ultra-fast address autocomplete qualification API integrated with their fiber network database and automated onboarding flow.","techStack":["WordPress Headless","React","REST API","Make.com","HubSpot","Stripe"],"outcomes":["Conversion rate improved by 42% on address qualification","Automated customer onboarding ticket creation in Zendesk and HubSpot"],"metrics":[{"label":"Conversion Lift","value":"+42%"},{"label":"API Response","value":"120ms"},{"label":"Signups/Month","value":"3,800+"}],"accentColor":"#ec4899","imageBg":"linear-gradient(135deg, #2b0c1e 0%, #52153b 100%)","deliverables":["Address Coverage Tool","Headless Checkout","HubSpot Sync Automation"],"testimonial":{"quote":"Hamid transformed our signup funnel. The speed and stability he introduced gave us an immediate revenue bump.","author":"Marcus K.","role":"Growth Director","company":"Pentanet Partner"},"liveUrl":"https://pentanet.com.au","liveDomain":"pentanet.com.au"},{"id":"aussie-broadband","name":"Aussie Broadband","category":"ISP","region":"Australia","countryCode":"AU","featured":false,"summary":"Broadband plan comparison matrix, NBN speed tier advisor, and customer transition workflows.","challenge":"Customers found speed tier selection confusing, leading to high support ticket volume for downgrades/upgrades.","solution":"Created an intuitive visual bandwidth calculator matching household device counts to optimal NBN tiers with instant checkout integration.","techStack":["Webflow","Custom JavaScript","Zapier","Segment","Google Tag Manager"],"outcomes":["Support ticket inquiries for tier selection decreased by 34%","Average Order Value (AOV) increased by 18%"],"metrics":[{"label":"AOV Lift","value":"+18%"},{"label":"Ticket Drop","value":"-34%"}],"accentColor":"#10b981","imageBg":"linear-gradient(135deg, #09261b 0%, #124d37 100%)","deliverables":["Plan Advisor Widget","Speed Test Integration","Conversion Optimization"],"liveUrl":"https://aussiebroadband.com.au","liveDomain":"aussiebroadband.com.au"},{"id":"swoop","name":"Swoop","category":"ISP","region":"Australia","countryCode":"AU","featured":false,"summary":"Regional internet provider landing pages and automated multi-channel lead distribution for business fiber.","challenge":"Needed scalable regional landing page infrastructure across 40+ Australian municipal regions with localized pricing.","solution":"Engineered programmatic CMS page generation in WordPress with dynamic geo-location pricing and automated lead distribution to territory sales reps.","techStack":["WordPress","Advanced Custom Fields","Make.com","Salesforce API","MaxMind GeoIP"],"outcomes":["Generated 45 targeted regional landing pages in under 2 weeks","Organic regional search visibility grew by 140%"],"metrics":[{"label":"Pages Scaled","value":"45+"},{"label":"Organic Traffic","value":"+140%"}],"accentColor":"#f59e0b","imageBg":"linear-gradient(135deg, #2b1d06 0%, #52370c 100%)","deliverables":["Programmatic SEO Architecture","GeoIP Routing","Salesforce Webhooks"],"liveUrl":"https://swoop.com.au","liveDomain":"swoop.com.au"},{"id":"mccarthy-plumbing-group","name":"McCarthy Plumbing Group","category":"Home Services","region":"Australia","countryCode":"AU","featured":true,"summary":"High-converting emergency plumbing website with instant click-to-call, automated dispatch routing, and review automation.","challenge":"Needed 24/7 urgent lead capture with zero lag and automatic job creation in ServiceM8 field management software.","solution":"Custom WordPress mobile-first build with tap-to-call sticky navigation, automated SMS dispatch via Twilio and ServiceM8 API sync.","techStack":["WordPress","ServiceM8 API","Twilio SMS","Make.com","Google Ads Call Tracking"],"outcomes":["Mobile call conversions increased by 85%","Job dispatch automation eliminated 15 minutes of manual data entry per emergency call"],"metrics":[{"label":"Mobile Calls","value":"+85%"},{"label":"Dispatch Lag","value":"0s"},{"label":"5-Star Reviews","value":"450+"}],"accentColor":"#059669","imageBg":"linear-gradient(135deg, #09241b 0%, #114232 100%)","deliverables":["Mobile Emergency UI","ServiceM8 Sync","Automated SMS Pipeline"],"liveUrl":"https://mccarthyplumbinggroup.com.au","liveDomain":"mccarthyplumbinggroup.com.au"},{"id":"focus-build","name":"Focus Build","category":"Home Services","region":"Australia","countryCode":"AU","featured":false,"summary":"Luxury home renovation & commercial building contractor showcase with interactive before/after sliders and project cost calculator.","challenge":"Low lead quality with visitors unaware of minimum project budgets.","solution":"Designed an elegant pre-qualifying questionnaire that filters inquiries by budget tier and automatically syncs project files to Google Drive.","techStack":["Webflow","Make.com","Google Drive API","Slack Webhooks","ConvertKit"],"outcomes":["Filtered out 90% of unqualified inquiries","Average closed project value increased from $45k to $160k"],"metrics":[{"label":"Lead Quality","value":"+90%"},{"label":"Avg Project Deal","value":"$160k"}],"accentColor":"#84cc16","imageBg":"linear-gradient(135deg, #182607 0%, #2e4a0d 100%)","deliverables":["Custom Budget Filter","Interactive Sliders","Google Drive Sync"],"liveUrl":"https://focusbuild.com.au","liveDomain":"focusbuild.com.au"},{"id":"freo-plumbing","name":"Freo Plumbing","category":"HVAC & Plumbing","region":"Australia","countryCode":"AU","featured":false,"summary":"Commercial and residential plumbing services platform with instant quote generator.","challenge":"Slow response times to online quote requests during after-hours.","solution":"Built an AI-assisted quote intake bot that triages plumbing emergencies and automatically assigns on-call technicians.","techStack":["WordPress","OpenAI API","Make.com","Twilio","Stripe Invoicing"],"outcomes":["Average after-hours response time dropped from 45 min to under 30 seconds","Closed $40k in additional after-hours jobs in Q1"],"metrics":[{"label":"Response Time","value":"<30s"},{"label":"Revenue Boost","value":"+$40k"}],"accentColor":"#0284c7","imageBg":"linear-gradient(135deg, #062338 0%, #0d466e 100%)","deliverables":["AI Triage Assistant","After-Hours SMS Gateway","WordPress Fast Build"],"liveUrl":"https://freoplumbing.com.au","liveDomain":"freoplumbing.com.au"},{"id":"climax-air","name":"Climax Air","category":"HVAC & Plumbing","region":"Australia","countryCode":"AU","featured":false,"summary":"HVAC installation & maintenance platform with seasonal service subscription automation.","challenge":"High customer churn on annual air conditioning service contracts due to manual phone renewals.","solution":"Integrated WooCommerce Subscriptions with Stripe recurring billing and automated email reminder drip campaigns.","techStack":["WordPress","WooCommerce Subscriptions","Stripe Billing","ActiveCampaign","Zapier"],"outcomes":["Recurring subscription revenue grew by 240% in year one","Automated 1,200 annual maintenance reminders"],"metrics":[{"label":"MRR Growth","value":"+240%"},{"label":"Automated Reminders","value":"1,200+"}],"accentColor":"#06b6d4","imageBg":"linear-gradient(135deg, #05262c 0%, #0c4d59 100%)","deliverables":["Recurring Billing Engine","Automated Renewal Drip","Custom WooCommerce Setup"],"liveUrl":"https://climaxair.com.au","liveDomain":"climaxair.com.au"},{"id":"hallmark-plumbing-heating","name":"Hallmark Plumbing & Heating","category":"HVAC & Plumbing","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"UK Gas Safe registered heating & boiler installation site with instant boiler quotation wizard.","challenge":"Homeowners needed transparent, instant boiler replacement quotes based on house size and radiator count.","solution":"Engineered a 4-step boiler selector wizard with instant financing breakdowns and calendar reservation.","techStack":["WordPress","Vue.js","Zapier","HubSpot","Barclays Partner API"],"outcomes":["Generated £320k in direct boiler sales through the online wizard within 6 months"],"metrics":[{"label":"Direct Sales","value":"£320k"},{"label":"Wizard Completion","value":"68%"}],"accentColor":"#d97706","imageBg":"linear-gradient(135deg, #2b1803 0%, #522f07 100%)","deliverables":["Boiler Selection Wizard","Finance Calculator","HubSpot CRM Sync"],"liveUrl":"https://hallmarkplumbingheating.co.uk","liveDomain":"hallmarkplumbingheating.co.uk"},{"id":"capital-plumbing-heating","name":"Capital Plumbing & Heating","category":"HVAC & Plumbing","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Edinburgh commercial heating & plumbing portal with automated landlord compliance certification dispatch.","challenge":"Managing CP12 landlord gas safety certifications manually created hundreds of hours of admin backlog.","solution":"Built an automated client portal where landlords can order CP12 certificates, pay via Stripe, and receive automated PDF certificates upon engineer signoff.","techStack":["WordPress","Stripe","Make.com","DocuSign API","AWS S3"],"outcomes":["Eliminated 95% of manual paperwork for landlord safety certificates","Over 3,500 certificates processed seamlessly"],"metrics":[{"label":"Certificates Dispatched","value":"3,500+"},{"label":"Admin Hours Cut","value":"95%"}],"accentColor":"#ea580c","imageBg":"linear-gradient(135deg, #2b1204 0%, #522308 100%)","deliverables":["Landlord Portal","Automated Certificate PDF Engine","Stripe Billing"],"liveUrl":"https://capitalplumbingheating.co.uk","liveDomain":"capitalplumbingheating.co.uk"},{"id":"bw-real-estate","name":"BW Real Estate","category":"Real Estate","region":"Australia","countryCode":"AU","featured":true,"summary":"Bespoke luxury real estate agency platform with automated property feed sync from CoreLogic/REX CRM.","challenge":"Manual double-entry of property listings on website and CRM caused delays and outdated listing statuses.","solution":"Created a bidirectional API sync between REX CRM and WordPress with automated high-res floorplan viewers and open-inspection SMS check-in.","techStack":["WordPress","REX CRM API","Make.com","Twilio SMS","Mapbox GL"],"outcomes":["Zero manual property entry; listings sync in real-time within 60 seconds","Inspection check-in app captured 3,200 verified buyer contacts"],"metrics":[{"label":"Sync Latency","value":"<60s"},{"label":"Buyer Contacts","value":"3,200+"},{"label":"Portfolio Value","value":"$85M+"}],"accentColor":"#1e293b","imageBg":"linear-gradient(135deg, #111827 0%, #1f2937 100%)","deliverables":["Real-Time CRM Feed","Mapbox Map Search","Open House SMS Check-in"],"liveUrl":"https://bwrealestate.com.au","liveDomain":"bwrealestate.com.au"},{"id":"atlas-real-estate","name":"Atlas","category":"Real Estate","region":"Australia","countryCode":"AU","featured":false,"summary":"Next-generation property agency platform with custom neighborhood guides and agent performance profiles.","challenge":"Needed high-converting neighborhood landing pages with local demographic data and recent sales metrics.","solution":"Designed a dynamic Webflow CMS architecture populated automatically from Australian Bureau of Statistics and sales data APIs.","techStack":["Webflow","Zapier","Airtable","Custom Data Visualizations"],"outcomes":["Page 1 Google rankings for 18 competitive suburb keyword clusters in Sydney"],"metrics":[{"label":"Keywords Ranked","value":"18 Top 3"},{"label":"Organic Inquiries","value":"+115%"}],"accentColor":"#6366f1","imageBg":"linear-gradient(135deg, #161738 0%, #2b2e6e 100%)","deliverables":["Automated Suburb Guides","Agent Profile Directory","Dynamic CMS"],"liveUrl":"https://atlasrealestate.com.au","liveDomain":"atlasrealestate.com.au"},{"id":"ppd-real-estate","name":"PPD","category":"Real Estate","region":"Australia","countryCode":"AU","featured":false,"summary":"High-end Eastern Suburbs real estate portal with VIP off-market property alerts and investor portal.","challenge":"High-net-worth buyers wanted exclusive off-market listings delivered immediately via WhatsApp/Email based on exact criteria.","solution":"Engineered an off-market matching algorithm using Make.com and WhatsApp Business API connecting buyers with private listings.","techStack":["WordPress","Make.com","WhatsApp Cloud API","Stripe Pro","ACF Pro"],"outcomes":["Facilitated over $30M in off-market transactions via automated WhatsApp matches in 2025"],"metrics":[{"label":"Off-Market Volume","value":"$30M+"},{"label":"Match Open Rate","value":"94%"}],"accentColor":"#8b5cf6","imageBg":"linear-gradient(135deg, #1d1338 0%, #39256e 100%)","deliverables":["Off-Market Engine","WhatsApp Automation","VIP Buyer Portal"],"liveUrl":"https://ppdrealestate.com.au","liveDomain":"ppdrealestate.com.au"},{"id":"pinpoint-pm","name":"Pinpoint PM","category":"Property Management","region":"Australia","countryCode":"AU","featured":false,"summary":"Dedicated property management portal with automated rental appraisal requests and tenant maintenance logger.","challenge":"Landlords waiting 48+ hours for rental estimates, losing potential property management authorities to competitors.","solution":"Built an instant automated rental appraisal tool pulling comparable rent data and instantly booking video consultations.","techStack":["WordPress","CoreLogic API","Zapier","Calendly","ActiveCampaign"],"outcomes":["Turnaround for rental estimates dropped to instant under 2 minutes","New management agreements increased by 48%"],"metrics":[{"label":"Appraisal Speed","value":"<2 min"},{"label":"New Managements","value":"+48%"}],"accentColor":"#14b8a6","imageBg":"linear-gradient(135deg, #072623 0%, #0e4a44 100%)","deliverables":["Automated Appraisal Engine","Maintenance Logger","Email Drip Campaign"],"liveUrl":"https://pinpointpm.com.au","liveDomain":"pinpointpm.com.au"},{"id":"pm-partners","name":"PM Partners","category":"Property Management","region":"Australia","countryCode":"AU","featured":false,"summary":"Commercial property management & facility maintenance platform with real-time contractor work order dispatch.","challenge":"Maintenance tickets took multiple manual phone calls to coordinate between tenants, property managers, and trades.","solution":"Integrated an automated maintenance triage webapp connecting to Make.com, generating work orders with trade contractors automatically.","techStack":["WordPress","Make.com","Airtable","Twilio SMS","SendGrid"],"outcomes":["Maintenance resolution time decreased from 5.2 days to 1.4 days"],"metrics":[{"label":"Resolution Speed","value":"1.4 days"},{"label":"Work Orders Processed","value":"4,800+"}],"accentColor":"#0d9488","imageBg":"linear-gradient(135deg, #06211e 0%, #0d423c 100%)","deliverables":["Contractor Dispatch System","Tenant Self-Service Portal","Automation Flow"],"liveUrl":"https://pmpartners.com.au","liveDomain":"pmpartners.com.au"},{"id":"rpm-group","name":"RPM Group","category":"Property Management","region":"Australia","countryCode":"AU","featured":false,"summary":"Master-planned residential community sales platform with interactive masterplans and lot reservation engine.","challenge":"Prospective land buyers could not see live lot availability or hold deposits on estate masterplans online.","solution":"Created an SVG-based interactive estate masterplan synchronized to inventory database with online Stripe holding deposit checkout.","techStack":["WordPress Headless","SVG Map Engine","Stripe Checkout","Salesforce Sync"],"outcomes":["Sold out 3 stages of land releases online with over $14M in reservation deposits processed"],"metrics":[{"label":"Deposits Processed","value":"$14M+"},{"label":"Map Interactions","value":"45,000+"}],"accentColor":"#15803d","imageBg":"linear-gradient(135deg, #082110 0%, #114220 100%)","deliverables":["Interactive SVG Masterplan","Online Lot Reservation","CRM Inventory Sync"],"liveUrl":"https://rpmgroup.com.au","liveDomain":"rpmgroup.com.au"},{"id":"lively-properties","name":"Lively Properties","category":"Short Term Rental","region":"Australia","countryCode":"AU","featured":true,"summary":"Direct booking holiday rental platform for luxury Gold Coast homes with dynamic pricing and zero OTA commissions.","challenge":"Paying 18-22% in Airbnb/Booking.com fees on $1.5M in annual holiday bookings.","solution":"Built a custom direct booking engine with Guesty PMS two-way sync, Stripe payments, ID verification, and damage deposit pre-authorizations.","techStack":["WordPress","Guesty API","Stripe Elements","Make.com","Autohost API"],"outcomes":["Saved over $180,000 in third-party OTA commissions in the first 12 months","Direct bookings increased from 8% to 54% of total reservation volume"],"metrics":[{"label":"OTA Fees Saved","value":"$180k+"},{"label":"Direct Bookings","value":"54%"},{"label":"Average Stay","value":"4.8 nights"}],"accentColor":"#f97316","imageBg":"linear-gradient(135deg, #2b1403 0%, #522706 100%)","deliverables":["Direct Booking Engine","Guesty PMS 2-Way Sync","Automated ID & Security Deposit Flow"],"testimonial":{"quote":"Hamid built us our own direct booking machine. We bypassed Airbnb and saved six figures in commissions while maintaining a 5-star guest experience.","author":"Chloe Simmons","role":"Operations Director","company":"Lively Properties"},"liveUrl":"https://livelyproperties.com.au","liveDomain":"livelyproperties.com.au"},{"id":"book-a-break","name":"Book a Break","category":"Short Term Rental","region":"Australia","countryCode":"AU","featured":false,"summary":"Regional vacation rental aggregator with multi-calendar sync, cleaning schedule automation, and automated guest guides.","challenge":"Cleaners missing scheduled turnovers due to disparate Airbnb/VRBO calendars.","solution":"Developed an automated webhook workflow that dispatches SMS cleaning schedules to local staff upon guest check-out.","techStack":["Webflow","Make.com","Twilio SMS","iCal Sync Engine","Airtable"],"outcomes":["Zero missed cleaning turnovers across 35 luxury rental properties"],"metrics":[{"label":"Turnover Success","value":"100%"},{"label":"Properties Managed","value":"35+"}],"accentColor":"#f43f5e","imageBg":"linear-gradient(135deg, #2b0b14 0%, #521526 100%)","deliverables":["Turnover Automation","Digital Guest Welcome Book","Multi-Calendar Sync"],"liveUrl":"https://bookabreak.com.au","liveDomain":"bookabreak.com.au"},{"id":"destination-byron-bay","name":"Destination Byron Bay","category":"Short Term Rental","region":"Australia","countryCode":"AU","featured":false,"summary":"Curated boutique beachfront accommodation portal with concierge experience add-on packages.","challenge":"Guests wanted to book private chefs, surf lessons, and wellness treatments alongside their accommodation.","solution":"Designed an upsell checkout drawer allowing guests to add verified local experience packages to their booking cart.","techStack":["WordPress","WooCommerce","Stripe Connect","Zapier","Mailchimp"],"outcomes":["Increased ancillary revenue per guest booking by an average of $340"],"metrics":[{"label":"Ancillary Rev / Booking","value":"+$340"},{"label":"Upsell Attach Rate","value":"31%"}],"accentColor":"#06b6d4","imageBg":"linear-gradient(135deg, #06242b 0%, #0d4652 100%)","deliverables":["Upsell Experience Engine","Stripe Connect Split Payments","WordPress CMS"],"liveUrl":"https://destinationbyronbay.com.au","liveDomain":"destinationbyronbay.com.au"},{"id":"relaxaway","name":"Relaxaway","category":"Short Term Rental","region":"New Zealand","countryCode":"NZ","featured":false,"summary":"Queenstown luxury alpine holiday home portfolio with dynamic winter ski package booking.","challenge":"High seasonality and sudden weather changes required dynamic rate updates and automated ski pass delivery.","solution":"Integrated dynamic rate algorithms and automated digital keycode provisioning via SmartLock API upon ID verification.","techStack":["WordPress","PriceLabs API","Igloohome SmartLock API","Make.com","Stripe"],"outcomes":["Occupancy in shoulder season increased by 22% through automated dynamic rate adjustments"],"metrics":[{"label":"Shoulder Occupancy","value":"+22%"},{"label":"Keyless Check-ins","value":"100%"}],"accentColor":"#0284c7","imageBg":"linear-gradient(135deg, #062338 0%, #0d466e 100%)","deliverables":["SmartLock Integration","Dynamic Pricing API","Bespoke Theme"],"liveUrl":"https://relaxaway.com","liveDomain":"relaxaway.com"},{"id":"queenstown-holiday-homes","name":"Queenstown Holiday Homes","category":"Short Term Rental","region":"New Zealand","countryCode":"NZ","featured":false,"summary":"Premier holiday home management website with landlord owner revenue dashboard.","challenge":"Property owners demanded live monthly statements, maintenance logs, and projected rental yields.","solution":"Built a secure client portal providing property owners with live financial dashboards and one-click statement downloads.","techStack":["WordPress","React Portal","Make.com","Xero API","AWS S3"],"outcomes":["Reduced owner accounting inquiry emails by 80%"],"metrics":[{"label":"Inquiry Drop","value":"-80%"},{"label":"Owner Retention","value":"98%"}],"accentColor":"#0369a1","imageBg":"linear-gradient(135deg, #052033 0%, #0b3d61 100%)","deliverables":["Owner Financial Portal","Xero Automated Sync","Custom WordPress Site"],"liveUrl":"https://queenstownholidayhomes.com","liveDomain":"queenstownholidayhomes.com"},{"id":"asafo-and-co","name":"Asafo & Co","category":"Law","region":"Europe","countryCode":"EU","featured":true,"summary":"International corporate law firm portal spanning Paris, London, and African commercial hubs with multilingual intelligence.","challenge":"Needed a prestigious, ultra-fast multilingual portal displaying cross-border deal publications, lawyer directories, and strict GDPR compliance.","solution":"Engineered a bespoke decoupled WordPress build with WPML multilingual sync, dynamic partner search, and deal announcement newsletters.","techStack":["WordPress","WPML","Algolia Search","Cloudflare Enterprise","HubSpot Legal"],"outcomes":["Seamless multi-language experience across English and French with zero translation drift","Lawyer biography search queries resolve in under 30ms via Algolia"],"metrics":[{"label":"Search Speed","value":"<30ms"},{"label":"Languages","value":"EN / FR"},{"label":"Monthly Visitors","value":"45k+"}],"accentColor":"#9333ea","imageBg":"linear-gradient(135deg, #200836 0%, #3e0f66 100%)","deliverables":["Multilingual Architecture","Algolia Search Engine","GDPR Compliance Setup"],"liveUrl":"https://asafoandco.com","liveDomain":"asafoandco.com"},{"id":"daniel-williams-law","name":"Daniel Williams Law","category":"Law","region":"United States","countryCode":"US","featured":false,"summary":"Commercial litigation & corporate defense law portal with secure client consultation scheduling.","challenge":"High volume of unqualified personal injury calls misdirected to commercial litigation partners.","solution":"Created an intake triage form that categorizes case types and directs corporate clients straight to partner availability.","techStack":["WordPress","Clio Grow API","Zapier","LawPay Gateway"],"outcomes":["Saved 8 partner hours/week from screening unqualified inquiries","Direct retainer intake increased by 35%"],"metrics":[{"label":"Partner Hours Saved","value":"8 hrs/wk"},{"label":"Retainer Intake","value":"+35%"}],"accentColor":"#7c3aed","imageBg":"linear-gradient(135deg, #1b0a36 0%, #351466 100%)","deliverables":["Clio Integration","Intake Triage Form","LawPay Integration"],"liveUrl":"https://danielwilliamslaw.com","liveDomain":"danielwilliamslaw.com"},{"id":"rania-combs-law","name":"Rania Combs Law","category":"Law","region":"United States","countryCode":"US","featured":false,"summary":"Online estate planning and probate law platform with automated client questionnaire to legal draft generation.","challenge":"Creating estate planning drafts took 4+ hours of manual data entry from paper forms.","solution":"Built a secure webform workflow integrating with Make.com and legal document generation software.","techStack":["WordPress","Make.com","Formstack","DocuSign API","Stripe"],"outcomes":["Drafting preparation time dropped from 4 hours to 15 minutes per estate plan"],"metrics":[{"label":"Draft Time","value":"15 min"},{"label":"Plans Processed","value":"1,200+"}],"accentColor":"#6d28d9","imageBg":"linear-gradient(135deg, #180933 0%, #2f1261 100%)","deliverables":["Estate Planning Intake","DocuSign Automated Delivery","Secure Payment Integration"],"liveUrl":"https://raniacombslaw.com","liveDomain":"raniacombslaw.com"},{"id":"mcintyre-legal","name":"McIntyre Legal","category":"Law","region":"United States","countryCode":"US","featured":false,"summary":"Intellectual property & patent law portal with automated trademark conflict search intake.","challenge":"Client inquiries for trademark registration lacked crucial trademark specimen and classification data.","solution":"Engineered a guided step-by-step trademark intake funnel that captures Nice Classification criteria before booking.","techStack":["Webflow","Zapier","Airtable","SendGrid API","Stripe"],"outcomes":["Reduced time-to-USPTO filing by 3 days per client"],"metrics":[{"label":"Filing Speedup","value":"3 Days"},{"label":"Intake Accuracy","value":"99%"}],"accentColor":"#5b21b6","imageBg":"linear-gradient(135deg, #14072b 0%, #270e54 100%)","deliverables":["Trademark Intake Funnel","Automated Classification Guide","Webflow Build"],"liveUrl":"https://mcintyrelegal.com","liveDomain":"mcintyrelegal.com"},{"id":"vita-legal","name":"Vita Legal","category":"Law","region":"Australia","countryCode":"AU","featured":false,"summary":"Employment law and workplace dispute specialists with anonymous whistleblowing and claim estimation portal.","challenge":"Employees needed confidential, anonymous dispute intake tools that comply with Australian privacy standards.","solution":"Designed end-to-end encrypted submission forms with automated case file creation in LEAP legal software.","techStack":["WordPress","LEAP API","Make.com","Proton Encryption Hooks"],"outcomes":["Encrypted over 800 confidential workplace disputes with zero privacy breaches"],"metrics":[{"label":"Confidential Claims","value":"800+"},{"label":"Client Satisfaction","value":"100%"}],"accentColor":"#4c1d95","imageBg":"linear-gradient(135deg, #100624 0%, #200c45 100%)","deliverables":["Encrypted Intake System","LEAP Legal Software Sync","Custom WP Theme"],"liveUrl":"https://vitalegal.com.au","liveDomain":"vitalegal.com.au"},{"id":"olivers-legal-services","name":"Olivers Legal Services","category":"Reference","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"High-volume conveyancing & property legal service portal with milestone tracker for home buyers.","challenge":"Home buyers constantly calling conveyancers for updates on contract exchanges and completion dates.","solution":"Created an online live case milestone tracker with automated WhatsApp/SMS notifications at each conveyancing stage.","techStack":["WordPress","Twilio SMS","Make.com","Xero","Custom Portal"],"outcomes":["Reduced client status inquiry calls by 62%"],"metrics":[{"label":"Call Reduction","value":"-62%"},{"label":"Milestones Tracked","value":"5,000+"}],"accentColor":"#4338ca","imageBg":"linear-gradient(135deg, #0e0d2e 0%, #1c1a59 100%)","deliverables":["Conveyancing Milestone Tracker","WhatsApp Status Bot","Client Portal"],"liveUrl":"https://oliverslegalservices.co.uk","liveDomain":"oliverslegalservices.co.uk"},{"id":"metem","name":"Metem","category":"Industrial","region":"United States","countryCode":"US","featured":true,"summary":"Precision aerospace cooling & turbine manufacturing portal with interactive engineering capabilities matrix.","challenge":"Tier-1 aerospace contractors required strict ISO/ITAR compliance documentation before submitting RFQ specifications.","solution":"Built an enterprise WordPress platform with gated ITAR-compliant document downloads and automated NDA execution via Adobe Sign.","techStack":["WordPress","Adobe Sign API","Make.com","Salesforce","AWS S3"],"outcomes":["Automated 100% of preliminary NDA executions for aerospace RFQs","Over $12M in defense contracts initiated via portal"],"metrics":[{"label":"Contracts Initiated","value":"$12M+"},{"label":"NDA Automation","value":"100%"},{"label":"Security Grade","value":"A+"}],"accentColor":"#0f766e","imageBg":"linear-gradient(135deg, #062623 0%, #0d4742 100%)","deliverables":["ITAR Compliance Gating","Adobe Sign Integration","Capabilities Matrix"],"liveUrl":"https://metem.com","liveDomain":"metem.com"},{"id":"js-procurement-group","name":"JS Procurement Group","category":"Industrial","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Global supply chain & industrial procurement portal with real-time container freight status tracking.","challenge":"Clients needed visibility over multi-modal industrial equipment shipments from Asia to European ports.","solution":"Integrated global maritime vessel and container tracking APIs with automated status notification digests to supply chain managers.","techStack":["Webflow","Make.com","MarineTraffic API","SendGrid","Airtable"],"outcomes":["Provided live cargo visibility for over 450 industrial machinery shipments"],"metrics":[{"label":"Shipments Tracked","value":"450+"},{"label":"Status Accuracy","value":"99.8%"}],"accentColor":"#047857","imageBg":"linear-gradient(135deg, #04241a 0%, #084734 100%)","deliverables":["Vessel Tracking Integration","Client Cargo Dashboard","Webflow Build"],"liveUrl":"https://jsprocurementgroup.co.uk","liveDomain":"jsprocurementgroup.co.uk"},{"id":"ues","name":"UES","category":"Industrial","region":"Australia","countryCode":"AU","featured":false,"summary":"Transportation seating, industrial hardware & commercial vehicle solutions catalogue with CAD downloads.","challenge":"Over 12,000 SKUs required complex specification filtering and CAD 3D file delivery to vehicle bodybuilders.","solution":"Engineered an elastic-search powered catalogue with instant spec sheet PDF compilation and CAD STEP file downloads.","techStack":["WordPress","WooCommerce B2B","ElasticSearch","AWS S3","Custom PHP"],"outcomes":["Product search latency dropped from 3.2s to 85ms across 12,000 SKUs"],"metrics":[{"label":"SKU Count","value":"12,000+"},{"label":"Search Latency","value":"85ms"}],"accentColor":"#065f46","imageBg":"linear-gradient(135deg, #041f17 0%, #083d2e 100%)","deliverables":["B2B Product Catalogue","ElasticSearch Setup","CAD Download Gating"],"liveUrl":"https://ues.com.au","liveDomain":"ues.com.au"},{"id":"lifting365","name":"Lifting365","category":"Industrial Tools","region":"United Kingdom","countryCode":"UK","featured":true,"summary":"E-commerce store for heavy lifting gear, hoisting equipment, and safety harnesses with certification generation.","challenge":"Every lifting sling and hoist sold required an accompanying statutory LOLER inspection test certificate automatically emailed to buyers.","solution":"Developed a custom WooCommerce extension that automatically merges serial numbers into statutory LOLER PDF certificates upon order dispatch.","techStack":["WordPress","WooCommerce","Stripe","Make.com","FPDF Certificate Engine"],"outcomes":["Automated over 18,000 LOLER compliance certificates","Saved 35 staff hours weekly in manual warehouse document creation"],"metrics":[{"label":"Certificates Created","value":"18,000+"},{"label":"Hours Saved/Wk","value":"35 hrs"},{"label":"Online Sales Growth","value":"+165%"}],"accentColor":"#b45309","imageBg":"linear-gradient(135deg, #2b1402 0%, #522704 100%)","deliverables":["WooCommerce Heavy Equipment Store","Automated LOLER PDF Generator","B2B Trade Pricing"],"testimonial":{"quote":"The automated LOLER certification system Hamid programmed for our store solved our biggest operational nightmare. Flawless execution.","author":"Liam O’Connor","role":"Managing Director","company":"Lifting365"},"liveUrl":"https://lifting365.co.uk","liveDomain":"lifting365.co.uk"},{"id":"tji-solutions","name":"TJISolutions","category":"Industrial Tools","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Bolting technology, hydraulic torque tools, and calibration booking platform.","challenge":"Equipment calibration reminders were tracked on manual whiteboards, leading to expired tool certifications for clients.","solution":"Created an automated tool asset register where clients track tool calibration expiration with automated 30-day renewal bookings.","techStack":["WordPress","WooCommerce","Zapier","Twilio SMS","HubSpot"],"outcomes":["Calibration repeat bookings jumped by 78%"],"metrics":[{"label":"Calibration Growth","value":"+78%"},{"label":"Tools Registered","value":"2,400+"}],"accentColor":"#c2410c","imageBg":"linear-gradient(135deg, #2b0f03 0%, #521d05 100%)","deliverables":["Asset Expiration Portal","Calibration Booking Engine","HubSpot Sync"],"liveUrl":"https://tjisolutions.co.uk","liveDomain":"tjisolutions.co.uk"},{"id":"specialised-force","name":"Specialised Force","category":"Industrial Tools","region":"Australia","countryCode":"AU","featured":false,"summary":"High-capacity hydraulic tooling, electrical cable laying, and rail maintenance equipment platform.","challenge":"Complex tier-pricing for government and defense contractors required dynamic pricing upon authenticated B2B login.","solution":"Engineered custom B2B wholesale pricing tiers with integration into their ERP system via REST APIs.","techStack":["WordPress","WooCommerce B2B","Custom REST API","MYOB Advanced Sync"],"outcomes":["Cut B2B purchase order processing time by 80%"],"metrics":[{"label":"Order Processing","value":"-80% time"},{"label":"B2B Accounts","value":"850+"}],"accentColor":"#9a3412","imageBg":"linear-gradient(135deg, #240c04 0%, #451707 100%)","deliverables":["MYOB ERP Integration","B2B Wholesale Portal","Custom Quotation Mode"],"liveUrl":"https://specialisedforce.com.au","liveDomain":"specialisedforce.com.au"},{"id":"i-and-m-solutions","name":"IandM Solutions","category":"Industrial Tools","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Industrial inspection, non-destructive testing (NDT), and instrumentation supply portal.","challenge":"Need to supply specialized technical manuals and calibration certs to offshore oil rig inspectors.","solution":"Built an offline-first PWA document library allowing field engineers to retrieve inspection manuals without internet access.","techStack":["WordPress","PWA Service Workers","IndexedDB","Tailwind"],"outcomes":["Over 1,200 offshore engineers actively using the offline asset cache"],"metrics":[{"label":"Active Engineers","value":"1,200+"},{"label":"Offline Availability","value":"100%"}],"accentColor":"#78350f","imageBg":"linear-gradient(135deg, #1c0c03 0%, #361706 100%)","deliverables":["Offline PWA Manuals","Document Library","WordPress Architecture"],"liveUrl":"https://iandmsolutions.co.uk","liveDomain":"iandmsolutions.co.uk"},{"id":"psysafe","name":"PsySafe","category":"HR / Workplace Consulting","region":"United Kingdom","countryCode":"UK","featured":true,"summary":"Psychosocial hazard assessment & workplace mental health compliance platform for enterprise corporations.","challenge":"New workplace psychosocial safety laws in UK and Australia required enterprises to conduct anonymous risk assessments at scale.","solution":"Engineered a secure, anonymous enterprise survey engine with instant aggregate risk scoring reports and executive PDF dashboards.","techStack":["WordPress Headless","Next.js","Make.com","Chart.js","AWS Lambda"],"outcomes":["Deployed across 40+ corporate clients covering 25,000+ employee assessments","Automated 100% of executive compliance PDF creation"],"metrics":[{"label":"Employees Assessed","value":"25,000+"},{"label":"Automated Reports","value":"1,500+"},{"label":"Compliance Score","value":"100%"}],"accentColor":"#0284c7","imageBg":"linear-gradient(135deg, #071f30 0%, #0d3c5e 100%)","deliverables":["Enterprise Survey Engine","Automated PDF Risk Report","Headless WebApp"],"liveUrl":"https://psysafe.com.au","liveDomain":"psysafe.com.au"},{"id":"elevate-consulting-partners","name":"Elevate Consulting Partners","category":"HR / Workplace Consulting","region":"United States","countryCode":"US","featured":false,"summary":"Executive leadership coaching & cultural transformation consultancy portal with client diagnostic tool.","challenge":"Consulting sales required an engaging diagnostic tool to benchmark leadership readiness before discovery calls.","solution":"Built an interactive Leadership Maturity Index questionnaire that sends customized maturity scorecards via Zapier and HubSpot.","techStack":["Webflow","Zapier","HubSpot CRM","Custom Canvas Radar Chart"],"outcomes":["Generated 350+ enterprise C-suite discovery calls in under 6 months"],"metrics":[{"label":"C-Suite Leads","value":"350+"},{"label":"Quiz Completion Rate","value":"81%"}],"accentColor":"#2563eb","imageBg":"linear-gradient(135deg, #091730 0%, #122e61 100%)","deliverables":["Maturity Index Diagnostic","Radar Chart Generation","HubSpot Integration"],"liveUrl":"https://elevateconsultingpartners.com","liveDomain":"elevateconsultingpartners.com"},{"id":"irepair-experts","name":"iRepair Experts","category":"Mobile Repair","region":"Australia","countryCode":"AU","featured":false,"summary":"Same-day smartphone, tablet, and MacBook repair booking portal with live device repair pricing.","challenge":"Over 300 device models with fluctuating screen and battery replacement part costs caused pricing discrepancies.","solution":"Built an interactive device selector synced directly to inventory cost sheets with dynamic repair time estimation and instant booking.","techStack":["WordPress","WooCommerce Bookings","Make.com","Google Sheets API","Twilio SMS"],"outcomes":["Repair bookings increased by 94%","Phone quote inquiries dropped by 70% as customers booked online"],"metrics":[{"label":"Online Bookings","value":"+94%"},{"label":"Phone Admin Drop","value":"-70%"}],"accentColor":"#10b981","imageBg":"linear-gradient(135deg, #06241b 0%, #0d4734 100%)","deliverables":["Device Selector Wizard","Dynamic Part Price Sync","SMS Reminder Flow"],"liveUrl":"https://irepairexperts.com.au","liveDomain":"irepairexperts.com.au"},{"id":"starphones","name":"Starphones","category":"Mobile Repair","region":"Australia","countryCode":"AU","featured":false,"summary":"Multi-location mobile accessories and express repair chain portal across 12 shopping centre kiosks.","challenge":"Customers could not check store stock availability or book appointments at specific retail kiosk locations.","solution":"Engineered a location-aware store finder with live kiosk inventory check and appointment calendar routing.","techStack":["WordPress","Mapbox API","Vend POS Sync","Zapier","Stripe"],"outcomes":["Drove 4,500+ booked in-store appointments across 12 kiosk locations"],"metrics":[{"label":"Store Locations","value":"12 Kiosks"},{"label":"In-Store Bookings","value":"4,500+"}],"accentColor":"#059669","imageBg":"linear-gradient(135deg, #041f17 0%, #094030 100%)","deliverables":["Multi-Store POS Sync","Kiosk Locator","Express Booking"],"liveUrl":"https://starphones.com.au","liveDomain":"starphones.com.au"},{"id":"france-limousine-services","name":"France Limousine Services","category":"Limo / Party Bus","region":"Europe","countryCode":"EU","featured":false,"summary":"VIP airport transfer and executive chauffeur service platform across Paris and the French Riviera.","challenge":"International travelers faced currency conversion issues and needed real-time flight tracking dispatch for airport pickups.","solution":"Integrated FlightAware API for automated chauffeur dispatch adjustment based on delayed flights, with multi-currency Stripe checkout.","techStack":["WordPress","FlightAware API","Stripe Multi-Currency","Make.com","Twilio WhatsApp"],"outcomes":["Eliminated 100% of driver wait-time penalties due to delayed international flights"],"metrics":[{"label":"Flight Tracking","value":"Real-time"},{"label":"Multi-Currency","value":"EUR/USD/GBP"}],"accentColor":"#d97706","imageBg":"linear-gradient(135deg, #2b1802 0%, #522f04 100%)","deliverables":["Flight Tracking Automation","Multi-Currency Stripe","VIP Booking Form"],"liveUrl":"https://francelimousineservices.com","liveDomain":"francelimousineservices.com"},{"id":"my-limousine-paris","name":"My Limousine Paris","category":"Limo / Party Bus","region":"Europe","countryCode":"EU","featured":false,"summary":"Luxury wedding & private sightseeing fleet reservation system with automated distance calculation.","challenge":"Custom route pricing through Paris landmarks took hours of manual quote calculations.","solution":"Built an instant route price calculator using Google Distance Matrix API with vehicle tier pricing.","techStack":["WordPress","Google Maps API","WooCommerce","Zapier","PayPal/Stripe"],"outcomes":["Quotes delivered in 1 second; online conversion rate jumped from 4% to 19%"],"metrics":[{"label":"Conversion Rate","value":"19%"},{"label":"Quote Speed","value":"1 second"}],"accentColor":"#b45309","imageBg":"linear-gradient(135deg, #241402 0%, #452604 100%)","deliverables":["Google Distance Matrix Pricing","Fleet Showcase","Instant Payment Gateway"],"liveUrl":"https://mylimousineparis.com","liveDomain":"mylimousineparis.com"},{"id":"presidential-transpo","name":"Presidential Transpo","category":"Limo / Party Bus","region":"United States","countryCode":"US","featured":false,"summary":"Washington DC executive black car and diplomatic transport service with secure passenger verification.","challenge":"High-security transport clients required strict NDA compliance and secure driver credential badges prior to arrival.","solution":"Automated passenger text notifications with driver photo ID, vehicle license plate, and GPS tracking link.","techStack":["WordPress","Twilio SMS","Make.com","Limo AnyWhere API","Stripe"],"outcomes":["Dispatched over 12,000 VIP journeys with 99.9% on-time rating"],"metrics":[{"label":"VIP Journeys","value":"12,000+"},{"label":"On-Time Score","value":"99.9%"}],"accentColor":"#1e293b","imageBg":"linear-gradient(135deg, #0e131c 0%, #1e283b 100%)","deliverables":["Driver Dispatch Tracker","VIP Security Flow","LimoAnywhere Sync"],"liveUrl":"https://presidentialtranspo.com","liveDomain":"presidentialtranspo.com"},{"id":"nyc-party-bus-pros","name":"NYC Party Bus Pros","category":"Limo / Party Bus","region":"United States","countryCode":"US","featured":false,"summary":"New York party bus & luxury coach rental platform with live vehicle availability calendar and online split payments.","challenge":"Large group organizers struggled to collect payments from 20+ attendees, delaying bus reservations.","solution":"Built a group split-payment checkout where the organizer reserves the date and attendees receive individual payment links.","techStack":["WordPress","Stripe Connect","Make.com","Twilio SMS","Custom React Drawer"],"outcomes":["Group reservation completion rate jumped by 65%"],"metrics":[{"label":"Booking Completion","value":"+65%"},{"label":"Parties Hosted","value":"1,800+"}],"accentColor":"#e11d48","imageBg":"linear-gradient(135deg, #2b0610 0%, #540c1f 100%)","deliverables":["Split-Payment Engine","Live Fleet Calendar","SMS Group Notifications"],"liveUrl":"https://nycpartybuspros.com","liveDomain":"nycpartybuspros.com"},{"id":"99-medispa","name":"99 MediSpa","category":"Skincare / Med Spa","region":"United States","countryCode":"US","featured":true,"summary":"Luxury aesthetic clinic portal with treatment customizer, practitioner booking, and recurring membership billing.","challenge":"High cancellation rates for expensive aesthetic treatments without deposit protection.","solution":"Integrated Boulevard/Zenoti booking APIs with non-refundable deposit holds, medical history intake forms, and VIP monthly memberships.","techStack":["WordPress","Boulevard API","Stripe Subscriptions","Make.com","Klaviyo"],"outcomes":["No-show rate plunged to under 2%","Generated $32k in monthly recurring revenue from VIP skincare memberships"],"metrics":[{"label":"No-Show Rate","value":"<2%"},{"label":"MRR Memberships","value":"$32k/mo"},{"label":"Online Sales","value":"+140%"}],"accentColor":"#db2777","imageBg":"linear-gradient(135deg, #2b0818 0%, #541030 100%)","deliverables":["VIP Membership Portal","Boulevard Booking Sync","Medical Intake Webforms"],"liveUrl":"https://99medispa.com","liveDomain":"99medispa.com"},{"id":"luxe-medical-aesthetics","name":"Luxe Medical Aesthetics","category":"Skincare / Med Spa","region":"United States","countryCode":"US","featured":false,"summary":"Doctor-led medical spa website with skin analysis consultation quiz and skincare e-commerce boutique.","challenge":"Needed an online skin analysis quiz that recommends both in-clinic laser treatments and medical-grade home skincare products.","solution":"Built an interactive 6-step skin diagnosis questionnaire that outputs tailored product regimens with one-click cart additions.","techStack":["WordPress","WooCommerce","Zapier","Klaviyo SMS","Stripe"],"outcomes":["E-commerce store sales increased by 210% directly through quiz recommendations"],"metrics":[{"label":"E-com Sales Growth","value":"+210%"},{"label":"Quiz Completions","value":"6,400+"}],"accentColor":"#be185d","imageBg":"linear-gradient(135deg, #240713 0%, #470e26 100%)","deliverables":["Skin Diagnostic Quiz","WooCommerce Medical Skincare","Klaviyo Automated Flows"],"liveUrl":"https://luxemedicalaesthetics.com","liveDomain":"luxemedicalaesthetics.com"},{"id":"farm-africa","name":"Farm Africa","category":"Nonprofit","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"International agricultural development charity platform with Gift Aid donation processing and recurring supporter engine.","challenge":"Complicated UK Gift Aid claiming and high payment gateway transaction fees reduced effective donation receipts.","solution":"Optimized donation checkout flow with automated UK Gift Aid declaration capture and low-fee Stripe/GoCardless direct debit integration.","techStack":["WordPress","Stripe Charity","GoCardless Direct Debit","Salesforce NPSP","Make.com"],"outcomes":["UK Gift Aid capture rate reached 98.4%","Online donation conversion increased by 38% during seasonal appeals"],"metrics":[{"label":"Gift Aid Capture","value":"98.4%"},{"label":"Donation Lift","value":"+38%"}],"accentColor":"#16a34a","imageBg":"linear-gradient(135deg, #062610 0%, #0c4d21 100%)","deliverables":["Gift Aid Automation","Direct Debit Recurring Engine","Salesforce NPSP Sync"],"liveUrl":"https://farmafrica.org","liveDomain":"farmafrica.org"},{"id":"battersea","name":"Battersea","category":"Nonprofit","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Animal rehoming & welfare charity digital campaign hub with interactive pet matching questionnaire.","challenge":"High volume of adoption inquiries for pets with specific needs that did not match adopter living environments.","solution":"Created an intelligent pet compatibility questionnaire that matches rescue animals based on garden access, child age, and lifestyle.","techStack":["Webflow","Make.com","Airtable","Twilio","Mailchimp"],"outcomes":["Successful rehoming placement rate increased by 28% while reducing animal return rates"],"metrics":[{"label":"Adoption Match Rate","value":"+28%"},{"label":"Return Rates","value":"<3%"}],"accentColor":"#059669","imageBg":"linear-gradient(135deg, #052419 0%, #0a4732 100%)","deliverables":["Pet Match Questionnaire","Campaign Hub","Webflow Integration"],"liveUrl":"https://battersea.co.uk","liveDomain":"battersea.co.uk"},{"id":"wateraid-uk","name":"WaterAid UK","category":"Nonprofit","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Clean water global initiative campaign microsite with interactive impact visualizer and peer-to-peer fundraising tools.","challenge":"Donors wanted transparent visibility into exactly where their monthly funds built clean water wells.","solution":"Engineered an interactive global project map showing real-time water borehole construction milestones and community stories.","techStack":["WordPress Headless","Mapbox GL","Stripe","Zapier","YouTube API"],"outcomes":["Microsite raised over £1.4M during the clean water winter appeal"],"metrics":[{"label":"Campaign Raised","value":"£1.4M+"},{"label":"Supporters Engaged","value":"18,500+"}],"accentColor":"#0284c7","imageBg":"linear-gradient(135deg, #052233 0%, #0a4466 100%)","deliverables":["Interactive Impact Map","Fundraising Campaign Portal","Stripe Donations"],"liveUrl":"https://wateraiduk.co.uk","liveDomain":"wateraiduk.co.uk"},{"id":"sync-bricks","name":"Sync Bricks","category":"IT / MSP","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Cloud infrastructure & Microsoft 365 migration consultancy with interactive cloud cost calculator.","challenge":"Clients hesitated on cloud migrations without clear ROI and license consolidation projections.","solution":"Built an interactive Microsoft 365 license vs on-prem server cost calculator that outputs downloadable audit PDFs.","techStack":["WordPress","Make.com","Airtable","SendGrid","Tailwind"],"outcomes":["Generated 120+ qualified enterprise cloud migration audits in 90 days"],"metrics":[{"label":"Migration Audits","value":"120+"},{"label":"Lead Velocity","value":"+140%"}],"accentColor":"#0284c7","imageBg":"linear-gradient(135deg, #062233 0%, #0c4363 100%)","deliverables":["Cloud ROI Calculator","Automated PDF Audit Dispatch","WordPress Build"],"liveUrl":"https://syncbricks.co.uk","liveDomain":"syncbricks.co.uk"},{"id":"it-pros-management","name":"IT Pros Management","category":"IT / MSP","region":"United States","countryCode":"US","featured":false,"summary":"Managed service provider (MSP) platform with cybersecurity compliance audit questionnaire and live ticket status.","challenge":"Needed automated client onboarding and security compliance scorecards for SOC2/HIPAA prospects.","solution":"Designed an interactive compliance scanner that connects to ConnectWise PSA and automates risk assessment reports.","techStack":["WordPress","ConnectWise API","Zapier","HubSpot","Custom PHP"],"outcomes":["Shortened sales cycle from 45 days to 14 days for managed IT service agreements"],"metrics":[{"label":"Sales Cycle","value":"14 days"},{"label":"Security Audits","value":"450+"}],"accentColor":"#3b82f6","imageBg":"linear-gradient(135deg, #0a1c38 0%, #13376e 100%)","deliverables":["ConnectWise Integration","Security Scanner Tool","MSP Marketing Site"],"liveUrl":"https://itprosmanagement.com","liveDomain":"itprosmanagement.com"},{"id":"gerrell-and-hard","name":"Gerrell & Hard","category":"Staffing","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Technical engineering & automotive recruitment website with live job board and ATS candidate parsing.","challenge":"Recruiters spent hours re-formatting candidate CVs into standardized client submission briefs.","solution":"Built an AI-assisted CV parser that ingests PDF resumes, extracts engineering skills, and maps them to Bullhorn ATS.","techStack":["WordPress","Bullhorn ATS API","OpenAI API","Make.com","ElasticSearch"],"outcomes":["Saved 18 recruiter hours per week; job applications doubled with one-click LinkedIn apply"],"metrics":[{"label":"Hours Saved/Wk","value":"18 hrs"},{"label":"Applications","value":"+105%"}],"accentColor":"#6366f1","imageBg":"linear-gradient(135deg, #121336 0%, #24266b 100%)","deliverables":["AI Resume Parser","Bullhorn ATS Sync","Fast Job Board Search"],"liveUrl":"https://gerrellandhard.co.uk","liveDomain":"gerrellandhard.co.uk"},{"id":"camino-search","name":"Camino Search","category":"Staffing","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Private equity & venture-backed tech executive recruitment portal across London and New York.","challenge":"High-stakes C-suite recruitment required an understated luxury aesthetic with confidential mandate submission rooms.","solution":"Designed an ultra-minimalist Webflow portal with password-protected candidate pitch decks and private calendar scheduling.","techStack":["Webflow","Memberstack","Zapier","Notion API","Calendly"],"outcomes":["Facilitated over 45 VP/C-level placements for European and US tech unicorns"],"metrics":[{"label":"C-Suite Placements","value":"45+"},{"label":"Avg Salary Placed","value":"£195k"}],"accentColor":"#4f46e5","imageBg":"linear-gradient(135deg, #100f33 0%, #1f1d63 100%)","deliverables":["Confidential Candidate Rooms","Webflow CMS Architecture","Notion Integration"],"liveUrl":"https://caminosearch.co.uk","liveDomain":"caminosearch.co.uk"},{"id":"kreisson","name":"Kreisson","category":"Professional Services","region":"Australia","countryCode":"AU","featured":false,"summary":"Construction & engineering legal and advisory portal with dispute resolution playbook downloads.","challenge":"Low conversion on industry insight whitepapers due to lengthy static forms.","solution":"Streamlined download gating with instant email magic link verification and automated nurture sequences.","techStack":["WordPress","ActiveCampaign","Make.com","Cloudflare"],"outcomes":["Whitepaper download conversions rose by 145%"],"metrics":[{"label":"Whitepaper Downloads","value":"+145%"},{"label":"Client Inquiries","value":"+40%"}],"accentColor":"#0d9488","imageBg":"linear-gradient(135deg, #041f1c 0%, #093d37 100%)","deliverables":["Magic Link Gating","Automated Lead Nurture","Advisory Portal"],"liveUrl":"https://kreisson.com.au","liveDomain":"kreisson.com.au"},{"id":"cognosis","name":"Cognosis","category":"Professional Services","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Corporate strategy consultancy platform with interactive business growth benchmark.","challenge":"Needed an authoritative corporate portal showcasing Fortune 500 client case studies and strategic methodologies.","solution":"Engineered a clean, typographic editorial layout in Webflow with interactive methodology breakdowns.","techStack":["Webflow","Custom CSS","Zapier","Airtable"],"outcomes":["Increased session duration by 2.4x among C-suite visitors"],"metrics":[{"label":"Session Duration","value":"4.5 min"},{"label":"Bounce Rate","value":"28%"}],"accentColor":"#0f766e","imageBg":"linear-gradient(135deg, #041f1d 0%, #083d39 100%)","deliverables":["Editorial Webflow Build","Interactive Frameworks","CRM Sync"],"liveUrl":"https://cognosis.co.uk","liveDomain":"cognosis.co.uk"},{"id":"tgl","name":"TGL","category":"Professional Services","region":"Australia","countryCode":"AU","featured":false,"summary":"International freight forwarding & logistics consultancy with instant sea/air container rate quotes.","challenge":"Freight quotes took 24-48 hours to price manually across shipping lines.","solution":"Built an automated freight rate aggregator pulling spot rates and generating instant PDF quotation sheets.","techStack":["WordPress","Make.com","FreightRate API","Stripe","SendGrid"],"outcomes":["Quotation response time cut from 24 hours to instant under 10 seconds"],"metrics":[{"label":"Quote Speed","value":"<10 sec"},{"label":"Quotes Handled","value":"8,500+"}],"accentColor":"#0284c7","imageBg":"linear-gradient(135deg, #052133 0%, #0a4163 100%)","deliverables":["Instant Freight Quoting API","PDF Generation","WordPress Architecture"],"liveUrl":"https://tgl.com.au","liveDomain":"tgl.com.au"},{"id":"freshminds","name":"Freshminds","category":"Professional Services","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Boutique consulting & research talent network with automated talent vetting intake.","challenge":"Screening thousands of freelance strategy consultants manually created a talent bottleneck.","solution":"Created an intelligent applicant scoring system integrating typeform, Make.com, and Airtable scoring rubrics.","techStack":["Webflow","Make.com","Airtable","Typeform API","Slack"],"outcomes":["Processed over 4,000 consultant vetting applications with automated ranking"],"metrics":[{"label":"Consultants Vetted","value":"4,000+"},{"label":"Placement Speed","value":"48 hrs"}],"accentColor":"#6366f1","imageBg":"linear-gradient(135deg, #111233 0%, #212363 100%)","deliverables":["Talent Scoring Rubric Flow","Airtable Database Sync","Webflow Talent Showcase"],"liveUrl":"https://freshminds.co.uk","liveDomain":"freshminds.co.uk"},{"id":"made-by-shape","name":"Made By Shape","category":"Branding / Creative","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Creative design & digital agency portfolio with full-screen video case studies and dynamic project grids.","challenge":"High-res video case studies were causing sluggish mobile rendering and high bounce rates.","solution":"Optimized video asset delivery with Cloudflare Stream, adaptive bitrate streaming, and buttery smooth GSAP animations.","techStack":["WordPress Headless","GSAP","Cloudflare Stream","Tailwind","REST API"],"outcomes":["Mobile performance score jumped to 98/100 while maintaining 4K video reel showcases"],"metrics":[{"label":"Lighthouse Score","value":"98/100"},{"label":"Video Load Time","value":"0.4s"}],"accentColor":"#ec4899","imageBg":"linear-gradient(135deg, #2b0c1e 0%, #52153b 100%)","deliverables":["Cloudflare Stream CDN Setup","GSAP Smooth Scroll","Interactive Case Studies"],"liveUrl":"https://madebyshape.co.uk","liveDomain":"madebyshape.co.uk"},{"id":"dark-cherry-creative","name":"Dark Cherry Creative","category":"Branding / Creative","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Brand identity & packaging design studio with interactive brand audit questionnaire.","challenge":"Wanted a memorable, dark-mode portfolio highlighting tactile print finishes and luxury branding.","solution":"Developed a high-contrast dark aesthetic Webflow site with micro-interactions and interactive project filter.","techStack":["Webflow","Custom JavaScript","Zapier","Mailchimp"],"outcomes":["Inquiries from premium FMCG brands increased by 80%"],"metrics":[{"label":"Brand Inquiries","value":"+80%"},{"label":"Avg Project Fee","value":"£18k"}],"accentColor":"#e11d48","imageBg":"linear-gradient(135deg, #26050e 0%, #4a0a1c 100%)","deliverables":["Dark Mode Aesthetic","Micro-Interactions","Webflow Build"],"liveUrl":"https://darkcherrycreative.co.uk","liveDomain":"darkcherrycreative.co.uk"},{"id":"end-of-work","name":"End Of Work","category":"Branding / Creative","region":"Australia","countryCode":"AU","featured":false,"summary":"Sydney brand consultancy for luxury property, wine, and lifestyle brands with editorial typography.","challenge":"Needed an unconventional editorial layout that broke standard agency grids while maintaining ultra-fast load speed.","solution":"Custom WordPress build utilizing horizontal scrolling showcases and responsive typographic scaling.","techStack":["WordPress","Custom CSS Grid","Alpine.js","Vimeo Enterprise"],"outcomes":["Won multiple international design awards for agency site experience"],"metrics":[{"label":"Awards Won","value":"3 Major"},{"label":"Page Speed","value":"0.6s"}],"accentColor":"#d97706","imageBg":"linear-gradient(135deg, #241402 0%, #472705 100%)","deliverables":["Horizontal Scroll Showcase","Custom Typography Engine","WordPress Setup"],"liveUrl":"https://endofwork.com.au","liveDomain":"endofwork.com.au"},{"id":"printed-com","name":"Printed.com","category":"Web-to-Print","region":"United Kingdom","countryCode":"UK","featured":true,"summary":"Commercial web-to-print e-commerce platform with live 3D print preview and automated prepress artwork preflight.","challenge":"Customers uploaded non-compliant print files (RGB, low DPI, missing bleeds) requiring hundreds of manual prepress checks.","solution":"Engineered an automated PDF preflight checker that scans uploaded vector artwork for DPI, CMYK color spaces, and bleed margins instantly in the browser.","techStack":["WordPress","WooCommerce","Canvas 3D WebGL","Make.com","PDFTron API","AWS Lambda"],"outcomes":["Prepress rework reduced by 88%","Cart abandonment on custom print configurator dropped by 34%"],"metrics":[{"label":"Prepress Rework","value":"-88%"},{"label":"Cart Conversion","value":"+34%"},{"label":"Print Jobs / Month","value":"14,000+"}],"accentColor":"#8b5cf6","imageBg":"linear-gradient(135deg, #1b0a36 0%, #36146b 100%)","deliverables":["In-Browser Artwork Preflight Tool","3D Print Previewer","WooCommerce Custom Checkout"],"testimonial":{"quote":"Hamid built our automated artwork preflight engine from scratch. It literally saved our prepress team over 40 hours every single week.","author":"Gareth Evans","role":"Operations Head","company":"Printed.com Partner"},"liveUrl":"https://printedcom.co.uk","liveDomain":"printedcom.co.uk"},{"id":"printlocker","name":"Printlocker","category":"Web-to-Print","region":"Australia","countryCode":"AU","featured":false,"summary":"Custom apparel & merchandise direct-to-garment (DTG) print portal with live interactive 3D t-shirt designer.","challenge":"Slow 2D mockup tools led to incorrect customer expectations and high return rates on custom printed apparel.","solution":"Developed an interactive 3D garment customization canvas with real-time embroidery and DTG print rendering with instant order output.","techStack":["WordPress","Three.js","WooCommerce","Stripe","Make.com"],"outcomes":["Return rates dropped to under 0.5%","Custom order volume grew by 160%"],"metrics":[{"label":"Return Rate","value":"<0.5%"},{"label":"Order Volume","value":"+160%"}],"accentColor":"#ec4899","imageBg":"linear-gradient(135deg, #260718 0%, #4d0e30 100%)","deliverables":["Three.js 3D T-Shirt Customizer","Automated Print File Generator","WooCommerce Store"],"liveUrl":"https://printlocker.com.au","liveDomain":"printlocker.com.au"},{"id":"mixam","name":"Mixam","category":"Web-to-Print","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Multi-page booklet, book printing & magazine instant pricing matrix and automated imposition pipeline.","challenge":"Calculating exact book printing costs across 15 paper stocks, 6 bindings, and variable page counts caused laggy UI.","solution":"Optimized complex matrix calculation algorithms in pure WebAssembly running locally on the client for sub-millisecond price updates.","techStack":["Webflow / React Micro-Frontend","WebAssembly","Stripe API","Zapier"],"outcomes":["Sub-millisecond price calculations regardless of complex paper weight and finish combinations"],"metrics":[{"label":"Calculation Latency","value":"<1ms"},{"label":"Orders Processed","value":"50k+"}],"accentColor":"#3b82f6","imageBg":"linear-gradient(135deg, #071b38 0%, #0e3770 100%)","deliverables":["WebAssembly Matrix Engine","Interactive Book Customizer","Checkout Optimization"],"liveUrl":"https://mixam.co.uk","liveDomain":"mixam.co.uk"},{"id":"the-agile-obm","name":"The Agile OBM","category":"Business Operations","region":"United States","countryCode":"US","featured":false,"summary":"Online Business Management (OBM) agency platform with automated client intake and retainer onboarding.","challenge":"Onboarding new 7-figure online business clients involved 20+ disparate manual setup tasks.","solution":"Built an automated onboarding workflow that generates Asana project boards, Slack channels, Google Drive folders, and Stripe subscription contracts with a single form.","techStack":["WordPress","Make.com","Asana API","Slack API","Stripe Billing"],"outcomes":["Cut client onboarding time from 3 days to under 4 minutes"],"metrics":[{"label":"Onboarding Time","value":"<4 min"},{"label":"Manual Tasks Cut","value":"22 tasks"}],"accentColor":"#10b981","imageBg":"linear-gradient(135deg, #052419 0%, #0b4a34 100%)","deliverables":["Automated Asana/Slack Workspace Creator","Stripe Retainers","WordPress Portal"],"liveUrl":"https://theagileobm.com","liveDomain":"theagileobm.com"},{"id":"bytebodega","name":"ByteBodega","category":"Business Operations","region":"United States","countryCode":"US","featured":false,"summary":"Fractional COO and operations consulting platform with live workflow audit matrix.","challenge":"Prospects lacked clarity on where their operational bottlenecks lay before hiring an operations consultant.","solution":"Engineered a 10-point Operational Health Quiz that outputs customized bottleneck heatmaps and service tier recommendations.","techStack":["Webflow","Zapier","Notion","HubSpot","Custom Chart.js"],"outcomes":["Generated 280+ high-tier retainer consulting leads in year one"],"metrics":[{"label":"Retainer Leads","value":"280+"},{"label":"Diagnostic Completion","value":"86%"}],"accentColor":"#14b8a6","imageBg":"linear-gradient(135deg, #04211e 0%, #09423c 100%)","deliverables":["Operational Health Quiz","Notion Client Intake Sync","Webflow Site"],"liveUrl":"https://bytebodega.com","liveDomain":"bytebodega.com"},{"id":"smv-virtual","name":"SMV Virtual","category":"Business Operations","region":"United States","countryCode":"US","featured":false,"summary":"Executive virtual assistant staffing platform with automated assistant skill-matching algorithm.","challenge":"Matching executive personalities with appropriate VA skill sets required extensive manual reviewing.","solution":"Built an AI matching workflow using OpenAI and Make.com that scores VA resumes against executive task requirements.","techStack":["WordPress","OpenAI API","Make.com","Airtable","Twilio"],"outcomes":["Client-VA match retention increased from 71% to 94%"],"metrics":[{"label":"Match Retention","value":"94%"},{"label":"Placement Time","value":"24 hrs"}],"accentColor":"#06b6d4","imageBg":"linear-gradient(135deg, #052229 0%, #0a4352 100%)","deliverables":["AI Skill-Matching Engine","Airtable Database","WordPress Hub"],"liveUrl":"https://smvvirtual.com","liveDomain":"smvvirtual.com"},{"id":"ernst-media","name":"Ernst Media","category":"SEO / Digital Marketing","region":"United States","countryCode":"US","featured":false,"summary":"Performance marketing & PPC agency platform with automated Google Ads audit scorecard.","challenge":"Needed an automated audit tool to hook potential PPC clients by scanning their ad spend efficiency.","solution":"Developed a lead generation audit tool that calculates wasted ad spend and instantly books Google Meet discovery audits.","techStack":["Webflow","Zapier","Google Calendar API","HubSpot"],"outcomes":["Generated over $180k in new agency MRR from audit tool inquiries"],"metrics":[{"label":"New Agency MRR","value":"+$180k"},{"label":"Audit Leads / Wk","value":"25+"}],"accentColor":"#f59e0b","imageBg":"linear-gradient(135deg, #2b1b04 0%, #543508 100%)","deliverables":["PPC Waste Calculator","Calendar Booking Flow","Webflow Build"],"liveUrl":"https://ernstmedia.com","liveDomain":"ernstmedia.com"},{"id":"ink-digital","name":"Ink Digital","category":"SEO / Digital Marketing","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Digital growth & enterprise SEO agency portfolio with dynamic ranking case study visualizer.","challenge":"Needed to showcase complex before-and-after organic traffic data cleanly without boring spreadsheets.","solution":"Built dynamic interactive traffic growth charts with filters for algorithm updates and keyword rankings.","techStack":["WordPress","Chart.js","ACF Pro","Tailwind CSS"],"outcomes":["Doubled conversion rate on agency proposal pitch decks"],"metrics":[{"label":"Pitch Win Rate","value":"+45%"},{"label":"Case Study Views","value":"32k+"}],"accentColor":"#ea580c","imageBg":"linear-gradient(135deg, #290f04 0%, #521f08 100%)","deliverables":["Interactive Chart.js Case Studies","WordPress Custom Architecture","SEO Optimizations"],"liveUrl":"https://inkdigital.co.uk","liveDomain":"inkdigital.co.uk"},{"id":"syncrait","name":"SyncRait","category":"Reference","region":"Australia","countryCode":"AU","featured":false,"summary":"Enterprise cloud sync and data warehouse migration platform.","challenge":"Real-time multi-tenant database synchronization without data loss.","solution":"Designed and deployed high-throughput webhook queues with error handling and automatic retry algorithms.","techStack":["Make.com","Node.js","PostgreSQL","Redis","Tailwind"],"outcomes":["Processed 1.2M daily webhook transactions with 99.99% uptime"],"metrics":[{"label":"Daily Transactions","value":"1.2M"},{"label":"Uptime","value":"99.99%"}],"accentColor":"#6366f1","imageBg":"linear-gradient(135deg, #101033 0%, #202163 100%)","deliverables":["Webhook Queue Architecture","Failover Sync Engine","Dashboard UI"],"liveUrl":"https://syncrait.com.au","liveDomain":"syncrait.com.au"},{"id":"koah-digital","name":"Koah Digital","category":"Reference","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Headless e-commerce & Shopify Plus architecture consultancy.","challenge":"Bridging legacy ERP inventory with modern Shopify checkout and bespoke Webflow frontends.","solution":"Architected middleware API connectors syncing inventory and order status in under 2 seconds.","techStack":["Shopify Plus API","Make.com","Webflow","Tailwind","Stripe"],"outcomes":["Eliminated inventory out-of-stock over-sells across 6 international stores"],"metrics":[{"label":"Over-Sell Reduction","value":"100%"},{"label":"International Stores","value":"6"}],"accentColor":"#10b981","imageBg":"linear-gradient(135deg, #052419 0%, #0b4731 100%)","deliverables":["Middleware API Connector","Shopify Plus Customization","Webflow Integration"],"liveUrl":"https://koahdigital.co.uk","liveDomain":"koahdigital.co.uk"},{"id":"anchour","name":"Anchour","category":"Reference","region":"United States","countryCode":"US","featured":false,"summary":"High-impact creative agency portfolio and digital transformation engine.","challenge":"Designing an ultra-responsive, fluid layout that feels native across 4K displays down to mobile screens.","solution":"Crafted custom fluid CSS typography formulas and buttery smooth scroll transitions.","techStack":["Webflow","Custom CSS Grid","GSAP","Cloudflare CDN"],"outcomes":["Average time on page exceeded 3.8 minutes across global creative visitors"],"metrics":[{"label":"Avg Time on Site","value":"3.8 min"},{"label":"Speed Score","value":"99/100"}],"accentColor":"#ec4899","imageBg":"linear-gradient(135deg, #2b0c1e 0%, #52153b 100%)","deliverables":["Fluid Typographic Engine","GSAP Animations","Webflow Development"],"liveUrl":"https://anchour.com","liveDomain":"anchour.com"},{"id":"legacy-by-structure","name":"Legacy By Structure","category":"Reference","region":"United Kingdom","countryCode":"UK","featured":false,"summary":"Architectural structural heritage restoration portfolio with historical building blueprints database.","challenge":"Archiving and searching 150 years of heritage building structural blueprints with instant tagging.","solution":"Built an indexed architectural archive with category filtering and interactive blueprint zooms.","techStack":["WordPress","ACF Pro","OpenSeaDragon Deep Zoom","AWS S3"],"outcomes":["Over 12,000 historical architectural drawings catalogued and digitized"],"metrics":[{"label":"Drawings Digitized","value":"12,000+"},{"label":"Search Latency","value":"<50ms"}],"accentColor":"#4f46e5","imageBg":"linear-gradient(135deg, #0f0e33 0%, #1f1c66 100%)","deliverables":["Deep Zoom Blueprint Viewer","Heritage Archive Search","WordPress Build"],"liveUrl":"https://legacybystructure.co.uk","liveDomain":"legacybystructure.co.uk"}],"experience":[{"role":"Lead Web Architect & Automation Specialist","organization":"Independent Practice (AU / UK / US Clients)","period":"2021 — Present","type":"Full-Time Consultancy","highlights":["Delivered 50+ bespoke web platforms and automation ecosystems for businesses across Australia, UK, and the US.","Specialized in WordPress, WooCommerce high-conversion checkouts, Webflow architectures, and API middleware using Make.com and Zapier.","Engineered custom AI workflow automations with OpenAI/Gemini to eliminate repetitive client operations and accelerate lead velocity.","Maintained a 99.4% client satisfaction rate with measurable business outcomes (reduced drop-offs, automated certifications, zero-lag syncs)."]},{"role":"Senior WordPress & WooCommerce Engineer","organization":"Digital Solutions Group","period":"2019 — 2021","type":"Senior Engineering Role","highlights":["Architected complex WooCommerce stores handling thousands of daily transactions and high-volume SKU catalogues.","Built custom PHP plugins, custom REST API endpoints, and Stripe/PayPal multi-currency payment pipelines.","Implemented Core Web Vitals optimization, reducing average First Contentful Paint to under 0.8 seconds across client portfolios."]},{"role":"Web Developer & CMS Integration Engineer","organization":"Creative & Tech Agency","period":"2017 — 2019","type":"Development & Integrations","highlights":["Built custom responsive themes and CMS structures for real estate agencies, engineering consultancies, and luxury service brands.","Connected CRM systems (HubSpot, Salesforce, Pipedrive) via webhooks to automate lead routing and reduce response times."]}],"processSteps":[{"number":"01","title":"Discover & Audit","tagline":"Deep architecture audit & strategy","description":"Understanding your exact goals, bottlenecks, customer journeys, and operational pain points through rigorous technical discovery and workflow mapping.","deliverables":["Tech Stack & Speed Audit","Workflow Bottleneck Map","Scaffolded Scope & Timeline"]},{"number":"02","title":"Design & Build","tagline":"Precision CMS & Frontend Engineering","description":"Transforming requirements into ultra-fast, responsive, and intuitive web systems. Whether WordPress, WooCommerce, or Webflow — built clean and scalable.","deliverables":["Custom Responsive Theme","Sub-second TTFB & Core Web Vitals","High-Converting Checkout / Intake"]},{"number":"03","title":"Automate & Deliver","tagline":"Zero-friction automations & launch","description":"Connecting your website to your CRM, email pipelines, AI tools, and payment systems using Make and Zapier. Testing, refining, and launching with absolute precision.","deliverables":["Make / Zapier Webhook Glue","Automated CRM & Notification Routing","Launch Verification & Support"]}],"testimonials":[{"quote":"Working with Hamid was seamless from start to finish. He understood our complex engineering requirements quickly, asked the right questions, and delivered a high-speed platform that scaled our tender inquiries by 180%.","author":"David Vance","role":"Principal Engineer","company":"Cantilever Engineers (Melbourne)","avatar":"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80"},{"quote":"Hamid transformed our signup funnel and automation pipelines. The speed, accuracy, and reliability he introduced gave us an immediate revenue bump. He does things right the first time.","author":"Marcus K.","role":"Director of Growth & Integrations","company":"Pentanet Partner (Perth)","avatar":"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80"},{"quote":"The automated certification system and WooCommerce optimization Hamid built eliminated over 35 manual admin hours every single week for our warehouse team. Simply exceptional craftsmanship.","author":"Liam O’Connor","role":"Managing Director","company":"Lifting365 (UK / Europe)","avatar":"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80"},{"quote":"Hamid built us our direct booking system and Guesty PMS synchronization. We saved over $180,000 in Airbnb fees in our first 12 months with zero glitches. Couldn’t recommend him higher.","author":"Chloe Simmons","role":"Operations Director","company":"Lively Properties (Gold Coast)","avatar":"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80"}]};
-  </script>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="hamidbuilds.dev home">
+      <span class="brand-mark" aria-hidden="true">hb</span>
+      <span class="brand-name">hamidbuilds<span>.dev</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="#agencies">For agencies</a>
+      <a href="#businesses">For businesses</a>
+      <a href="work.html">Work</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a class="btn btn-gold" href="#contact">Get a quote</a>
+    </nav>
+  </div>
+</header>
 
-  <script>
-    (function() {
-      const data = window.__PORTFOLIO_DATA__;
-      const { profile, projects, experience, processSteps, testimonials } = data;
+<main id="main">
 
-      // State
-      let selectedCategory = 'All';
-      let selectedRegion = 'All';
-      let searchQuery = '';
-      let viewMode = 'grid'; // 'grid' | 'directory'
-      let visibleCount = 6;
-      let selectedProject = null;
-      let activeModalTab = 'case-study';
-      let contactModalOpen = false;
-      let contactSubject = '';
-      let copiedEmail = false;
-      let copiedMdx = false;
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="pill"><i aria-hidden="true"></i>Available for new projects &amp; retainers</p>
+      <h1>WordPress sites and SEO, shipped on <span>your</span> deadline.</h1>
+      <p class="hero-sub">White-label development for agencies. Done-for-you websites for small businesses. 5+ years in WordPress, Elementor and WooCommerce, working Australian and UK business hours from Lahore.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold btn-lg" href="#agencies">I'm an agency →</a>
+        <a class="btn btn-ghost btn-lg" href="#businesses">I run a business →</a>
+      </div>
+      <p class="hero-meta">Clients in Australia · United Kingdom · United States · New Zealand · France</p>
+    </div>
+    <div class="hero-visual">
+      <div class="browser">
+        <div class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="browser-shot thumb">
+          <div class="thumb-fallback"><b>LF</b>longfieldfinancialadvisory.co.uk</div>
+          <img data-site="https://longfieldfinancialadvisory.co.uk" alt="Longfield Financial Advisory homepage, built by Hamid" width="1200" height="750">
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><small>In the portfolio</small><strong><span data-project-count>108</span> sites</strong><small>Across 9 industries</small></div>
+        <div class="stat"><small>Reply time</small><strong>Same day</strong><small>Online during your morning</small></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      // Estimator State
-      let estType = 'wordpress';
-      let estTimeline = 'standard';
-      let estIntegrations = ['make', 'crm'];
-      let estCurrency = 'USD';
+<div class="strip" aria-label="Tools">
+  <div class="wrap">
+    <span>WordPress</span><span>Elementor Pro</span><span>WooCommerce</span><span>Shopify</span><span>Gravity Forms</span><span>Technical &amp; local SEO</span><span>Core Web Vitals</span>
+  </div>
+</div>
 
-      // SVG Icon helper
-      function icon(name, cls = "w-4 h-4") {
-        const icons = {
-          arrowUpRight: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>',
-          externalLink: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>',
-          check: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>',
-          checkCircle: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>',
-          close: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>',
-          search: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
-          filter: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>',
-          grid: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>',
-          fileCode: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>',
-          copy: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>',
-          chevronDown: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>',
-          chevronUp: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>',
-          globe: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>',
-          sparkles: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>',
-          quote: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path></svg>',
-          mail: '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>',
-        };
-        return icons[name] || '';
-      }
+<section class="section" id="agencies">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Two ways to work together</p>
+      <h2>Pick the path that sounds like you.</h2>
+    </div>
+    <div class="paths">
+      <article class="path path-dark">
+        <div class="path-tag">
+          <span class="path-icon"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E2B04A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>
+          For agencies
+        </div>
+        <h3>Your overflow developer, under your brand.</h3>
+        <p>Send the mockup, Figma file or HTML. I build it in Elementor or WordPress on staging, you review, and your client never sees my name.</p>
+        <ul class="ticks">
+          <li>Faithful builds from mockups, Figma or HTML</li>
+          <li>White-label SEO fulfilment: on-page, technical, citations</li>
+          <li>Online during your working day (AEST and UK mornings)</li>
+          <li>NDA-friendly, no client contact unless you want it</li>
+        </ul>
+        <a class="btn btn-gold" href="#contact">Send me a test project →</a>
+      </article>
+      <article class="path" id="businesses">
+        <div class="path-tag">
+          <span class="path-icon"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8A5D0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span>
+          For small businesses
+        </div>
+        <h3>A website that brings you enquiries, not just compliments.</h3>
+        <p>One person from first call to launch. A clear fixed price, a staging link to review, and a site you can update yourself.</p>
+        <ul class="ticks">
+          <li>New sites and rebuilds in WordPress</li>
+          <li>Local SEO so nearby customers find you on Google</li>
+          <li>Contact forms, booking and WhatsApp that actually reach you</li>
+          <li>Monthly care plan: updates, backups, speed, small edits</li>
+        </ul>
+        <a class="btn btn-navy" href="#contact">Get a fixed quote →</a>
+      </article>
+    </div>
+  </div>
+</section>
 
-      // Categories
-      const categories = ['All', ...Array.from(new Set(projects.map(p => p.category))).sort()];
+<section class="section" id="work" style="padding-top:24px">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="section-head">
+        <p class="eyebrow">Recent work</p>
+        <h2>Real projects, real briefs.</h2>
+      </div>
+      <a class="btn btn-navy" href="work.html"><span>See all <span data-project-count>108</span> projects →</span></a>
+    </div>
+    <div class="cards">
+      <a class="card" href="https://longfieldfinancialadvisory.co.uk" target="_blank" rel="noopener">
+        <div class="thumb"><div class="thumb-fallback"><b>LF</b>longfieldfinancialadvisory.co.uk</div><img data-site="https://longfieldfinancialadvisory.co.uk" alt="" width="1200" height="750"></div>
+        <div class="card-body">
+          <span class="card-meta">UK · Financial advisory · 8 pages</span>
+          <h3>Longfield Financial Advisory</h3>
+          <p class="card-desc">Built from approved mockups in Elementor, staged, then moved live with a working enquiry form and a mobile-first header.</p>
+          <div class="chips"><span class="chip">Elementor</span><span class="chip">Mockup to build</span><span class="chip">Repeat client</span></div>
+        </div>
+      </a>
+      <a class="card" href="https://longfieldbusinessgroup.co.uk" target="_blank" rel="noopener">
+        <div class="thumb"><div class="thumb-fallback"><b>LB</b>longfieldbusinessgroup.co.uk</div><img data-site="https://longfieldbusinessgroup.co.uk" alt="" width="1200" height="750"></div>
+        <div class="card-body">
+          <span class="card-meta">UK · Business acquisition · 5 pages</span>
+          <h3>Longfield Business Group</h3>
+          <p class="card-desc">WordPress site and logo on IONOS, staging first, followed by on-page SEO for owners researching succession and selling.</p>
+          <div class="chips"><span class="chip">WordPress</span><span class="chip">Logo</span><span class="chip">On-page SEO</span></div>
+        </div>
+      </a>
+      <a class="card" href="https://chughtailab.com" target="_blank" rel="noopener">
+        <div class="thumb"><div class="thumb-fallback"><b>CL</b>chughtailab.com</div><img data-site="https://chughtailab.com" alt="" width="1200" height="750"></div>
+        <div class="card-body">
+          <span class="card-meta">Pakistan · Healthcare · Enterprise</span>
+          <h3>Chughtai Lab</h3>
+          <p class="card-desc">Enterprise-scale healthcare portal for Pakistan's leading diagnostic lab network.</p>
+          <div class="chips"><span class="chip">WordPress</span><span class="chip">Healthcare</span><span class="chip">Enterprise</span></div>
+        </div>
+      </a>
+    </div>
+    <div class="note-box">
+      <p><strong>Plus ongoing white-label work</strong> for a Bristol SEO agency: landing pages, citation building and technical fixes, delivered under their brand.</p>
+      <a href="#agencies"><strong>How white-label works →</strong></a>
+    </div>
+  </div>
+</section>
 
-      // Filter Logic
-      function getFilteredProjects() {
-        return projects.filter(p => {
-          if (selectedCategory !== 'All' && p.category !== selectedCategory) return false;
-          if (selectedRegion !== 'All' && p.region !== selectedRegion) return false;
-          if (searchQuery.trim() !== '') {
-            const q = searchQuery.toLowerCase();
-            const matchesName = p.name.toLowerCase().includes(q);
-            const matchesCategory = p.category.toLowerCase().includes(q);
-            const matchesSummary = p.summary.toLowerCase().includes(q);
-            const matchesTech = p.techStack.some(t => t.toLowerCase().includes(q));
-            const matchesRegion = p.region.toLowerCase().includes(q);
-            return matchesName || matchesCategory || matchesSummary || matchesTech || matchesRegion;
-          }
-          return true;
-        });
-      }
+<section class="section" id="about" style="padding-top:24px">
+  <div class="wrap about">
+    <div class="about-photo">
+      <picture>
+        <source type="image/webp" srcset="assets/hamid-480.webp 480w, assets/hamid-960.webp 960w" sizes="(max-width: 640px) 90vw, 360px">
+        <img src="assets/hamid-480.jpg" alt="Hamid Ali Asad, WordPress developer" width="480" height="480" loading="lazy" decoding="async">
+      </picture>
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow">Who you'll work with</p>
+      <h2>Hi, I'm Hamid.</h2>
+      <p>I've been building WordPress sites for 5+ years, for agencies who need reliable overflow capacity and for business owners who just want a site that works. You deal with me directly from the first message to launch day, no account managers, no hand-offs.</p>
+      <p>I work Australian and UK business hours from Lahore, so your feedback gets picked up while you're still at your desk.</p>
+      <div class="facts">
+        <div><small>Experience</small><strong>5+ years</strong></div>
+        <div><small>Based in</small><strong>Lahore, PK</strong></div>
+        <div><small>Works with</small><strong>AU · UK · US · NZ</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      // Render App
-      function render() {
-        const app = document.getElementById('app');
-        const filtered = getFilteredProjects();
-        const displayed = filtered.slice(0, visibleCount);
-        const hasMore = visibleCount < filtered.length;
-        const isExpanded = visibleCount >= filtered.length && filtered.length > 6;
-        const progress = Math.min(100, Math.round((displayed.length / Math.max(1, filtered.length)) * 100));
+<section class="section section-white" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2>No surprises between quote and launch.</h2>
+    </div>
+    <ol class="steps">
+      <li><b>01</b><h3>Brief &amp; fixed quote</h3><p>A short call or a written brief. You get scope, price and timeline in writing within 24 hours.</p></li>
+      <li><b>02</b><h3>Build on staging</h3><p>Your live site stays untouched. You get a private link and updates as pages land.</p></li>
+      <li><b>03</b><h3>Review rounds</h3><p>Comment on anything. Edits are turned around overnight, ready by your morning.</p></li>
+      <li><b>04</b><h3>Launch &amp; look after</h3><p>Go-live, speed and SEO basics checked, a proper handover, then an optional care plan.</p></li>
+    </ol>
+  </div>
+</section>
 
-        const regionCounts = {
-          AU: projects.filter(p => p.countryCode === 'AU').length,
-          UK: projects.filter(p => p.countryCode === 'UK').length,
-          US: projects.filter(p => p.countryCode === 'US').length,
-        };
+<section class="section" id="testimonials" hidden>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What clients say</p>
+      <h2>In their words.</h2>
+    </div>
+    <div class="quotes" id="quote-list"></div>
+  </div>
+</section>
 
-        const featuredProjects = projects.filter(p => p.featured).slice(0, 6);
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Toolkit</p>
+      <h2>Tools I use every day.</h2>
+    </div>
+    <div class="stack">
+      <span>WordPress</span><span>Elementor Pro</span><span>WooCommerce</span><span>Shopify</span><span>Breakdance</span><span>ACF</span><span>Gravity Forms</span><span>PHP</span><span>JavaScript</span><span>Figma</span><span>GoHighLevel</span><span>Zapier</span><span>n8n</span><span>Google Search Console</span><span>Google Analytics</span><span>Tag Manager</span><span>Cloudflare</span><span>cPanel</span><span>Stripe</span><span>PayPal</span>
+    </div>
+  </div>
+</section>
 
-        // Calculate Estimator Total
-        let baseCost = 2500;
-        if (estType === 'woocommerce') baseCost = 4200;
-        if (estType === 'webflow') baseCost = 3400;
-        if (estType === 'custom-ai') baseCost = 4800;
-
-        const integrationCost = estIntegrations.length * 600;
-        const timelineMultiplier = estTimeline === 'urgent' ? 1.35 : estTimeline === 'flexible' ? 0.9 : 1.0;
-        const totalUSD = Math.round((baseCost + integrationCost) * timelineMultiplier);
-
-        const currencySymbol = estCurrency === 'AUD' ? 'A$' : estCurrency === 'GBP' ? '£' : '$';
-        const currencyRate = estCurrency === 'AUD' ? 1.52 : estCurrency === 'GBP' ? 0.78 : 1.0;
-        const finalPrice = Math.round(totalUSD * currencyRate);
-
-        app.innerHTML = `
-          <!-- Navigation -->
-          <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-md border-b border-white/10 py-4">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
-              <a href="#" class="text-left flex items-center gap-3 text-white">
-                <div class="w-9 h-9 bg-white/5 border border-white/10 text-[#CCFF00] flex items-center justify-center font-black text-sm tracking-tighter">
-                  HA
-                </div>
-                <div>
-                  <div class="text-xl font-bold tracking-tighter text-white leading-none">
-                    HAMID ALI ASAD
-                  </div>
-                  <div class="text-[10px] font-mono uppercase tracking-[0.2em] text-[#CCFF00] mt-1">
-                    Websites & Automations
-                  </div>
-                </div>
-              </a>
-
-              <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-neutral-400 font-medium font-mono">
-                <a href="#projects-section" class="hover:text-white transition-colors">Projects</a>
-                <a href="#about-section" class="hover:text-white transition-colors">About</a>
-                <a href="#process-section" class="hover:text-white transition-colors">Process</a>
-                <!-- ADD THIS LINK INSIDE <nav> -->
-<a href="blog.html" class="text-[#CCFF00] hover:text-[#e5ff66] font-bold transition-colors flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest">
-  <span>Blog</span>
-  <span style="font-size: 9px; padding: 2px 6px; background: rgba(204, 255, 0, 0.15); color: #CCFF00; border: 1px solid rgba(204, 255, 0, 0.3); border-radius: 2px;">
-    GEO
-  </span>
-</a>
-                <button onclick="window.__openContact()" class="text-[#CCFF00] hover:underline font-bold">Contact</button>
-              </nav>
-
-              <div class="flex items-center gap-3">
-                <button onclick="window.__copyEmail()" class="flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-mono uppercase tracking-wider text-neutral-300 hover:text-white bg-white/5 border border-white/10 rounded-sm transition-colors">
-                  ${copiedEmail ? icon('check', 'w-3.5 h-3.5 text-[#CCFF00]') + '<span class="text-[#CCFF00]">Copied!</span>' : icon('copy', 'w-3.5 h-3.5') + '<span>Copy Email</span>'}
-                </button>
-                <button onclick="window.__openContact()" class="px-4 py-2 bg-[#CCFF00] text-black font-black text-xs uppercase tracking-wider rounded-xs hover:bg-[#b8e600] transition-colors">
-                  Hire Me
-                </button>
-              </div>
-            </div>
-          </header>
-
-          <main class="pt-24">
-            <!-- 1. HERO SECTION -->
-            <section class="py-20 md:py-28 bg-[#0A0A0A] text-[#F5F5F5] border-b border-white/10 relative overflow-hidden">
-              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                  <div class="lg:col-span-7">
-                    <p class="text-[#CCFF00] font-mono text-xs mb-4 uppercase tracking-[0.3em]">
-                      // Websites & Automations Specialist
-                    </p>
-                    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.88] tracking-tighter text-white mb-8">
-                      HI — I’M <br />
-                      HAMID <br />
-                      ALI ASAD
-                    </h1>
-                    <p class="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-xl mb-8">
-                      I build websites and automate workflows for businesses that need things done right the first time. 50+ sites delivered across Australia, UK, and the US — WordPress, WooCommerce, Webflow, and custom integrations with AI tools, Make, and Zapier.
-                    </p>
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button onclick="window.__openContact('New Project Inquiry')" class="flex items-center gap-2 px-8 py-4 bg-[#CCFF00] hover:bg-[#b8e600] text-black font-black text-xs uppercase tracking-widest rounded-sm transition-transform hover:scale-105 shadow-md">
-                        <span>Get in Touch</span>
-                        ${icon('arrowUpRight', 'w-4 h-4 stroke-[2.5]')}
-                      </button>
-                      <a href="#projects-section" class="flex items-center gap-2 px-6 py-4 bg-white/5 hover:bg-white/10 text-white font-mono text-xs uppercase tracking-wider rounded-sm border border-white/10">
-                        <span>View All 50+ Projects</span>
-                        ${icon('arrowUpRight', 'w-4 h-4 text-[#CCFF00]')}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div class="lg:col-span-5 bg-[#111111] p-6 rounded-sm border border-white/10">
-                    <div class="flex items-center justify-between mb-4 border-b border-white/10 pb-3">
-                      <span class="text-xs font-mono uppercase tracking-wider text-[#CCFF00]">Verified Track Record</span>
-                      <span class="text-[10px] font-mono text-neutral-400">AU • UK • US</span>
-                    </div>
-                    <div class="grid grid-cols-2 gap-3 mb-6">
-                      <div class="p-4 bg-black/60 border border-white/5 rounded-xs">
-                        <div class="text-3xl font-black text-[#CCFF00] font-mono">50+</div>
-                        <div class="text-xs text-neutral-400 font-mono uppercase mt-1">Sites Delivered</div>
-                      </div>
-                      <div class="p-4 bg-black/60 border border-white/5 rounded-xs">
-                        <div class="text-3xl font-black text-[#CCFF00] font-mono">99.4%</div>
-                        <div class="text-xs text-neutral-400 font-mono uppercase mt-1">Client Satisfaction</div>
-                      </div>
-                    </div>
-                    <div class="space-y-2">
-                      <div class="text-[11px] font-mono uppercase text-neutral-400 mb-2">Core Capabilities:</div>
-                      <div class="flex flex-wrap gap-1.5">
-                        ${profile.specialties.map(s => '<span class="px-2.5 py-1 bg-white/5 border border-white/10 text-xs text-neutral-300 font-mono">' + s + '</span>').join('')}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- 2. FEATURED SHOWREEL -->
-            <section class="py-20 bg-[#0D0D0D] text-[#F5F5F5] border-b border-white/10">
-              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-                  <div>
-                    <div class="text-[#CCFF00] font-mono text-xs mb-2 uppercase tracking-[0.3em]">Selected Case Studies</div>
-                    <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tighter">FEATURED BUILDS & SYSTEMS</h2>
-                  </div>
-                  <a href="#projects-section" class="text-xs font-mono uppercase tracking-wider text-[#CCFF00] hover:underline flex items-center gap-1">
-                    <span>Explore Archive (${projects.length} Projects)</span>
-                    ${icon('arrowUpRight', 'w-3.5 h-3.5')}
-                  </a>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  ${featuredProjects.map(p => `
-                    <div class="bg-[#111111] border border-white/10 hover:border-[#CCFF00] p-6 rounded-sm flex flex-col justify-between transition-all hover:-translate-y-1 cursor-pointer group" onclick="window.__openCaseStudy('${p.id}')">
-                      <div>
-                        <div class="flex items-center justify-between mb-3">
-                          <span class="px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider bg-white/5 text-neutral-300 border border-white/10">${p.category}</span>
-                          <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="p-1 bg-white/5 hover:bg-[#CCFF00] text-neutral-400 hover:text-black rounded-xs transition-colors" title="Visit ${p.liveDomain}">
-                            ${icon('externalLink', 'w-3.5 h-3.5')}
-                          </a>
-                        </div>
-                        <h3 class="text-xl font-bold text-white group-hover:text-[#CCFF00] transition-colors mb-2">${p.name}</h3>
-                        <p class="text-neutral-400 text-xs leading-relaxed line-clamp-2 mb-4">${p.summary}</p>
-                        ${p.metrics && p.metrics.length ? `
-                          <div class="grid grid-cols-2 gap-2 mb-4">
-                            ${p.metrics.slice(0, 2).map(m => `
-                              <div class="p-2.5 bg-black/60 border border-white/5 rounded-xs">
-                                <div class="text-sm font-black text-[#CCFF00] font-mono">${m.value}</div>
-                                <div class="text-[10px] text-neutral-400 font-mono uppercase truncate">${m.label}</div>
-                              </div>
-                            `).join('')}
-                          </div>
-                        ` : ''}
-                      </div>
-                      <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono uppercase text-neutral-400">
-                        <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="hover:text-[#CCFF00] flex items-center gap-1 text-[11px]">
-                          ${icon('globe', 'w-3 h-3 text-[#CCFF00]')}
-                          <span>${p.liveDomain}</span>
-                        </a>
-                        <span class="text-[#CCFF00] font-bold">Case Study →</span>
-                      </div>
-                    </div>
-                  `).join('')}
-                </div>
-              </div>
-            </section>
-
-            <!-- 3. PROJECTS & CASE STUDIES EXPLORER -->
-            <section id="projects-section" class="py-24 bg-[#0A0A0A] text-[#F5F5F5] border-b border-white/10">
-              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-                <div class="text-center max-w-3xl mx-auto mb-14">
-                  <div class="text-xs font-mono uppercase tracking-[0.3em] text-[#CCFF00] mb-3">// Complete Work Archive</div>
-                  <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tighter">PROJECTS & CASE STUDIES</h2>
-                  <p class="mt-3 text-neutral-400 text-sm">Explore 50+ websites, high-converting checkout funnels, and enterprise automations. Click any project to open the case study.</p>
-                </div>
-
-                <!-- Search & Filters -->
-                <div class="bg-[#111111] rounded-sm p-6 border border-white/10 mb-8">
-                  <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
-                    <div class="relative flex-1">
-                      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500">${icon('search', 'w-4 h-4')}</span>
-                      <input type="text" id="searchInput" value="${searchQuery}" oninput="window.__setSearch(this.value)" placeholder="Search client, category, or tech stack..." class="w-full pl-11 pr-4 py-3 bg-[#0A0A0A] border border-white/10 rounded-sm text-sm text-white placeholder:text-neutral-500 focus:outline-hidden focus:border-[#CCFF00] font-mono" />
-                    </div>
-
-                    <div class="flex flex-wrap items-center gap-1.5 bg-[#0A0A0A] p-1.5 rounded-sm border border-white/10">
-                      ${[
-                        { label: 'All Regions', val: 'All' },
-                        { label: '🇦🇺 AU (' + regionCounts.AU + ')', val: 'Australia' },
-                        { label: '🇬🇧 UK (' + regionCounts.UK + ')', val: 'United Kingdom' },
-                        { label: '🇺🇸 US (' + regionCounts.US + ')', val: 'United States' },
-                      ].map(r => `
-                        <button onclick="window.__setRegion('${r.val}')" class="px-3 py-1.5 rounded-xs text-[11px] font-mono uppercase tracking-wider ${selectedRegion === r.val ? 'bg-[#CCFF00] text-black font-black' : 'text-neutral-400 hover:text-white'}">${r.label}</button>
-                      `).join('')}
-                    </div>
-
-                    <div class="flex items-center gap-1 bg-[#0A0A0A] p-1.5 rounded-sm border border-white/10">
-                      <button onclick="window.__setViewMode('grid')" class="flex items-center gap-1 px-3 py-1.5 rounded-xs text-[11px] font-mono uppercase ${viewMode === 'grid' ? 'bg-white/10 text-white font-bold' : 'text-neutral-500'}">
-                        ${icon('grid', 'w-3.5 h-3.5')} Grid
-                      </button>
-                      <button onclick="window.__setViewMode('directory')" class="flex items-center gap-1 px-3 py-1.5 rounded-xs text-[11px] font-mono uppercase ${viewMode === 'directory' ? 'bg-white/10 text-white font-bold' : 'text-neutral-500'}">
-                        ${icon('fileCode', 'w-3.5 h-3.5')} MDX Table
-                      </button>
-                    </div>
-                  </div>
-
-                  <!-- Category Pills -->
-                  <div class="mt-5 pt-4 border-t border-white/10 flex items-center gap-2 overflow-x-auto pb-2">
-                    <span class="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-widest mr-1">Category:</span>
-                    ${categories.map(cat => {
-                      const count = cat === 'All' ? projects.length : projects.filter(p => p.category === cat).length;
-                      return `
-                        <button onclick="window.__setCategory('${cat}')" class="px-3 py-1 text-[11px] font-mono uppercase whitespace-nowrap rounded-sm ${selectedCategory === cat ? 'bg-[#CCFF00] text-black font-black' : 'bg-white/5 text-neutral-400 hover:text-white border border-white/5'}">
-                          ${cat} <span class="text-[9px] opacity-75">(${count})</span>
-                        </button>
-                      `;
-                    }).join('')}
-                  </div>
-                </div>
-
-                <!-- Progress counter -->
-                <div class="bg-[#111111] p-4 rounded-sm border border-white/10 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono uppercase text-neutral-400">
-                  <div>
-                    Showing <strong class="text-white">${displayed.length}</strong> of <strong class="text-white">${filtered.length}</strong> case studies
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <button onclick="window.__setVisibleCount(6)" class="px-2 py-0.5 rounded-xs ${visibleCount === 6 ? 'bg-[#CCFF00] text-black font-bold' : 'bg-black/60 text-neutral-400'}">Show 6</button>
-                    <button onclick="window.__setVisibleCount(12)" class="px-2 py-0.5 rounded-xs ${visibleCount === 12 ? 'bg-[#CCFF00] text-black font-bold' : 'bg-black/60 text-neutral-400'}">Show 12</button>
-                    <button onclick="window.__revealAll()" class="px-2 py-0.5 rounded-xs ${visibleCount >= filtered.length ? 'bg-[#CCFF00] text-black font-bold' : 'bg-black/60 text-neutral-400'}">Reveal All (${filtered.length})</button>
-                  </div>
-                </div>
-
-                <!-- GRID VIEW -->
-                ${viewMode === 'grid' ? `
-                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-                    ${displayed.map(p => `
-                      <div class="bg-[#111111] border border-white/10 hover:border-[#CCFF00] p-6 rounded-sm flex flex-col justify-between transition-all hover:-translate-y-1 cursor-pointer group" onclick="window.__openCaseStudy('${p.id}')">
-                        <div>
-                          <div class="flex items-start justify-between gap-2 mb-4">
-                            <span class="px-2.5 py-1 text-[10px] font-mono font-bold uppercase bg-white/5 text-neutral-300 border border-white/10 rounded-xs">${p.category}</span>
-                            <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="px-2 py-1 bg-white/5 hover:bg-[#CCFF00] text-neutral-400 hover:text-black border border-white/10 hover:border-[#CCFF00] text-[10px] font-mono font-bold rounded-xs transition-colors flex items-center gap-1" title="Visit ${p.liveDomain}">
-                              <span>Live Site</span>
-                              ${icon('externalLink', 'w-3 h-3')}
-                            </a>
-                          </div>
-                          <h3 class="text-xl font-bold text-white group-hover:text-[#CCFF00] transition-colors mb-2">${p.name}</h3>
-                          <p class="text-neutral-400 text-xs leading-relaxed line-clamp-3 mb-5">${p.summary}</p>
-                          ${p.metrics && p.metrics.length ? `
-                            <div class="grid grid-cols-2 gap-2 mb-5">
-                              ${p.metrics.slice(0, 2).map(m => `
-                                <div class="p-2.5 bg-black/60 border border-white/5 rounded-xs">
-                                  <div class="text-sm font-black text-[#CCFF00] font-mono">${m.value}</div>
-                                  <div class="text-[10px] text-neutral-400 font-mono uppercase truncate">${m.label}</div>
-                                </div>
-                              `).join('')}
-                            </div>
-                          ` : ''}
-                        </div>
-                        <div>
-                          <div class="flex flex-wrap gap-1 pt-4 border-t border-white/10 mb-3">
-                            ${p.techStack.map(t => '<span class="px-2 py-0.5 bg-white/5 text-neutral-400 text-[10px] font-mono uppercase">' + t + '</span>').join('')}
-                          </div>
-                          <div class="flex items-center justify-between text-xs font-mono uppercase text-neutral-400 pt-2 border-t border-white/5">
-                            <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="hover:text-[#CCFF00] flex items-center gap-1 text-[11px]">
-                              ${icon('globe', 'w-3 h-3 text-[#CCFF00]')}
-                              <span>${p.liveDomain}</span>
-                            </a>
-                            <span class="text-[#CCFF00] font-bold">Case Study →</span>
-                          </div>
-                        </div>
-                      </div>
-                    `).join('')}
-                  </div>
-                ` : `
-                  <!-- TABLE VIEW -->
-                  <div class="bg-[#111111] rounded-sm border border-white/10 overflow-hidden mb-10">
-                    <table class="w-full text-left text-xs">
-                      <thead class="bg-black text-neutral-400 font-mono uppercase tracking-wider text-[10px] border-b border-white/10">
-                        <tr>
-                          <th class="py-3 px-4">Project</th>
-                          <th class="py-3 px-4">Live URL</th>
-                          <th class="py-3 px-4">Category</th>
-                          <th class="py-3 px-4">Region</th>
-                          <th class="py-3 px-4 text-right">Action</th>
-                        </tr>
-                      </thead>
-                      <tbody class="divide-y divide-white/5 font-mono">
-                        ${displayed.map(p => `
-                          <tr class="hover:bg-white/5 cursor-pointer group" onclick="window.__openCaseStudy('${p.id}')">
-                            <td class="py-3 px-4 font-bold text-white group-hover:text-[#CCFF00]">${p.name}</td>
-                            <td class="py-3 px-4">
-                              <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="text-[#CCFF00] hover:underline flex items-center gap-1">
-                                <span>${p.liveDomain}</span>
-                                ${icon('externalLink', 'w-3 h-3')}
-                              </a>
-                            </td>
-                            <td class="py-3 px-4 text-neutral-300">${p.category}</td>
-                            <td class="py-3 px-4 text-neutral-400">${p.region}</td>
-                            <td class="py-3 px-4 text-right">
-                              <button class="px-3 py-1 bg-white/5 group-hover:bg-[#CCFF00] text-neutral-300 group-hover:text-black font-bold uppercase rounded-xs">
-                                Open MDX
-                              </button>
-                            </td>
-                          </tr>
-                        `).join('')}
-                      </tbody>
-                    </table>
-                  </div>
-                `}
-
-                <!-- Pagination actions -->
-                ${filtered.length > 6 ? `
-                  <div class="p-6 bg-[#111111] rounded-sm border border-white/10 text-center flex flex-wrap items-center justify-center gap-4">
-                    ${hasMore ? `
-                      <button onclick="window.__showMore()" class="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono uppercase font-bold text-white rounded-xs">
-                        Load More (+6)
-                      </button>
-                      <button onclick="window.__revealAll()" class="px-7 py-3 bg-[#CCFF00] text-black font-mono font-black text-xs uppercase tracking-wider rounded-xs hover:bg-[#b8e600]">
-                        Reveal All (${filtered.length} Projects)
-                      </button>
-                    ` : `
-                      <button onclick="window.__setVisibleCount(6)" class="px-6 py-3 bg-white/5 border border-white/10 text-xs font-mono uppercase text-neutral-300 rounded-xs">
-                        Show Fewer (Reset to 6)
-                      </button>
-                    `}
-                  </div>
-                ` : ''}
-              </div>
-            </section>
-            <!-- 5. ABOUT & PROCESS SECTION -->
-            <section id="about-section" class="py-24 bg-[#0A0A0A] text-[#F5F5F5] border-b border-white/10">
-              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                  <div>
-                    <div class="text-xs font-mono uppercase tracking-[0.3em] text-[#CCFF00] mb-3">// Experience & Career</div>
-                    <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tighter mb-6">PUSHING BOUNDARIES SINCE 2017</h2>
-                    <div class="space-y-6">
-                      ${experience.map(e => `
-                        <div class="p-6 bg-[#111111] border border-white/10 rounded-sm">
-                          <div class="flex items-center justify-between text-xs font-mono text-[#CCFF00] mb-1">
-                            <span>${e.period}</span>
-                            <span class="text-neutral-400">${e.type}</span>
-                          </div>
-                          <h3 class="text-lg font-bold text-white mb-1">${e.role}</h3>
-                          <div class="text-xs font-mono text-neutral-400 mb-3">${e.organization}</div>
-                          <ul class="space-y-1.5 text-xs text-neutral-300">
-                            ${e.highlights.map(h => '<li class="flex items-start gap-2"><span class="text-[#CCFF00] mt-0.5">•</span><span>' + h + '</span></li>').join('')}
-                          </ul>
-                        </div>
-                      `).join('')}
-                    </div>
-                  </div>
-
-                  <div id="process-section">
-                    <div class="text-xs font-mono uppercase tracking-[0.3em] text-[#CCFF00] mb-3">// 3-Step Pipeline</div>
-                    <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tighter mb-6">HOW WE WORK TOGETHER</h2>
-                    <div class="space-y-6">
-                      ${processSteps.map(s => `
-                        <div class="p-6 bg-[#111111] border border-white/10 rounded-sm">
-                          <div class="text-3xl font-black text-[#CCFF00] font-mono mb-2">${s.number}</div>
-                          <h3 class="text-xl font-bold text-white mb-1">${s.title}</h3>
-                          <p class="text-xs text-neutral-300 leading-relaxed mb-3">${s.description}</p>
-                          <div class="flex flex-wrap gap-1.5">
-                            ${s.deliverables.map(d => '<span class="px-2 py-0.5 bg-white/5 border border-white/10 text-[10px] font-mono text-neutral-300">' + d + '</span>').join('')}
-                          </div>
-                        </div>
-                      `).join('')}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- 6. TESTIMONIALS -->
-            <section class="py-20 bg-[#0D0D0D] text-[#F5F5F5] border-b border-white/10">
-              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-                <div class="text-center mb-12">
-                  <div class="text-xs font-mono uppercase tracking-[0.3em] text-[#CCFF00] mb-2">// Client Feedback</div>
-                  <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tighter">WHAT PARTNERS SAY</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  ${testimonials.map(t => `
-                    <div class="p-6 bg-[#111111] border border-white/10 rounded-sm flex flex-col justify-between">
-                      <p class="text-sm text-neutral-300 italic mb-6 leading-relaxed">"${t.quote}"</p>
-                      <div class="pt-4 border-t border-white/10 flex items-center justify-between">
-                        <div>
-                          <div class="text-sm font-bold text-white">${t.author}</div>
-                          <div class="text-xs font-mono text-neutral-400">${t.role} • ${t.company}</div>
-                        </div>
-                        <span class="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 bg-[#CCFF00] text-black font-bold rounded-xs">Verified</span>
-                      </div>
-                    </div>
-                  `).join('')}
-                </div>
-              </div>
-            </section>
-
-            <!-- 7. CONTACT CTA SECTION -->
-            <section id="contact-section" class="py-24 bg-[#0A0A0A] text-[#F5F5F5] text-center relative overflow-hidden">
-              <div class="max-w-3xl mx-auto px-4 sm:px-6">
-                <div class="text-xs font-mono uppercase tracking-[0.3em] text-[#CCFF00] mb-3">// Let’s Connect</div>
-                <h2 class="text-5xl sm:text-6xl font-black text-white tracking-tighter mb-6">HAVE A PROJECT IN MIND?</h2>
-                <p class="text-base text-neutral-300 mb-8">Whether you need a high-speed WordPress build, a custom Webflow framework, or automated workflows with Make and Zapier — let's build something exceptional.</p>
-                <div class="flex flex-wrap items-center justify-center gap-4">
-                  <button onclick="window.__openContact('Let\'s Build Together')" class="px-8 py-4 bg-[#CCFF00] hover:bg-[#b8e600] text-black font-black text-xs uppercase tracking-widest rounded-sm transition-transform hover:scale-105">
-                    Start a Conversation →
-                  </button>
-                  <a href="mailto:${profile.email}" class="px-6 py-4 bg-white/5 hover:bg-white/10 text-white font-mono text-xs uppercase tracking-wider rounded-sm border border-white/10">
-                    ${profile.email}
-                  </a>
-                </div>
-              </div>
-            </section>
-          </main>
-
-          <!-- Footer -->
-          <footer class="py-12 bg-black text-neutral-500 border-t border-white/10 text-xs font-mono">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div>
-                © ${new Date().getFullYear()} Hamid Ali Asad. All rights reserved.
-              </div>
-              <div class="flex items-center gap-6">
-                <a href="mailto:${profile.email}" class="hover:text-white transition-colors">${profile.email}</a>
-                <a href="#projects-section" class="hover:text-white transition-colors">50+ Case Studies</a>
-                <a href="#" class="text-[#CCFF00] hover:underline">Back to top ↑</a>
-                <a href="blog.html" class="text-[#CCFF00] hover:underline transition-colors font-bold font-mono">
-  Blog / GEO Insights
-</a>
-              </div>
-            </div>
-          </footer>
-
-          <!-- CASE STUDY MODAL -->
-          ${selectedProject ? renderCaseStudyModal(selectedProject) : ''}
-
-          <!-- CONTACT MODAL -->
-          ${contactModalOpen ? renderContactModal() : ''}
-        `;
-      }
-
-      // Case study modal HTML
-      function renderCaseStudyModal(p) {
-        const mdxCode = `---
-title: "${p.name}"
-category: "${p.category}"
-region: "${p.region}"
-countryCode: "${p.countryCode}"
-liveUrl: "${p.liveUrl}"
-domain: "${p.liveDomain}"
-techStack: [${p.techStack.map(t => '"' + t + '"').join(', ')}]
-metrics:
-${p.metrics.map(m => '  - label: "' + m.label + '"\n    value: "' + m.value + '"').join('\n')}
-deliverables: [${p.deliverables.map(d => '"' + d + '"').join(', ')}]
----
-
-# ${p.name} — ${p.category} Case Study
-
-## Project Overview
-${p.summary}
-
-**Live Production Platform:** [${p.liveDomain}](${p.liveUrl})
-
-## The Challenge & Bottlenecks
-${p.challenge}
-
-## Architectural Solution & Implementation
-${p.solution}
-
-## Key Business Outcomes
-${p.outcomes.map(o => '- ' + o).join('\n')}
-
-${p.testimonial ? '> "' + p.testimonial.quote + '"\n> — **' + p.testimonial.author + '**, ' + p.testimonial.role + ', *' + p.testimonial.company + '*' : ''}
-`;
-
-        return `
-          <div class="fixed inset-0 z-50 overflow-y-auto bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6" onclick="window.__closeCaseStudy()">
-            <div class="relative bg-[#0E0E0E] text-[#F5F5F5] rounded-sm max-w-4xl w-full border border-white/15 shadow-2xl overflow-hidden my-6 max-h-[90vh] flex flex-col" onclick="event.stopPropagation()">
-              <!-- Top bar -->
-              <div class="px-6 py-4 bg-black text-white flex items-center justify-between border-b border-white/10 shrink-0">
-                <div class="flex items-center gap-3">
-                  <span class="px-2.5 py-0.5 text-[10px] font-mono font-bold uppercase bg-[#CCFF00] text-black rounded-xs">${p.category}</span>
-                  <span class="text-xs font-mono text-neutral-400 hidden sm:inline">content/projects/${p.id}.mdx</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="flex items-center bg-white/5 border border-white/10 p-1 rounded-xs text-xs font-mono">
-                    <button onclick="window.__setModalTab('case-study')" class="px-3 py-1 uppercase ${activeModalTab === 'case-study' ? 'bg-[#CCFF00] text-black font-black' : 'text-neutral-300'}">Case Study</button>
-                    <button onclick="window.__setModalTab('mdx-source')" class="px-3 py-1 uppercase ${activeModalTab === 'mdx-source' ? 'bg-[#CCFF00] text-black font-black' : 'text-neutral-300'}">MDX Source</button>
-                  </div>
-                  <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-white/10 hover:bg-[#CCFF00] text-white hover:text-black border border-white/15 text-xs font-mono font-bold uppercase rounded-xs">
-                    <span>Live Site</span>
-                    ${icon('externalLink', 'w-3.5 h-3.5')}
-                  </a>
-                  <button onclick="window.__closeCaseStudy()" class="p-2 text-neutral-400 hover:text-white ml-2">${icon('close', 'w-5 h-5')}</button>
-                </div>
-              </div>
-
-              <!-- Content -->
-              <div class="overflow-y-auto p-6 sm:p-8 flex-1 space-y-6">
-                ${activeModalTab === 'case-study' ? `
-                  <div>
-                    <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
-                      <span class="px-3 py-1 rounded-xs text-[10px] font-mono font-bold bg-white/5 text-[#CCFF00] border border-white/10">${p.region}</span>
-                      <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#171717] hover:bg-[#CCFF00] border border-white/15 text-white hover:text-black rounded-xs text-xs font-mono font-bold">
-                        ${icon('globe', 'w-3.5 h-3.5')}
-                        <span>Visit Live Site: ${p.liveDomain}</span>
-                        ${icon('externalLink', 'w-3 h-3')}
-                      </a>
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl font-black text-white">${p.name}</h2>
-                    <p class="mt-3 text-sm text-neutral-300 leading-relaxed">${p.summary}</p>
-                  </div>
-
-                  ${p.metrics && p.metrics.length ? `
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                      ${p.metrics.map(m => `
-                        <div class="p-4 bg-[#141414] border border-white/10 rounded-xs">
-                          <div class="text-2xl font-black text-[#CCFF00] font-mono">${m.value}</div>
-                          <div class="text-xs font-mono text-neutral-400 uppercase mt-0.5">${m.label}</div>
-                        </div>
-                      `).join('')}
-                    </div>
-                  ` : ''}
-
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="p-5 rounded-xs bg-[#161212] border border-rose-950/80">
-                      <div class="text-xs font-mono font-bold text-rose-400 uppercase mb-2">// The Challenge & Bottlenecks</div>
-                      <p class="text-xs text-neutral-300 leading-relaxed">${p.challenge}</p>
-                    </div>
-                    <div class="p-5 rounded-xs bg-[#121610] border border-[#CCFF00]/20">
-                      <div class="text-xs font-mono font-bold text-[#CCFF00] uppercase mb-2">// Architectural Solution</div>
-                      <p class="text-xs text-neutral-300 leading-relaxed">${p.solution}</p>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 class="text-sm font-mono font-bold text-white uppercase mb-3">// Measurable Business Outcomes</h3>
-                    <div class="space-y-2">
-                      ${p.outcomes.map(o => `
-                        <div class="flex items-start gap-2 p-3 bg-[#141414] border border-white/10 rounded-xs text-xs text-neutral-200">
-                          <span class="text-[#CCFF00]">✓</span>
-                          <span>${o}</span>
-                        </div>
-                      `).join('')}
-                    </div>
-                  </div>
-
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/10 text-xs font-mono">
-                    <div>
-                      <div class="font-bold text-neutral-400 uppercase mb-2">Tech Stack</div>
-                      <div class="flex flex-wrap gap-1">
-                        ${p.techStack.map(t => '<span class="px-2 py-0.5 bg-white/5 border border-white/10 text-white">' + t + '</span>').join('')}
-                      </div>
-                    </div>
-                    <div>
-                      <div class="font-bold text-neutral-400 uppercase mb-2">Deliverables</div>
-                      <div class="space-y-1 text-neutral-300">
-                        ${p.deliverables.map(d => '<div>• ' + d + '</div>').join('')}
-                      </div>
-                    </div>
-                  </div>
-                ` : `
-                  <!-- MDX Tab -->
-                  <div>
-                    <div class="flex justify-between items-center mb-3">
-                      <span class="text-xs font-mono text-neutral-400">content/projects/${p.id}.mdx</span>
-                      <button onclick="window.__copyMdx()" class="px-3 py-1.5 bg-[#CCFF00] text-black font-mono font-black text-xs uppercase rounded-xs">
-                        ${copiedMdx ? 'Copied!' : 'Copy MDX'}
-                      </button>
-                    </div>
-                    <pre class="bg-black text-neutral-200 p-4 rounded-xs font-mono text-xs overflow-x-auto border border-white/10"><code>${mdxCode}</code></pre>
-                  </div>
-                `}
-              </div>
-
-              <!-- Bottom bar -->
-              <div class="p-4 sm:p-6 bg-black border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-                <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 bg-white/10 text-white hover:text-black hover:bg-[#CCFF00] text-xs font-mono font-bold uppercase rounded-xs transition-colors flex items-center gap-1.5">
-                  <span>Visit Live Platform</span>
-                  ${icon('externalLink', 'w-3.5 h-3.5')}
-                </a>
-                <div class="flex items-center gap-3">
-                  <button onclick="window.__openContact('Inquiry about ' + '${p.name}')" class="px-6 py-2.5 bg-[#CCFF00] text-black font-mono font-black text-xs uppercase tracking-wider rounded-xs">
-                    Discuss Similar Build →
-                  </button>
-                  <button onclick="window.__closeCaseStudy()" class="px-4 py-2.5 bg-white/5 text-neutral-300 text-xs font-mono uppercase rounded-xs">
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <div class="contact-copy">
+        <h2>Got a project, or a backlog?</h2>
+        <p>Tell me what you need. You'll get a reply with a scope and price within 24 hours, usually the same day.</p>
+        <div class="contact-lines">
+          <a href="https://wa.me/923077138743" target="_blank" rel="noopener">
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>
+            WhatsApp +92 307 7138743
+          </a>
+          <a href="mailto:hamidaliasad16@gmail.com">
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E2B04A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            hamidaliasad16@gmail.com
+          </a>
+        </div>
+      </div>
+      <form class="form" id="contact-form" action="https://formspree.io/f/xqennqno" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry from hamidbuilds.dev">
+        <div class="form-row">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="f-type">I am</label>
+            <select id="f-type" name="client_type" required>
+              <option value="">Choose one</option>
+              <option>An agency (white-label)</option>
+              <option>A business owner</option>
+            </select>
           </div>
-        `;
-      }
-
-      // Contact Modal HTML
-      function renderContactModal() {
-        return `
-          <div class="fixed inset-0 z-50 overflow-y-auto bg-black/85 backdrop-blur-md flex items-center justify-center p-4" onclick="window.__closeContact()">
-            <div class="relative bg-[#0E0E0E] text-[#F5F5F5] rounded-sm max-w-lg w-full border border-white/15 shadow-2xl p-6 sm:p-8" onclick="event.stopPropagation()">
-              <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
-                <div>
-                  <h3 class="text-xl font-bold text-white">Start a Project</h3>
-                  <div class="text-xs font-mono text-[#CCFF00] mt-0.5">${profile.email}</div>
-                </div>
-                <button onclick="window.__closeContact()" class="p-1 text-neutral-400 hover:text-white">${icon('close', 'w-5 h-5')}</button>
-              </div>
-
-              <form onsubmit="window.__submitContact(event)" class="space-y-4 font-mono text-xs">
-                <div>
-                  <label class="block uppercase text-neutral-400 mb-1">Your Name</label>
-                  <input type="text" id="contactName" required placeholder="Jane Doe" class="w-full p-3 bg-black border border-white/10 rounded-xs text-white focus:outline-hidden focus:border-[#CCFF00]" />
-                </div>
-                <div>
-                  <label class="block uppercase text-neutral-400 mb-1">Your Email</label>
-                  <input type="email" id="contactEmail" required placeholder="jane@company.com" class="w-full p-3 bg-black border border-white/10 rounded-xs text-white focus:outline-hidden focus:border-[#CCFF00]" />
-                </div>
-                <div>
-                  <label class="block uppercase text-neutral-400 mb-1">Subject / Scope</label>
-                  <input type="text" id="contactSubj" value="${contactSubject}" placeholder="Project Inquiry" class="w-full p-3 bg-black border border-white/10 rounded-xs text-white focus:outline-hidden focus:border-[#CCFF00]" />
-                </div>
-                <div>
-                  <label class="block uppercase text-neutral-400 mb-1">Message</label>
-                  <textarea id="contactMsg" rows="4" required placeholder="Tell me about your goals, timelines, or bottlenecks..." class="w-full p-3 bg-black border border-white/10 rounded-xs text-white focus:outline-hidden focus:border-[#CCFF00]"></textarea>
-                </div>
-                <div class="pt-2 flex items-center justify-between">
-                  <button type="button" onclick="window.__copyEmail()" class="text-neutral-400 hover:text-white underline">
-                    Copy Direct Email
-                  </button>
-                  <button type="submit" class="px-6 py-3 bg-[#CCFF00] hover:bg-[#b8e600] text-black font-black uppercase tracking-wider rounded-xs">
-                    Send Message →
-                  </button>
-                </div>
-              </form>
-            </div>
+          <div class="field"><label for="f-budget">Budget</label>
+            <select id="f-budget" name="budget">
+              <option value="">Choose a range</option>
+              <option>Under $500</option>
+              <option>$500 – $1,500</option>
+              <option>$1,500 – $5,000</option>
+              <option>$5,000+</option>
+              <option>Ongoing / retainer</option>
+            </select>
           </div>
-        `;
-      }
+        </div>
+        <div class="field"><label for="f-msg">Project</label><textarea id="f-msg" name="message" rows="4" placeholder="What do you need built or fixed, and by when?" required></textarea></div>
+        <button class="btn btn-gold btn-lg" type="submit">Send enquiry</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
 
-      // Window Action Handlers
-      window.__setCategory = function(cat) {
-        selectedCategory = cat;
-        visibleCount = 6;
-        render();
-      };
+</main>
 
-      window.__setRegion = function(reg) {
-        selectedRegion = reg;
-        visibleCount = 6;
-        render();
-      };
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Hamid Ali Asad · hamidbuilds.dev · Lahore, Pakistan</span>
+    <nav aria-label="Footer"><a href="work.html">Work</a><a href="blog.html">Blog</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </div>
+</footer>
 
-      window.__setSearch = function(q) {
-        searchQuery = q;
-        visibleCount = 6;
-        render();
-        const input = document.getElementById('searchInput');
-        if (input) {
-          input.focus();
-          input.setSelectionRange(q.length, q.length);
-        }
-      };
+<a class="wa-float" href="https://wa.me/923077138743" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>
+</a>
 
-      window.__setViewMode = function(mode) {
-        viewMode = mode;
-        render();
-      };
-
-      window.__setVisibleCount = function(count) {
-        visibleCount = count;
-        render();
-      };
-
-      window.__showMore = function() {
-        visibleCount += 6;
-        render();
-      };
-
-      window.__revealAll = function() {
-        visibleCount = projects.length;
-        render();
-      };
-
-      window.__openCaseStudy = function(id) {
-        selectedProject = projects.find(p => p.id === id) || null;
-        activeModalTab = 'case-study';
-        copiedMdx = false;
-        render();
-      };
-
-      window.__closeCaseStudy = function() {
-        selectedProject = null;
-        render();
-      };
-
-      window.__setModalTab = function(tab) {
-        activeModalTab = tab;
-        render();
-      };
-
-      window.__copyMdx = function() {
-        if (!selectedProject) return;
-        const p = selectedProject;
-        const mdxCode = `---
-title: "${p.name}"
-category: "${p.category}"
-region: "${p.region}"
-countryCode: "${p.countryCode}"
-liveUrl: "${p.liveUrl}"
-domain: "${p.liveDomain}"
-techStack: [${p.techStack.map(t => '"' + t + '"').join(', ')}]
-metrics:
-${p.metrics.map(m => '  - label: "' + m.label + '"\n    value: "' + m.value + '"').join('\n')}
-deliverables: [${p.deliverables.map(d => '"' + d + '"').join(', ')}]
----
-
-# ${p.name} — ${p.category} Case Study
-
-## Project Overview
-${p.summary}
-
-**Live Production Platform:** [${p.liveDomain}](${p.liveUrl})
-
-## The Challenge & Bottlenecks
-${p.challenge}
-
-## Architectural Solution & Implementation
-${p.solution}
-
-## Key Business Outcomes
-${p.outcomes.map(o => '- ' + o).join('\n')}
-`;
-        navigator.clipboard.writeText(mdxCode);
-        copiedMdx = true;
-        render();
-        setTimeout(() => {
-          copiedMdx = false;
-          render();
-        }, 2000);
-      };
-
-      window.__openContact = function(subject) {
-        contactSubject = subject || '';
-        contactModalOpen = true;
-        render();
-      };
-
-      window.__closeContact = function() {
-        contactModalOpen = false;
-        render();
-      };
-
-      window.__copyEmail = function() {
-        navigator.clipboard.writeText(profile.email);
-        copiedEmail = true;
-        render();
-        setTimeout(() => {
-          copiedEmail = false;
-          render();
-        }, 2000);
-      };
-
-      window.__setEstType = function(type) {
-        estType = type;
-        render();
-      };
-
-      window.__toggleEstIntegration = function(id) {
-        if (estIntegrations.includes(id)) {
-          estIntegrations = estIntegrations.filter(x => x !== id);
-        } else {
-          estIntegrations.push(id);
-        }
-        render();
-      };
-
-      window.__submitContact = function(e) {
-        e.preventDefault();
-        const name = document.getElementById('contactName').value;
-        const email = document.getElementById('contactEmail').value;
-        const subj = document.getElementById('contactSubj').value;
-        const msg = document.getElementById('contactMsg').value;
-        
-        const mailtoUrl = "mailto:" + profile.email + "?subject=" + encodeURIComponent(subj || 'Portfolio Inquiry') + "&body=" + encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + msg);
-        window.location.href = mailtoUrl;
-        contactModalOpen = false;
-        render();
-      };
-
-      // Initial Mount
-      render();
-    })();
-  </script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
