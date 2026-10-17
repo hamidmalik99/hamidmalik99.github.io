@@ -2,5 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://hamidbuilds.dev/</loc><lastmod>2026-10-17</lastmod><priority>1.0</priority></url>
   <url><loc>https://hamidbuilds.dev/work.html</loc><lastmod>2026-10-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://hamidbuilds.dev/blog.html</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
+  <url><loc>https://hamidbuilds.dev/blog/</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://hamidbuilds.dev/blog/geo-aeo-generative-engine-optimization-guide.html</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
+  <url><loc>https://hamidbuilds.dev/blog/automate-lead-triage-crm-workflows-make-zapier.html</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
+  <url><loc>https://hamidbuilds.dev/blog/scaling-woocommerce-hpos-caching-checkout-optimization.html</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
+  <url><loc>https://hamidbuilds.dev/blog/webflow-vs-custom-wordpress-engineering-comparison.html</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
+  <url><loc>https://hamidbuilds.dev/blog/achieving-99-core-web-vitals-wordpress.html</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
 </urlset>
