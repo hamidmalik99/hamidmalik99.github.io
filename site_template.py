@@ -16,12 +16,24 @@ NAV = [('/#agencies', 'For agencies', None), ('/industries/', 'Industries', 'ind
        ('/work.html', 'Work', 'work'), ('/blog/', 'Blog', 'blog'), ('/#about', 'About', None)]
 
 
+GA_TAG = '''<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0XB01T27X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q0XB01T27X');
+</script>
+'''
+
+
 def head(title, desc, url, og_type='website', extra='', current=None):
     nav = ''.join('<a href="%s"%s>%s</a>' % (h, ' aria-current="page"' if k and k == current else '', t) for h, t, k in NAV)
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+{GA_TAG}<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
