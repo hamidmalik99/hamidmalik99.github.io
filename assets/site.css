@@ -334,3 +334,11 @@ p{margin:0}
 .industry-box{margin-top:40px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 .industry-box p:not(.eyebrow){color:#253350;font-size:17px}
 .page-hero .hero-meta{color:var(--muted-dark);font-size:15px}
+
+/* Cookie consent banner */
+.cookie-banner{position:fixed;left:24px;bottom:24px;z-index:300;max-width:420px;background:var(--navy-900);color:var(--body-dark);border:1px solid var(--line-dark);border-radius:var(--radius);padding:20px;box-shadow:0 12px 40px rgba(11,22,40,.35);font-size:15px;line-height:1.5}
+.cookie-banner[hidden]{display:none}
+.cookie-banner strong{color:#fff;font-family:var(--display);font-size:17px}
+.cookie-actions{display:flex;gap:10px;margin-top:14px}
+.cookie-actions .btn{min-height:44px;padding:10px 20px;font-size:15px}
+@media (max-width:600px){.cookie-banner{left:16px;right:16px;bottom:16px;max-width:none}.cookie-actions .btn{flex:1}}

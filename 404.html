@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0XB01T27X"></script>
+<!-- Google tag (gtag.js), loaded only after cookie consent (see /assets/consent.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q0XB01T27X');
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+  window.hbLoadGA = function () {
+    if (window.hbGALoaded) return;
+    window.hbGALoaded = true;
+    gtag('consent', 'update', {analytics_storage: 'granted'});
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q0XB01T27X';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-Q0XB01T27X');
+  };
+  try { if (localStorage.getItem('hb_consent') === 'granted') window.hbLoadGA(); } catch (e) {}
 </script>
+<script src="/assets/consent.js" defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Page not found | hamidbuilds.dev</title>

@@ -16,15 +16,25 @@ NAV = [('/#agencies', 'For agencies', None), ('/industries/', 'Industries', 'ind
        ('/work.html', 'Work', 'work'), ('/blog/', 'Blog', 'blog'), ('/#about', 'About', None)]
 
 
-GA_TAG = '''<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0XB01T27X"></script>
+GA_TAG = '''<!-- Google tag (gtag.js), loaded only after cookie consent (see /assets/consent.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q0XB01T27X');
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+  window.hbLoadGA = function () {
+    if (window.hbGALoaded) return;
+    window.hbGALoaded = true;
+    gtag('consent', 'update', {analytics_storage: 'granted'});
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q0XB01T27X';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-Q0XB01T27X');
+  };
+  try { if (localStorage.getItem('hb_consent') === 'granted') window.hbLoadGA(); } catch (e) {}
 </script>
+<script src="/assets/consent.js" defer></script>
 '''
 
 
@@ -83,7 +93,7 @@ def foot():
 <footer class="site-footer">
   <div class="wrap">
     <span>© <span id="year">2026</span> Hamid Ali Asad · hamidbuilds.dev · Lahore, Pakistan</span>
-    <nav aria-label="Footer"><a href="/">Home</a><a href="/industries/">Industries</a><a href="/work.html">Work</a><a href="/blog/">Blog</a><a href="mailto:{EMAIL}">{EMAIL}</a></nav>
+    <nav aria-label="Footer"><a href="/">Home</a><a href="/industries/">Industries</a><a href="/work.html">Work</a><a href="/blog/">Blog</a><a href="mailto:{EMAIL}">{EMAIL}</a><a href="#" data-cookie-settings>Cookie settings</a></nav>
   </div>
 </footer>
 <a class="wa-float" href="{WA}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">{WA_ICON}</a>
