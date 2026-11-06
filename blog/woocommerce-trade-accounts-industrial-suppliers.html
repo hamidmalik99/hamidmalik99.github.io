@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js), loaded only after cookie consent (see /assets/consent.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+  window.hbLoadGA = function () {
+    if (window.hbGALoaded) return;
+    window.hbGALoaded = true;
+    gtag('consent', 'update', {analytics_storage: 'granted'});
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q0XB01T27X';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-Q0XB01T27X');
+  };
+  try { if (localStorage.getItem('hb_consent') === 'granted') window.hbLoadGA(); } catch (e) {}
+</script>
+<script src="/assets/consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WooCommerce Trade Accounts | Hamid Ali Asad</title>
+<meta name="description" content="How to set up WooCommerce trade accounts for industrial suppliers: approval, account pricing, ex-VAT display, pay on account, UK invoice and terms rules.">
+<link rel="canonical" href="https://hamidbuilds.dev/blog/woocommerce-trade-accounts-industrial-suppliers.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Hamid Ali Asad">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="hamidbuilds.dev">
+<meta property="og:title" content="WooCommerce Trade Accounts | Hamid Ali Asad">
+<meta property="og:description" content="How to set up WooCommerce trade accounts for industrial suppliers: approval, account pricing, ex-VAT display, pay on account, UK invoice and terms rules.">
+<meta property="og:url" content="https://hamidbuilds.dev/blog/woocommerce-trade-accounts-industrial-suppliers.html">
+<meta property="og:image" content="https://hamidbuilds.dev/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WooCommerce Trade Accounts | Hamid Ali Asad">
+<meta name="twitter:description" content="How to set up WooCommerce trade accounts for industrial suppliers: approval, account pricing, ex-VAT display, pay on account, UK invoice and terms rules.">
+<meta name="twitter:image" content="https://hamidbuilds.dev/assets/og-image.png">
+<meta name="theme-color" content="#0B1628">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23E2B04A'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial' font-weight='800' font-size='30' fill='%230B1628'%3Ehb%3C/text%3E%3C/svg%3E">
+<link rel="alternate" type="application/rss+xml" title="hamidbuilds.dev blog" href="https://hamidbuilds.dev/blog/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "WooCommerce Trade Accounts for Industrial Suppliers", "description": "How to set up WooCommerce trade accounts for industrial suppliers: approval, account pricing, ex-VAT display, pay on account, UK invoice and terms rules.", "datePublished": "2026-11-01", "dateModified": "2026-11-01", "mainEntityOfPage": "https://hamidbuilds.dev/blog/woocommerce-trade-accounts-industrial-suppliers.html", "image": "https://hamidbuilds.dev/assets/og-image.png", "keywords": "WooCommerce trade accounts, WooCommerce B2B, trade pricing, pay on account, industrial ecommerce", "articleSection": "Industrial & B2B Websites", "author": {"@type": "Person", "name": "Hamid Ali Asad", "url": "https://hamidbuilds.dev/#about"}, "publisher": {"@type": "Organization", "name": "hamidbuilds.dev", "url": "https://hamidbuilds.dev"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://hamidbuilds.dev/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://hamidbuilds.dev/blog/"}, {"@type": "ListItem", "position": 3, "name": "WooCommerce Trade Accounts for Industrial Suppliers", "item": "https://hamidbuilds.dev/blog/woocommerce-trade-accounts-industrial-suppliers.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can WooCommerce handle trade accounts?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with the right setup. Trade accounts usually combine a registration and approval step, customer group or account-specific pricing, pay on account at checkout, quick reorder, quote requests and multi-user access. Many of these need plugins or custom development, so plan the features you need before choosing tools."}}, {"@type": "Question", "name": "Should trade prices be shown excluding VAT?", "acceptedAnswer": {"@type": "Answer", "text": "Usually, for logged-in trade customers, with a clear label. The UK CAP Code says VAT-exclusive prices may be given if everyone the price is clearly addressed to pays no VAT or can recover it, and they must be accompanied by a prominent statement of the amount or rate of VAT payable."}}, {"@type": "Question", "name": "What must a UK business invoice include?", "acceptedAnswer": {"@type": "Answer", "text": "GOV.UK lists a unique identification number, your company name, address and contact details, the customer's company name and address, a clear description of what you're charging for, the supply date, invoice date, amounts charged, VAT if applicable and the total owed. Limited companies must show their full registered name."}}, {"@type": "Question", "name": "When is a trade payment late in the UK?", "acceptedAnswer": {"@type": "Answer", "text": "GOV.UK says that if no payment date is agreed, payment is late 30 days after the customer gets the invoice or you deliver the goods, whichever is later. Agreed business payment dates must usually be within 60 days, though a longer period can be agreed if fair to both. You can claim interest and recovery costs on late payments."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="hamidbuilds.dev home">
+      <span class="brand-mark" aria-hidden="true">hb</span>
+      <span class="brand-name">hamidbuilds<span>.dev</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="/#agencies">For agencies</a><a href="/industries/">Industries</a><a href="/work.html">Work</a><a href="/blog/" aria-current="page">Blog</a><a href="/#about">About</a>
+      <a class="btn btn-gold" href="/#contact">Get a quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <article>
+    <header class="page-hero post-hero">
+      <div class="wrap post-wrap">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><span>Industrial &amp; B2B Websites</span></nav>
+        <p class="post-cat post-cat-dark">Industrial &amp; B2B Websites</p>
+        <h1>WooCommerce Trade Accounts for Industrial Suppliers</h1>
+        <div class="byline">
+          <img src="/assets/hamid-480.webp" alt="" width="44" height="44">
+          <span><strong>Hamid Ali Asad</strong><small><time datetime="2026-11-01">November 2026</time> · 6 min read</small></span>
+        </div>
+      </div>
+    </header>
+    <div class="wrap post-wrap post-body">
+      <aside class="answer-box" aria-label="Short answer">
+        <p class="eyebrow">The short answer</p>
+        <p>WooCommerce trade accounts let approved business customers log in, see their own prices excluding VAT, pay on account and reorder quickly. For UK industrial suppliers, include an application and approval step, customer group pricing, clear ex-VAT labelling, compliant invoices, agreed payment terms with reminders, quick reorder, quote baskets and multi-user access.</p>
+      </aside>
+      <section class="takeaways" aria-label="Key takeaways">
+        <h2>Key takeaways</h2>
+        <ul class="ticks"><li>Trade customers expect account prices, ex-VAT figures, payment on terms and fast reordering.</li><li>An application and approval step lets you run credit checks before trade prices and terms appear.</li><li>The CAP Code allows VAT-exclusive prices only for audiences who don&#x27;t pay or can recover VAT, with a prominent VAT statement.</li><li>GOV.UK lists what invoices must include, and VAT invoices are needed when both businesses are VAT registered.</li><li>If no payment date is agreed, payment is late 30 days after the invoice or delivery, whichever is later.</li></ul>
+      </section>
+      <div class="prose">
+<p>Most of your best customers don't buy like retail shoppers. They're contractors, maintenance teams and procurement departments who expect account prices, VAT-exclusive figures, payment on terms and a quick way to reorder the same items. Out of the box, WooCommerce is set up for customers who pay by card at checkout, so trade orders often still come in by phone and email. WooCommerce trade accounts close that gap: approved business customers log in, see their prices and order online on the terms you've agreed. This guide covers what a trade account setup should include for an industrial or lifting equipment supplier, the UK rules on invoices, VAT pricing and payment terms that shape it, and how to roll it out.</p>
+<h2>What trade customers expect from your website</h2>
+<p>Trade buyers mostly want the website to make their job quicker:</p>
+<ul>
+<li><strong>Their prices, not list prices</strong>, as soon as they log in</li>
+<li><strong>VAT shown the way they work</strong>, usually excluding VAT with the VAT clearly stated</li>
+<li><strong>Payment on account</strong> rather than a card at every order</li>
+<li><strong>Fast reordering</strong> of consumables and repeat items</li>
+<li><strong>Order history, invoices and documents</strong> in one place</li>
+<li><strong>Multiple users</strong> for different sites or staff, with someone controlling who can order</li>
+</ul>
+<p>If your website can't do these things, the website ends up as a catalogue and the real ordering happens elsewhere.</p>
+<h2>The core features of a trade account setup</h2>
+<h3>Application and approval</h3>
+<p>Add a trade account application form that collects the company name, company number, VAT number, delivery and invoice addresses, accounts contact and the credit you're being asked for. New applications should wait for your approval before trade prices or payment terms appear. Approval lets you run your normal credit checks before you extend terms.</p>
+<h3>Account-specific pricing</h3>
+<p>Set prices by customer group, such as trade, contract or distributor, or agree pricing for individual key accounts. Quantity breaks suit consumables like shackles, slings and fixings. Logged-out visitors can still see list prices, or a "log in for trade prices" prompt, depending on your strategy.</p>
+<h3>VAT display</h3>
+<p>The CAP Code's rules on <a href="https://www.asa.org.uk/type/non_broadcast/code_section/03.html">misleading advertising</a> say quoted prices must normally include non-optional taxes. VAT-exclusive prices may be given if everyone the price is clearly addressed to pays no VAT or can recover it, and they must be accompanied by a prominent statement of the amount or rate of VAT payable.</p>
+<p>In practice, show VAT-exclusive prices to logged-in trade customers with a clear "ex VAT" label and the VAT rate, and think carefully before showing ex-VAT prices to the general public on pages consumers can reach.</p>
+<h3>Payment on account</h3>
+<p>Let approved customers check out with "pay on account" up to a credit limit you set, with their purchase order number captured at checkout. Card payment can stay available for new or cash customers.</p>
+<h3>Invoices that meet the rules</h3>
+<p>GOV.UK's guidance on <a href="https://www.gov.uk/invoicing-and-taking-payment-from-customers/invoices-what-they-must-include">what invoices must include</a> lists a unique identification number, your company name, address and contact details, the customer's company name and address, a clear description of what you're charging for, the supply date, the invoice date, the amounts charged, the VAT amount if applicable and the total owed. Limited companies must include the full company name as it appears on the certificate of incorporation. The same page says you must use VAT invoices if both you and your customer are VAT registered.</p>
+<p>Whether invoices come from WooCommerce or your accounting system, make sure the template covers these, and that customers can download them from their account.</p>
+<h3>Payment terms and late payment</h3>
+<p>GOV.UK's guidance on <a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery">late commercial payments</a> explains that if you agree a payment date, it must usually be within 60 days for business transactions; a longer period can be agreed if it's fair to both businesses. If no payment date is agreed, the law says payment is late 30 days after the customer gets the invoice or you deliver the goods, whichever is later. The guidance also explains that you can claim interest and debt recovery costs on late commercial payments.</p>
+<p>Show each customer's agreed terms in their account, print them on invoices, and send automatic reminders before invoices fall due. This isn't legal or financial advice; check the current guidance and your own terms.</p>
+<h3>Quick reorder and quotes</h3>
+<p>Give trade customers a "buy again" list from previous orders, a quick-order form where they can enter product codes and quantities, and a quote basket for larger or custom orders such as made-to-length slings or lifting beams.</p>
+<h3>Users, sites and documents</h3>
+<p>Let a customer administrator add colleagues, set who can order and who can only view, and assign users to sites. Keep order history, invoices and equipment documents together. If you supply lifting equipment, this is where your certificate portal fits; see my guide to <a href="/blog/lifting-equipment-certificates-online.html">putting lifting equipment certificates online</a>.</p>
+<h2>Trade account feature checklist</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>What it does</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application form and approval</td>
+<td>Collects company, VAT and credit details; you approve</td>
+<td>Control over who gets terms</td>
+</tr>
+<tr>
+<td>Customer group pricing</td>
+<td>Trade, contract or account-specific prices</td>
+<td>Matches how you already price</td>
+</tr>
+<tr>
+<td>Quantity breaks</td>
+<td>Lower unit price at higher quantities</td>
+<td>Suits consumables</td>
+</tr>
+<tr>
+<td>Ex-VAT display with VAT rate</td>
+<td>Clear labelling for trade users</td>
+<td>CAP Code rule on VAT-exclusive prices</td>
+</tr>
+<tr>
+<td>Pay on account with PO number</td>
+<td>Checkout without a card, up to a limit</td>
+<td>How trade customers pay</td>
+</tr>
+<tr>
+<td>Compliant invoices</td>
+<td>All items GOV.UK lists</td>
+<td>Legal invoice requirements</td>
+</tr>
+<tr>
+<td>Terms and reminders</td>
+<td>Agreed terms shown, reminders before due</td>
+<td>Fewer late payments</td>
+</tr>
+<tr>
+<td>Quick reorder and quote basket</td>
+<td>Repeat orders and custom requests</td>
+<td>Saves trade buyers time</td>
+</tr>
+<tr>
+<td>Users, sites and permissions</td>
+<td>Customer controls who orders</td>
+<td>Fits larger customers</td>
+</tr>
+<tr>
+<td>Documents in the account</td>
+<td>Invoices and certificates in one place</td>
+<td>Fewer calls to your office</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Common trade account mistakes</h2>
+<ul>
+<li><strong>Approving accounts automatically.</strong> If trade prices and payment terms switch on the moment someone registers, you lose the chance to check who they are.</li>
+<li><strong>Mixing ex-VAT and inc-VAT prices without labels.</strong> Customers comparing a basket with a quote get confused, and consumers may see prices that don't include VAT. Label every price clearly.</li>
+<li><strong>Hiding the agreed terms.</strong> If the customer can't see their credit limit and payment terms in their account, expect more calls to your accounts team.</li>
+<li><strong>Leaving phone orders as the default.</strong> Without a reason to log in, such as quick reorder or downloadable invoices and certificates, customers carry on phoning.</li>
+</ul>
+<h2>How to roll it out</h2>
+<ol>
+<li><strong>Start with your best accounts.</strong> Invite your top trade customers first, load their pricing and terms, and ask for feedback.</li>
+<li><strong>Connect your accounting system.</strong> Sync customers, prices, orders and invoices so you don't key orders in twice.</li>
+<li><strong>Move phone and email orders online gradually.</strong> When a regular customer calls, offer to set up their login and show them quick reorder.</li>
+<li><strong>Keep product pages strong.</strong> Trade buyers still need specifications, safe working loads and documents on every product; see my guide to <a href="/blog/selling-lifting-equipment-online.html">selling lifting equipment online</a>.</li>
+<li><strong>Watch performance.</strong> Account pricing and large catalogues add load to WooCommerce; my guide to <a href="/blog/scaling-woocommerce-hpos-caching-checkout-optimization.html">scaling WooCommerce</a> covers the technical side.</li>
+</ol>
+<h2>How I can help</h2>
+<p>I build WooCommerce stores for lifting equipment and industrial tool suppliers, including trade account applications and approval, customer group pricing, ex-VAT display, pay on account, quick reorder, quote baskets and certificate portals, connected to your accounting system where possible. You can see more about my <a href="/industries/industrial-suppliers/">websites for industrial suppliers</a> or browse <a href="/work.html">100+ sites in my portfolio</a>.</p>
+<p>If your trade customers still order by phone and email, <a href="/#contact">get in touch</a> and I'll show you how trade accounts could work for your business.</p>
+      </div>
+      <section class='faqs'><h2>Frequently asked questions</h2><details class="faq"><summary>Can WooCommerce handle trade accounts?</summary><p>Yes, with the right setup. Trade accounts usually combine a registration and approval step, customer group or account-specific pricing, pay on account at checkout, quick reorder, quote requests and multi-user access. Many of these need plugins or custom development, so plan the features you need before choosing tools.</p></details><details class="faq"><summary>Should trade prices be shown excluding VAT?</summary><p>Usually, for logged-in trade customers, with a clear label. The UK CAP Code says VAT-exclusive prices may be given if everyone the price is clearly addressed to pays no VAT or can recover it, and they must be accompanied by a prominent statement of the amount or rate of VAT payable.</p></details><details class="faq"><summary>What must a UK business invoice include?</summary><p>GOV.UK lists a unique identification number, your company name, address and contact details, the customer&#x27;s company name and address, a clear description of what you&#x27;re charging for, the supply date, invoice date, amounts charged, VAT if applicable and the total owed. Limited companies must show their full registered name.</p></details><details class="faq"><summary>When is a trade payment late in the UK?</summary><p>GOV.UK says that if no payment date is agreed, payment is late 30 days after the customer gets the invoice or you deliver the goods, whichever is later. Agreed business payment dates must usually be within 60 days, though a longer period can be agreed if fair to both. You can claim interest and recovery costs on late payments.</p></details></section>
+      <aside class="industry-box"><p class="eyebrow">Websites for industrial suppliers</p><p>I build WooCommerce and WordPress sites for lifting equipment and industrial suppliers, with searchable catalogues, spec sheets and quote requests.</p><a class="btn btn-navy" href="/industries/industrial-suppliers/">See how I help industrial suppliers →</a></aside>
+      <div class="chips post-tags"><span class="chip">WooCommerce trade accounts</span><span class="chip">WooCommerce B2B</span><span class="chip">trade pricing</span><span class="chip">pay on account</span><span class="chip">industrial ecommerce</span></div>
+      <div class="author-box">
+        <img src="/assets/hamid-480.webp" alt="Hamid Ali Asad" width="72" height="72" loading="lazy">
+        <div><strong>Written by Hamid Ali Asad</strong><p>WordPress developer and SEO specialist with 5+ years of experience, building sites for agencies and small businesses across Australia, the UK and the US.</p><a href="/#about">More about Hamid →</a></div>
+      </div>
+    </div>
+  </article>
+  <section class="section" style="padding-top:24px">
+    <div class="wrap">
+      <div class="head-row"><div class="section-head"><p class="eyebrow">Keep reading</p><h2>More from the blog</h2></div><a class="btn btn-navy" href="/blog/">All articles →</a></div>
+      <div class="post-grid"><a class="post-card" href="/blog/engineering-project-portfolio-website.html" data-cat="Engineering Websites"><div class="post-card-top"><span class="post-cat">Engineering Websites</span></div><div class="post-card-body"><span class="card-meta">November 2026 · 6 min read</span><h3>Engineering Project Portfolio: Present Projects That Win Work</h3><p class="card-desc">How to build an engineering project portfolio that wins work: page structure, filters, Google image best practice, client permission and testimonial rules.</p><span class="post-more">Read article →</span></div></a><a class="post-card" href="/blog/fractional-cfo-pricing-page.html" data-cat="Finance Firm Websites"><div class="post-card-top"><span class="post-cat">Finance Firm Websites</span></div><div class="post-card-body"><span class="card-meta">November 2026 · 6 min read</span><h3>Fractional CFO Pricing Page: How to Show Fees on Your Website</h3><p class="card-desc">How to build a fractional CFO pricing page: ways to show fees, what to include, and UK and US rules on &#x27;from&#x27; prices, VAT and qualifications.</p><span class="post-more">Read article →</span></div></a><a class="post-card" href="/blog/business-broker-email-marketing.html" data-cat="Business Broker Websites"><div class="post-card-top"><span class="post-cat">Business Broker Websites</span></div><div class="post-card-body"><span class="card-meta">November 2026 · 6 min read</span><h3>Business Broker Email Marketing: Stay in Touch With Future Sellers</h3><p class="card-desc">Business broker email marketing that nurtures future sellers: building a list from your website, what to send, and the CAN-SPAM rules emails must follow.</p><span class="post-more">Read article →</span></div></a></div>
+    </div>
+  </section>
+
+<section class="contact" style="background:transparent;padding:0 0 96px">
+  <div class="wrap">
+    <div class="contact-card" style="align-items:center">
+      <div class="contact-copy">
+        <h2>Get trade accounts your customers will actually use</h2>
+        <p>Agencies: send me a test project. Business owners: tell me what you need and get a fixed quote within 24 hours.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-gold btn-lg" href="/#contact">Get a fixed quote →</a>
+        <a class="btn btn-ghost btn-lg" href="https://wa.me/923077138743" target="_blank" rel="noopener">WhatsApp me</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Hamid Ali Asad · hamidbuilds.dev · Lahore, Pakistan</span>
+    <nav aria-label="Footer"><a href="/">Home</a><a href="/industries/">Industries</a><a href="/work.html">Work</a><a href="/blog/">Blog</a><a href="mailto:info@hamidbuilds.dev">info@hamidbuilds.dev</a><a href="#" data-cookie-settings>Cookie settings</a></nav>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/923077138743" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
