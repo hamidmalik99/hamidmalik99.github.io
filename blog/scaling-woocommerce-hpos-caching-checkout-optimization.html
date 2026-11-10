@@ -22,20 +22,20 @@
 <script src="/assets/consent.js" defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scaling WooCommerce: HPOS, Redis Caching &amp; Checkout Architecture | Hamid Ali Asad</title>
-<meta name="description" content="Engineered guide to scaling WooCommerce stores for high traffic. How to migrate to HPOS, implement Redis object caching, and cut cart abandonment.">
+<title>WooCommerce HPOS and Data Caching Guide</title>
+<meta name="description" content="WooCommerce HPOS and HPOS data caching explained: what they change, how to migrate a large store safely, and the checks to make before you switch.">
 <link rel="canonical" href="https://hamidbuilds.dev/blog/scaling-woocommerce-hpos-caching-checkout-optimization.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Hamid Ali Asad">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="hamidbuilds.dev">
-<meta property="og:title" content="Scaling WooCommerce: HPOS, Redis Caching &amp; Checkout Architecture | Hamid Ali Asad">
-<meta property="og:description" content="Engineered guide to scaling WooCommerce stores for high traffic. How to migrate to HPOS, implement Redis object caching, and cut cart abandonment.">
+<meta property="og:title" content="WooCommerce HPOS and Data Caching Guide">
+<meta property="og:description" content="WooCommerce HPOS and HPOS data caching explained: what they change, how to migrate a large store safely, and the checks to make before you switch.">
 <meta property="og:url" content="https://hamidbuilds.dev/blog/scaling-woocommerce-hpos-caching-checkout-optimization.html">
 <meta property="og:image" content="https://hamidbuilds.dev/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Scaling WooCommerce: HPOS, Redis Caching &amp; Checkout Architecture | Hamid Ali Asad">
-<meta name="twitter:description" content="Engineered guide to scaling WooCommerce stores for high traffic. How to migrate to HPOS, implement Redis object caching, and cut cart abandonment.">
+<meta name="twitter:title" content="WooCommerce HPOS and Data Caching Guide">
+<meta name="twitter:description" content="WooCommerce HPOS and HPOS data caching explained: what they change, how to migrate a large store safely, and the checks to make before you switch.">
 <meta name="twitter:image" content="https://hamidbuilds.dev/assets/og-image.png">
 <meta name="theme-color" content="#0B1628">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23E2B04A'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial' font-weight='800' font-size='30' fill='%230B1628'%3Ehb%3C/text%3E%3C/svg%3E">
@@ -44,9 +44,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Scaling WooCommerce to 10,000+ Monthly Orders: High-Performance Order Storage (HPOS), Caching & Checkout Optimization", "description": "Engineered guide to scaling WooCommerce stores for high traffic. How to migrate to HPOS, implement Redis object caching, and cut cart abandonment.", "datePublished": "2026-01-01", "dateModified": "2026-01-01", "mainEntityOfPage": "https://hamidbuilds.dev/blog/scaling-woocommerce-hpos-caching-checkout-optimization.html", "image": "https://hamidbuilds.dev/assets/og-image.png", "keywords": "WooCommerce, E-Commerce, HPOS, Redis, Checkout Optimization, High Volume", "articleSection": "WooCommerce & E-Commerce", "author": {"@type": "Person", "name": "Hamid Ali Asad", "url": "https://hamidbuilds.dev/#about"}, "publisher": {"@type": "Organization", "name": "hamidbuilds.dev", "url": "https://hamidbuilds.dev"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://hamidbuilds.dev/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://hamidbuilds.dev/blog/"}, {"@type": "ListItem", "position": 3, "name": "Scaling WooCommerce to 10,000+ Monthly Orders: High-Performance Order Storage (HPOS), Caching & Checkout Optimization", "item": "https://hamidbuilds.dev/blog/scaling-woocommerce-hpos-caching-checkout-optimization.html"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it safe to migrate an existing live WooCommerce store to HPOS?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, provided it is done with dual-writing sync enabled first on a staging environment and third-party plugin compatibility is audited prior to switching authoritative order storage."}}, {"@type": "Question", "name": "Why not just switch to Shopify instead of fixing WooCommerce?", "acceptedAnswer": {"@type": "Answer", "text": "WooCommerce gives you zero transaction fee penalties (Shopify charges up to 2% for third-party gateways), 100% data ownership, custom product configuration logic, and zero platform censorship or arbitrary account restrictions."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "WooCommerce HPOS and Data Caching: How to Scale Your Store", "description": "WooCommerce HPOS and HPOS data caching explained: what they change, how to migrate a large store safely, and the checks to make before you switch.", "datePublished": "2026-01-01", "dateModified": "2026-01-01", "mainEntityOfPage": "https://hamidbuilds.dev/blog/scaling-woocommerce-hpos-caching-checkout-optimization.html", "image": "https://hamidbuilds.dev/assets/og-image.png", "keywords": "WooCommerce, HPOS, Caching, Performance, E-Commerce", "articleSection": "WooCommerce & E-Commerce", "author": {"@type": "Person", "name": "Hamid Ali Asad", "url": "https://hamidbuilds.dev/#about"}, "publisher": {"@type": "Organization", "name": "hamidbuilds.dev", "url": "https://hamidbuilds.dev"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://hamidbuilds.dev/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://hamidbuilds.dev/blog/"}, {"@type": "ListItem", "position": 3, "name": "WooCommerce HPOS and Data Caching: How to Scale Your Store", "item": "https://hamidbuilds.dev/blog/scaling-woocommerce-hpos-caching-checkout-optimization.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is HPOS data caching in WooCommerce?", "acceptedAnswer": {"@type": "Answer", "text": "HPOS data caching is an option WooCommerce introduced in version 9.6. It caches raw order data and order meta inside the HPOS data store, so WooCommerce checks the cache before querying the database. It was released as an alpha feature, so check the Features screen on your version for its current status and test it on staging first."}}, {"@type": "Question", "name": "Is HPOS enabled by default?", "acceptedAnswer": {"@type": "Answer", "text": "WooCommerce says HPOS has been enabled by default for new installations since version 8.2, released in October 2023. Stores created before then may still use the legacy WordPress posts storage. You can check and change the setting under WooCommerce, Settings, Advanced, Features, once your plugins are compatible."}}, {"@type": "Question", "name": "Is it safe to move a live store to HPOS?", "acceptedAnswer": {"@type": "Answer", "text": "WooCommerce's guide for large stores recommends testing locally, migrating a copy on staging, then switching production with synchronisation on so you can revert quickly. It describes switching and reverting as hot migrations with no planned downtime. Test checkout, refunds and integrations at each stage, and keep a backup."}}, {"@type": "Question", "name": "Do I need Redis for HPOS data caching?", "acceptedAnswer": {"@type": "Answer", "text": "HPOS data caching uses the WordPress object cache. Without a persistent object cache, such as Redis or Memcached from your host, cached data only lasts for one page load. With one, it can be reused across requests. Ask your host whether a persistent object cache is available on your plan."}}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -72,7 +72,7 @@
       <div class="wrap post-wrap">
         <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><span>WooCommerce &amp; E-Commerce</span></nav>
         <p class="post-cat post-cat-dark">WooCommerce &amp; E-Commerce</p>
-        <h1>Scaling WooCommerce to 10,000+ Monthly Orders: High-Performance Order Storage (HPOS), Caching &amp; Checkout Optimization</h1>
+        <h1>WooCommerce HPOS and Data Caching: How to Scale Your Store</h1>
         <div class="byline">
           <img src="/assets/hamid-480.webp" alt="" width="44" height="44">
           <span><strong>Hamid Ali Asad</strong><small><time datetime="2026-01-01">January 2026</time> · 7 min read</small></span>
@@ -82,40 +82,161 @@
     <div class="wrap post-wrap post-body">
       <aside class="answer-box" aria-label="Short answer">
         <p class="eyebrow">The short answer</p>
-        <p>Scaling WooCommerce past 10,000 monthly orders requires migrating to High-Performance Order Storage (HPOS) to move transactional data from wp_posts to dedicated indexed relational tables, enabling server-side Redis object caching, offloading unneeded plugin scripts on checkout templates, and utilizing accelerated 1-click payment gateways (Stripe Apple Pay / Google Pay) to increase checkout completion rates by up to 34%.</p>
+        <p>WooCommerce HPOS (High-Performance Order Storage) stores orders in dedicated tables instead of the WordPress posts tables, reducing database load. HPOS data caching, introduced in WooCommerce 9.6, caches raw order data in the HPOS data store and works best with a persistent object cache. Test both on staging before enabling them on a live store.</p>
       </aside>
       <section class="takeaways" aria-label="Key takeaways">
         <h2>Key takeaways</h2>
-        <ul class="ticks"><li>Legacy WooCommerce post-meta queries choke database concurrency during sales spikes.</li><li>HPOS (High-Performance Order Storage) provides dedicated indexed SQL tables for orders.</li><li>Redis persistent object caching reduces database query counts from 120+ to under 18 per page view.</li><li>Frictionless 1-step checkout with native Apple Pay / Google Pay lifts mobile conversion by 25–35%.</li></ul>
+        <ul class="ticks"><li>HPOS moves orders into four dedicated tables built for e-commerce queries.</li><li>HPOS has been enabled by default for new installations since WooCommerce 8.2.</li><li>HPOS data caching, introduced in WooCommerce 9.6, caches raw order data and checks the cache before the database.</li><li>WooCommerce&#x27;s large-store guide recommends testing locally and on staging, then switching with sync on and turning sync off gradually.</li><li>Integrations that read order data directly from the posts tables must be updated before switching.</li></ul>
       </section>
       <div class="prose">
-<h2>Why WooCommerce Slows Down Under Heavy Load</h2>
-<p>By default, standard WooCommerce stores save every order, line item, and customer attribute into WordPress's generic <code>wp_posts</code> and <code>wp_postmeta</code> tables.</p>
-<p>When your store scales to thousands of orders, every database lookup requires scanning millions of meta rows. The results are familiar and painful:
-- Checkout spinning wheels during flash sales.
-- Sluggish backend order management for warehouse staff.
-- Lost sales due to mobile checkout abandonment.</p>
-<hr />
-<h2>The 4-Step Scalability Blueprint</h2>
-<h3>1. Migration to HPOS (Custom Order Tables)</h3>
-<p>WooCommerce High-Performance Order Storage moves all order management into dedicated, index-optimized relational tables (<code>wc_orders</code>, <code>wc_order_addresses</code>, <code>wc_order_operational_data</code>). 
-- <strong>Database read performance:</strong> +40% improvement
-- <strong>Simultaneous checkout capacity:</strong> Up to 5x higher concurrency
-- <strong>Backup and export speeds:</strong> 10x faster</p>
-<h3>2. Redis Persistent Object Caching</h3>
-<p>Every time a customer loads an e-commerce page, WordPress queries product categories, tax rates, inventory counts, and shipping zones. By keeping these queries in <strong>in-memory Redis cache</strong>, server response times drop from 850ms to under 120ms.</p>
-<h3>3. Checkout Strip-Down (The 60-Second Conversion Rule)</h3>
-<p>Mobile shoppers will not fill out 14 form fields. We strip:
-- Duplicate address lines
-- Unnecessary company name fields
-- Clunky coupon fields (replaced with auto-applying promo URLs)
-- Adding direct <strong>Apple Pay</strong> and <strong>Google Pay</strong> buttons at the very top of the product page for instant 1-click purchases.</p>
-<h3>4. Automated ERP / Inventory Synchronization</h3>
-<p>Orders are immediately dispatched via webhooks to your shipping fulfillment software (ShipStation, Starshipit, DHL, or warehouse 3PL), guaranteeing stock counts remain accurate across all channels in real time.</p>
+<p>If your WooCommerce store feels slower as orders pile up, the way order data is stored and cached is usually the first place to look. WooCommerce HPOS (High-Performance Order Storage) moves orders out of the general WordPress posts tables into tables built for e-commerce, and HPOS data caching adds a cache layer for that order data on top. This guide explains what each one does, how to switch a large store over safely, and how they fit with object caching and checkout improvements. It's written for store owners and the developers who look after their stores.</p>
+<h2>Why order storage slows WooCommerce down</h2>
+<p>Before HPOS, WooCommerce stored orders as a custom post type, in the same <code>posts</code> and <code>postmeta</code> tables WordPress uses for pages, blog posts and everything else. WooCommerce's own <a href="https://developer.woocommerce.com/docs/features/orders/high-performance-order-storage/">HPOS documentation</a> says this "comes with performance issues". As a store grows, order lookups compete with every other kind of content in tables that weren't designed for order queries.</p>
+<p>In practice, store owners tend to notice:</p>
+<ul>
+<li>the Orders screen in the admin getting slower to load and search</li>
+<li>reports and exports taking longer</li>
+<li>more pressure on the database during busy periods, such as sales</li>
+</ul>
+<h2>What WooCommerce HPOS changes</h2>
+<p>HPOS stores orders in dedicated tables. The WooCommerce documentation lists four:</p>
+<ol>
+<li><code>wc_orders</code></li>
+<li><code>wc_order_addresses</code></li>
+<li><code>wc_order_operational_data</code></li>
+<li><code>wc_orders_meta</code></li>
+</ol>
+<p>(Your database adds its own table prefix in front, usually <code>wp_</code>.)</p>
+<p>The documentation says dedicated tables and indexes result in "fewer read/write operations and fewer busy tables", and that HPOS also makes targeted backups and restores easier and helps prevent race conditions.</p>
+<p>From WooCommerce 8.2, released in October 2023, HPOS is enabled by default for new installations. Older stores may still be on the legacy posts storage. You can check under <strong>WooCommerce &gt; Settings &gt; Advanced &gt; Features</strong>.</p>
+<h3>Check plugin compatibility first</h3>
+<p>The documentation explains that if a plugin isn't compatible with HPOS, the HPOS option is disabled in the Features screen, and a "View and manage" link lists the incompatible plugins. Update those plugins, replace them, or ask their developers about HPOS support before you switch.</p>
+<h2>HPOS data caching explained</h2>
+<p>HPOS data caching is a newer, separate setting. In its post on <a href="https://developer.woocommerce.com/2025/01/16/order-datastore-caching-a-new-approach-to-optimize-woocommerce-performance/">Order DataStore Caching</a>, WooCommerce explains that from version 9.6 it introduced an option to cache raw order data within the HPOS data store layer.</p>
+<p>The post explains the reasoning in short:</p>
+<ul>
+<li>Before this, WooCommerce tried to cache whole order objects. Because of how those objects are serialised, only the order ID was really stored, so each order had to be rebuilt from the database, which meant extra queries.</li>
+<li>With data caching on, the HPOS data stores cache the raw order data and order meta instead. When an order is requested, WooCommerce checks the cache first and only queries the database on a cache miss.</li>
+<li>Order data and meta are stored in the <code>orders_data</code> and <code>orders_meta</code> cache groups, and order objects move to their own non-persistent <code>order_objects</code> group.</li>
+</ul>
+<p>When the post was published, the feature was in alpha testing. To see the option, you added <code>define( 'WOOCOMMERCE_ENABLE_ALPHA_FEATURE_TESTING', true );</code> to <code>wp-config.php</code>, then enabled it under <strong>WooCommerce &gt; Settings &gt; Advanced &gt; Features</strong>. The post said WooCommerce planned to roll it out as a non-alpha feature in 9.7. Check the Features screen on your own version to see its current status.</p>
+<h3>Who needs to be careful</h3>
+<p>The same post says compatibility is only a concern if an extension:</p>
+<ul>
+<li>bypasses WooCommerce's CRUD layer with direct database queries to change order data</li>
+<li>extends the internal order data stores in a way that skips cache invalidation</li>
+<li>relies on clearing the old <code>orders</code> cache group directly</li>
+</ul>
+<p>If your store uses custom code or older plugins that write to orders directly, test HPOS data caching on staging first.</p>
+<h3>It works best with a persistent object cache</h3>
+<p>Data caching stores order data in WordPress's object cache. Without a persistent object cache, such as Redis or Memcached provided by your host, that cache only lasts for a single page load. With one, cached data is reused across requests. Ask your host whether a persistent object cache is available on your plan.</p>
+<h2>How to switch a large store to HPOS safely</h2>
+<p>WooCommerce has a <a href="https://developer.woocommerce.com/docs/features/orders/high-performance-order-storage/guide-large-store/">guide to enabling HPOS on large stores</a>. It sets out three phases.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>What to do</th>
+<th>WooCommerce's notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Local test</td>
+<td>Enable HPOS on a development copy with all plugins and custom code</td>
+<td>Test checkout with every payment method, refunds, subscriptions and critical flows</td>
+</tr>
+<tr>
+<td>2. Staging migration</td>
+<td>Copy the production database to staging and run <code>wp wc hpos sync</code></td>
+<td>Time the migration; for WooCommerce's test store of 9 million orders it took about a week</td>
+</tr>
+<tr>
+<td>3. Production</td>
+<td>Enable sync with posts authoritative, migrate, verify, then switch HPOS to authoritative</td>
+<td>Switching and reverting are hot migrations with no planned downtime</td>
+</tr>
+</tbody>
+</table></div>
+<p>A few points from the guide are worth highlighting:</p>
+<ul>
+<li><strong>Verify the data.</strong> <code>wp wc hpos verify_cot_data --verbose</code> checks that orders migrated correctly.</li>
+<li><strong>Check outside systems.</strong> Data warehouses, shipping tracking and accounting systems that read the posts tables directly must be updated before you switch.</li>
+<li><strong>Turn sync off gradually.</strong> Keep compatibility mode on after switching, disable sync on read first, then disable sync fully once things are stable. On WooCommerce's own high-volume migration, they disabled sync on read after six hours and fully disabled sync after a week.</li>
+<li><strong>Pick a quiet time.</strong> If your store has a natural low-volume period, switch then, and plan to be online afterwards.</li>
+</ul>
+<p>This is a summary. Read the full guide and test on staging before changing a live store.</p>
+<h2>Checkout and order flow</h2>
+<p>Faster order storage helps behind the scenes, but customers judge your store at checkout. Once HPOS is in place, common improvements include:</p>
+<ul>
+<li><strong>Remove fields you don't need.</strong> If you don't use a field, such as a second address line or company name for consumer orders, consider removing it.</li>
+<li><strong>Offer express payment options</strong> your payment provider supports, such as Apple Pay and Google Pay, for faster mobile checkout.</li>
+<li><strong>Load only what checkout needs.</strong> Plugins that add scripts to every page can slow checkout; limit them to the pages where they're used.</li>
+<li><strong>Connect fulfilment properly.</strong> Send orders to your shipping or warehouse system automatically, using its official WooCommerce integration or webhooks, rather than re-keying them.</li>
+</ul>
+<p>For overall page speed, see my guide to <a href="/blog/achieving-99-core-web-vitals-wordpress.html">Core Web Vitals on WordPress</a>.</p>
+<h2>Common mistakes when moving to HPOS</h2>
+<ul>
+<li><strong>Switching on a live store without testing.</strong> WooCommerce's guide starts with a local test and a staging migration for a reason.</li>
+<li><strong>Forgetting direct database integrations.</strong> Reports, feeds or accounting tools reading <code>postmeta</code> will quietly break or show stale data.</li>
+<li><strong>Turning off compatibility mode straight away.</strong> Keeping sync on for a while lets you revert to posts storage quickly if something goes wrong.</li>
+<li><strong>Enabling data caching without checking custom code.</strong> Code that writes to orders directly can leave cached data out of date.</li>
+<li><strong>Assuming caching fixes everything.</strong> Slow hosting, heavy themes and too many plugins still need attention.</li>
+</ul>
+<h2>HPOS and data caching checklist</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Order storage set to HPOS (WooCommerce orders tables)</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>All plugins show as HPOS compatible</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Tested checkout, refunds and subscriptions on staging</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Outside systems no longer read the posts tables</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Migration verified with <code>verify_cot_data</code></td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Compatibility mode turned off gradually</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Persistent object cache available from your host</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>HPOS data caching tested on staging before enabling</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Checkout fields and scripts reviewed</td>
+<td>Yes / No</td>
+</tr>
+</tbody>
+</table></div>
+<h2>How I can help</h2>
+<p>I've worked with WordPress and WooCommerce for more than five years, for agencies and small businesses in the UK, Australia, the US, New Zealand and France. I can audit your store's order storage, plugin compatibility and caching, plan and test an HPOS migration on staging, and tidy up checkout. For B2B stores, see my guide to <a href="/blog/woocommerce-trade-accounts-industrial-suppliers.html">WooCommerce trade accounts</a>. You can also browse <a href="/work.html">100+ sites in my portfolio</a>.</p>
+<p>If your WooCommerce store is slowing down as it grows, <a href="/#contact">get in touch</a>.</p>
       </div>
-      <section class='faqs'><h2>Frequently asked questions</h2><details class="faq"><summary>Is it safe to migrate an existing live WooCommerce store to HPOS?</summary><p>Yes, provided it is done with dual-writing sync enabled first on a staging environment and third-party plugin compatibility is audited prior to switching authoritative order storage.</p></details><details class="faq"><summary>Why not just switch to Shopify instead of fixing WooCommerce?</summary><p>WooCommerce gives you zero transaction fee penalties (Shopify charges up to 2% for third-party gateways), 100% data ownership, custom product configuration logic, and zero platform censorship or arbitrary account restrictions.</p></details></section>
+      <section class='faqs'><h2>Frequently asked questions</h2><details class="faq"><summary>What is HPOS data caching in WooCommerce?</summary><p>HPOS data caching is an option WooCommerce introduced in version 9.6. It caches raw order data and order meta inside the HPOS data store, so WooCommerce checks the cache before querying the database. It was released as an alpha feature, so check the Features screen on your version for its current status and test it on staging first.</p></details><details class="faq"><summary>Is HPOS enabled by default?</summary><p>WooCommerce says HPOS has been enabled by default for new installations since version 8.2, released in October 2023. Stores created before then may still use the legacy WordPress posts storage. You can check and change the setting under WooCommerce, Settings, Advanced, Features, once your plugins are compatible.</p></details><details class="faq"><summary>Is it safe to move a live store to HPOS?</summary><p>WooCommerce&#x27;s guide for large stores recommends testing locally, migrating a copy on staging, then switching production with synchronisation on so you can revert quickly. It describes switching and reverting as hot migrations with no planned downtime. Test checkout, refunds and integrations at each stage, and keep a backup.</p></details><details class="faq"><summary>Do I need Redis for HPOS data caching?</summary><p>HPOS data caching uses the WordPress object cache. Without a persistent object cache, such as Redis or Memcached from your host, cached data only lasts for one page load. With one, it can be reused across requests. Ask your host whether a persistent object cache is available on your plan.</p></details></section>
       
-      <div class="chips post-tags"><span class="chip">WooCommerce</span><span class="chip">E-Commerce</span><span class="chip">HPOS</span><span class="chip">Redis</span><span class="chip">Checkout Optimization</span><span class="chip">High Volume</span></div>
+      <div class="chips post-tags"><span class="chip">WooCommerce</span><span class="chip">HPOS</span><span class="chip">Caching</span><span class="chip">Performance</span><span class="chip">E-Commerce</span></div>
       <div class="author-box">
         <img src="/assets/hamid-480.webp" alt="Hamid Ali Asad" width="72" height="72" loading="lazy">
         <div><strong>Written by Hamid Ali Asad</strong><p>WordPress developer and SEO specialist with 5+ years of experience, building sites for agencies and small businesses across Australia, the UK and the US.</p><a href="/#about">More about Hamid →</a></div>
@@ -133,7 +254,7 @@
   <div class="wrap">
     <div class="contact-card" style="align-items:center">
       <div class="contact-copy">
-        <h2>Scale Your WooCommerce Store With Hamid</h2>
+        <h2>Get Your WooCommerce Store Audited</h2>
         <p>Agencies: send me a test project. Business owners: tell me what you need and get a fixed quote within 24 hours.</p>
       </div>
       <div class="cta-row">
