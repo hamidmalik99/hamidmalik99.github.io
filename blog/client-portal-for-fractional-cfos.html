@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js), loaded only after cookie consent (see /assets/consent.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+  window.hbLoadGA = function () {
+    if (window.hbGALoaded) return;
+    window.hbGALoaded = true;
+    gtag('consent', 'update', {analytics_storage: 'granted'});
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q0XB01T27X';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-Q0XB01T27X');
+  };
+  try { if (localStorage.getItem('hb_consent') === 'granted') window.hbLoadGA(); } catch (e) {}
+</script>
+<script src="/assets/consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Portal for Fractional CFOs: A Guide</title>
+<meta name="description" content="Why fractional CFO firms need a client portal for secure document sharing: FTC and NCSC guidance, the features that matter, and how to roll one out.">
+<link rel="canonical" href="https://hamidbuilds.dev/blog/client-portal-for-fractional-cfos.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Hamid Ali Asad">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="hamidbuilds.dev">
+<meta property="og:title" content="Client Portal for Fractional CFOs: A Guide">
+<meta property="og:description" content="Why fractional CFO firms need a client portal for secure document sharing: FTC and NCSC guidance, the features that matter, and how to roll one out.">
+<meta property="og:url" content="https://hamidbuilds.dev/blog/client-portal-for-fractional-cfos.html">
+<meta property="og:image" content="https://hamidbuilds.dev/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Client Portal for Fractional CFOs: A Guide">
+<meta name="twitter:description" content="Why fractional CFO firms need a client portal for secure document sharing: FTC and NCSC guidance, the features that matter, and how to roll one out.">
+<meta name="twitter:image" content="https://hamidbuilds.dev/assets/og-image.png">
+<meta name="theme-color" content="#0B1628">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23E2B04A'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial' font-weight='800' font-size='30' fill='%230B1628'%3Ehb%3C/text%3E%3C/svg%3E">
+<link rel="alternate" type="application/rss+xml" title="hamidbuilds.dev blog" href="https://hamidbuilds.dev/blog/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Client Portal for Fractional CFOs: Secure Document Sharing", "description": "Why fractional CFO firms need a client portal for secure document sharing: FTC and NCSC guidance, the features that matter, and how to roll one out.", "datePublished": "2026-11-01", "dateModified": "2026-11-01", "mainEntityOfPage": "https://hamidbuilds.dev/blog/client-portal-for-fractional-cfos.html", "image": "https://hamidbuilds.dev/assets/og-image.png", "keywords": "Fractional CFO, Client Portal, Data Security, Finance Firms, WordPress", "articleSection": "Finance Firm Websites", "author": {"@type": "Person", "name": "Hamid Ali Asad", "url": "https://hamidbuilds.dev/#about"}, "publisher": {"@type": "Organization", "name": "hamidbuilds.dev", "url": "https://hamidbuilds.dev"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://hamidbuilds.dev/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://hamidbuilds.dev/blog/"}, {"@type": "ListItem", "position": 3, "name": "Client Portal for Fractional CFOs: Secure Document Sharing", "item": "https://hamidbuilds.dev/blog/client-portal-for-fractional-cfos.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why should a fractional CFO use a client portal instead of email?", "acceptedAnswer": {"@type": "Answer", "text": "Email attachments are copied into every inbox they pass through and are hard to delete, so one compromised account can expose years of client documents. A portal keeps files in one place, with individual logins, permissions and an activity history. The FTC and NCSC both stress protecting sensitive data and the accounts that hold it."}}, {"@type": "Question", "name": "What security features should a client portal have?", "acceptedAnswer": {"@type": "Answer", "text": "Look for individual logins with 2-step verification or passkeys, encrypted connections for uploads and downloads, folders that each client alone can see, staff access limited to their own clients, an activity history, retention and deletion settings, and easy mobile uploads. Also check where data is stored and how you'd export it."}}, {"@type": "Question", "name": "Should I build a client portal into my WordPress website?", "acceptedAnswer": {"@type": "Answer", "text": "For most small finance firms, a reputable dedicated portal linked from a clear Client login button is safer, because security is the provider's core business. A portal built into WordPress can work if you want one branded experience and have someone responsible for maintaining and securing it over time."}}, {"@type": "Question", "name": "How long should a finance firm keep client documents in a portal?", "acceptedAnswer": {"@type": "Answer", "text": "Keep documents only as long as you need them, and follow any legal or professional retention rules that apply to you. The FTC advises disposing of information you no longer need, and the ICO's data minimisation guidance says to hold only what you need. Agree retention periods with clients in your engagement terms."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="hamidbuilds.dev home">
+      <span class="brand-mark" aria-hidden="true">hb</span>
+      <span class="brand-name">hamidbuilds<span>.dev</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="/#agencies">For agencies</a><a href="/industries/">Industries</a><a href="/work.html">Work</a><a href="/blog/" aria-current="page">Blog</a><a href="/#about">About</a>
+      <a class="btn btn-gold" href="/#contact">Get a quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <article>
+    <header class="page-hero post-hero">
+      <div class="wrap post-wrap">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><span>Finance Firm Websites</span></nav>
+        <p class="post-cat post-cat-dark">Finance Firm Websites</p>
+        <h1>Client Portal for Fractional CFOs: Secure Document Sharing</h1>
+        <div class="byline">
+          <img src="/assets/hamid-480.webp" alt="" width="44" height="44">
+          <span><strong>Hamid Ali Asad</strong><small><time datetime="2026-11-01">November 2026</time> · 7 min read</small></span>
+        </div>
+      </div>
+    </header>
+    <div class="wrap post-wrap post-body">
+      <aside class="answer-box" aria-label="Short answer">
+        <p class="eyebrow">The short answer</p>
+        <p>A client portal for fractional CFOs is a secure, logged-in area where clients upload financial documents and download reports instead of using email. It should have individual logins with 2-step verification, encrypted transfers, folders and permissions by client, activity history, retention rules and easy mobile uploads, linked clearly from your website.</p>
+      </aside>
+      <section class="takeaways" aria-label="Key takeaways">
+        <h2>Key takeaways</h2>
+        <ul class="ticks"><li>Email attachments spread sensitive financial documents across inboxes; a portal keeps them in one controlled place.</li><li>The FTC&#x27;s five principles are take stock, scale down, lock it, pitch it and plan ahead.</li><li>The FTC recommends TLS for sensitive financial data and least-privilege access for staff.</li><li>The NCSC recommends passkeys or strong passwords with 2-step verification, and regular access reviews.</li><li>Most small firms are best served by a reputable dedicated portal linked clearly from their website.</li></ul>
+      </section>
+      <div class="prose">
+<p>Fractional CFOs and outsourced finance firms handle some of the most sensitive information a business has: bank statements, payroll reports, management accounts, forecasts and investor documents. Too often it arrives as an email attachment, sits in someone's inbox, and gets forwarded again. A client portal for fractional CFOs gives clients a secure place on your website to upload documents and download reports, so sensitive files stop living in email threads. This guide covers why it matters, what official security guidance in the US and UK says, what a portal should do and how to roll one out. It's written for small finance firms, not IT departments.</p>
+<h2>Why email is a weak spot for finance firms</h2>
+<p>Email is convenient, but it's a poor filing system for confidential financial data. Attachments are copied to every inbox they pass through, they're hard to delete properly, and one compromised email account can expose years of client documents.</p>
+<p>The UK's National Cyber Security Centre puts email first in its <a href="https://www.ncsc.gov.uk/collection/small-organisations-guide-to-cyber-security">small organisations guide to cyber security</a>, followed by securing the other online accounts a business relies on. Its page on <a href="https://www.ncsc.gov.uk/collection/small-organisations-guide-to-cyber-security/secure-your-important-online-accounts">securing your important online accounts</a> specifically mentions accounts that store customer information, online storage and your company website.</p>
+<p>Moving document exchange into a portal reduces how much sensitive material sits in email, and gives you one place to control who can see what.</p>
+<h2>What the official guidance says</h2>
+<h3>United States</h3>
+<p>The FTC's <a href="https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business">Protecting Personal Information: A Guide for Business</a> says a sound data security plan is built on five principles:</p>
+<ol>
+<li><strong>Take stock.</strong> Know what personal information you have in your files and on your computers.</li>
+<li><strong>Scale down.</strong> Keep only what you need for your business.</li>
+<li><strong>Lock it.</strong> Protect the information that you keep.</li>
+<li><strong>Pitch it.</strong> Properly dispose of what you no longer need.</li>
+<li><strong>Plan ahead.</strong> Create a plan to respond to security incidents.</li>
+</ol>
+<p>The guide also says that when you receive or transmit sensitive financial data, you should use Transport Layer Security (TLS) encryption or another secure connection, and that you should pay particular attention to the security of your web applications. It recommends the "principle of least privilege": each employee should have access only to the resources needed for their job. It notes that statutes such as the Gramm-Leach-Bliley Act and the FTC Act may require businesses to provide reasonable security for sensitive information.</p>
+<h3>United Kingdom</h3>
+<p>The NCSC's guidance for small organisations recommends passkeys for business-critical accounts where they're available, and strong, unique passwords with 2-step verification (2SV) where they're not. It also recommends removing or disabling accounts that are no longer used, and reviewing who has access to important accounts every few months.</p>
+<p>UK firms also need to follow UK GDPR. The ICO's guidance on <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/">data minimisation</a> explains that you should hold only the personal data you need for your purpose.</p>
+<p>None of this is legal advice. Check which laws and professional rules apply to your firm, and take advice from a qualified adviser.</p>
+<h2>What a client portal for fractional CFOs should do</h2>
+<p>You don't need a complex system. A good portal does a few things well.</p>
+<h3>Secure sign-in</h3>
+<p>Each client user has their own login, protected by 2-step verification or passkeys where the portal supports them. No shared logins between people at the same client.</p>
+<h3>Upload and download in one place</h3>
+<p>Clients upload bank statements, receipts and reports to a folder for their company; you publish monthly packs, board reports and forecasts back to them. Every file transfer happens over an encrypted connection.</p>
+<h3>Folders and permissions by client</h3>
+<p>Each client sees only their own folders. Within your team, staff see only the clients they work on, in line with the FTC's least-privilege principle.</p>
+<h3>Activity history</h3>
+<p>The portal records who uploaded, viewed and downloaded each file, so you can answer "did they get the report?" without searching inboxes.</p>
+<h3>Retention and deletion</h3>
+<p>Set how long documents are kept and delete what you no longer need, following the FTC's "pitch it" principle and the ICO's guidance on minimisation. Agree retention with each client in your engagement terms.</p>
+<h3>Easy on mobile</h3>
+<p>Many business owners will photograph a receipt or download a report on their phone. If uploading is awkward on mobile, clients will go back to email.</p>
+<h2>Building it into your website</h2>
+<p>There are two common approaches:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>How it works</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dedicated portal software</td>
+<td>A specialist document-sharing or practice-management tool, linked from your website's "Client login" button</td>
+<td>Most small firms; security is the provider's core business</td>
+</tr>
+<tr>
+<td>Portal built into your website</td>
+<td>A secure, logged-in area of your WordPress site with file storage</td>
+<td>Firms that want one branded experience and have someone to maintain it</td>
+</tr>
+</tbody>
+</table></div>
+<p>For most fractional CFO and bookkeeping firms, a reputable dedicated tool, linked clearly from your website, is the safer choice. Whichever you choose, check the provider's security features, where data is stored, and how you'd get your data out if you switch.</p>
+<p>Your public website still matters:</p>
+<ul>
+<li><strong>A clear "Client login" link</strong> in the header, so clients never search for it</li>
+<li><strong>A short "How we keep your data secure" page</strong> explaining, in plain English, how clients should send documents and what you do with them</li>
+<li><strong>An instruction never to email certain documents</strong>, such as payroll files or ID documents</li>
+<li><strong>A link to your privacy notice</strong></li>
+</ul>
+<p>My guide to <a href="/blog/fractional-cfo-website.html">what a fractional CFO website should include</a> covers the rest of the site, including the privacy notice.</p>
+<h2>Rolling it out to clients</h2>
+<ol>
+<li><strong>Start with new clients.</strong> Set up their portal access during onboarding, so they never get used to emailing documents.</li>
+<li><strong>Move existing clients in batches.</strong> Send a short guide with screenshots, and offer a quick call to walk them through it.</li>
+<li><strong>Change your own habits.</strong> Publish every report through the portal and send a notification email with no attachment.</li>
+<li><strong>Review access regularly.</strong> Remove people who have left a client's business, and staff who no longer work on the account, as the NCSC recommends.</li>
+<li><strong>Write down your incident plan.</strong> Decide who does what if a client account is compromised, following the FTC's "plan ahead" principle.</li>
+</ol>
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Shared logins.</strong> One username for a whole client team means you can't tell who did what, or remove one person's access.</li>
+<li><strong>No 2-step verification.</strong> A password alone is a weak lock on a client's financial records.</li>
+<li><strong>Keeping everything forever.</strong> Old documents you don't need are still a risk if they're exposed.</li>
+<li><strong>Portal plus email attachments.</strong> If reports still go out by email, the portal hasn't solved the problem.</li>
+<li><strong>A hidden login link.</strong> If clients can't find the portal, they'll email you instead.</li>
+</ul>
+<h2>Client portal checklist</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Individual logins for every client user</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>2-step verification or passkeys turned on</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Encrypted connection for all uploads and downloads</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Clients see only their own folders</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Staff see only the clients they work on</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Activity history for files</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Retention period agreed and applied</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Works well on mobile</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>"Client login" link in the website header</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Access reviewed every few months</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>Incident plan written down</td>
+<td>Yes / No</td>
+</tr>
+</tbody>
+</table></div>
+<h2>How I can help</h2>
+<p>I build WordPress websites for fractional CFO and outsourced finance firms in the US, the UK and Australia, including the Longfield Financial Advisory website in the UK. I can add a clear client login, connect your site to a dedicated portal, write a plain-English "how we keep your data secure" page, and make sure forms and pages are served securely. You can see more about my <a href="/industries/fractional-cfo/">websites for fractional CFO firms</a> or browse <a href="/work.html">100+ sites in my portfolio</a>. For pricing pages, see my guide to the <a href="/blog/fractional-cfo-pricing-page.html">fractional CFO pricing page</a>.</p>
+<p>If your clients still email you their bank statements, <a href="/#contact">get in touch</a>.</p>
+      </div>
+      <section class='faqs'><h2>Frequently asked questions</h2><details class="faq"><summary>Why should a fractional CFO use a client portal instead of email?</summary><p>Email attachments are copied into every inbox they pass through and are hard to delete, so one compromised account can expose years of client documents. A portal keeps files in one place, with individual logins, permissions and an activity history. The FTC and NCSC both stress protecting sensitive data and the accounts that hold it.</p></details><details class="faq"><summary>What security features should a client portal have?</summary><p>Look for individual logins with 2-step verification or passkeys, encrypted connections for uploads and downloads, folders that each client alone can see, staff access limited to their own clients, an activity history, retention and deletion settings, and easy mobile uploads. Also check where data is stored and how you&#x27;d export it.</p></details><details class="faq"><summary>Should I build a client portal into my WordPress website?</summary><p>For most small finance firms, a reputable dedicated portal linked from a clear Client login button is safer, because security is the provider&#x27;s core business. A portal built into WordPress can work if you want one branded experience and have someone responsible for maintaining and securing it over time.</p></details><details class="faq"><summary>How long should a finance firm keep client documents in a portal?</summary><p>Keep documents only as long as you need them, and follow any legal or professional retention rules that apply to you. The FTC advises disposing of information you no longer need, and the ICO&#x27;s data minimisation guidance says to hold only what you need. Agree retention periods with clients in your engagement terms.</p></details></section>
+      <aside class="industry-box"><p class="eyebrow">Websites for fractional cfos</p><p>I build websites for fractional CFOs and finance advisers that explain scope and pricing clearly and make booking a first call easy.</p><a class="btn btn-navy" href="/industries/fractional-cfo/">See how I help fractional cfos →</a></aside>
+      <div class="chips post-tags"><span class="chip">Fractional CFO</span><span class="chip">Client Portal</span><span class="chip">Data Security</span><span class="chip">Finance Firms</span><span class="chip">WordPress</span></div>
+      <div class="author-box">
+        <img src="/assets/hamid-480.webp" alt="Hamid Ali Asad" width="72" height="72" loading="lazy">
+        <div><strong>Written by Hamid Ali Asad</strong><p>WordPress developer and SEO specialist with 5+ years of experience, building sites for agencies and small businesses across Australia, the UK and the US.</p><a href="/#about">More about Hamid →</a></div>
+      </div>
+    </div>
+  </article>
+  <section class="section" style="padding-top:24px">
+    <div class="wrap">
+      <div class="head-row"><div class="section-head"><p class="eyebrow">Keep reading</p><h2>More from the blog</h2></div><a class="btn btn-navy" href="/blog/">All articles →</a></div>
+      <div class="post-grid"><a class="post-card" href="/blog/engineering-project-portfolio-website.html" data-cat="Engineering Websites"><div class="post-card-top"><span class="post-cat">Engineering Websites</span></div><div class="post-card-body"><span class="card-meta">November 2026 · 6 min read</span><h3>Engineering Project Portfolio: Present Projects That Win Work</h3><p class="card-desc">How to build an engineering project portfolio that wins work: page structure, filters, Google image best practice, client permission and testimonial rules.</p><span class="post-more">Read article →</span></div></a><a class="post-card" href="/blog/fractional-cfo-pricing-page.html" data-cat="Finance Firm Websites"><div class="post-card-top"><span class="post-cat">Finance Firm Websites</span></div><div class="post-card-body"><span class="card-meta">November 2026 · 6 min read</span><h3>Fractional CFO Pricing Page: How to Show Fees on Your Website</h3><p class="card-desc">How to build a fractional CFO pricing page: ways to show fees, what to include, and UK and US rules on &#x27;from&#x27; prices, VAT and qualifications.</p><span class="post-more">Read article →</span></div></a><a class="post-card" href="/blog/business-broker-email-marketing.html" data-cat="Business Broker Websites"><div class="post-card-top"><span class="post-cat">Business Broker Websites</span></div><div class="post-card-body"><span class="card-meta">November 2026 · 6 min read</span><h3>Business Broker Email Marketing: Stay in Touch With Future Sellers</h3><p class="card-desc">Business broker email marketing that nurtures future sellers: building a list from your website, what to send, and the CAN-SPAM rules emails must follow.</p><span class="post-more">Read article →</span></div></a></div>
+    </div>
+  </section>
+
+<section class="contact" style="background:transparent;padding:0 0 96px">
+  <div class="wrap">
+    <div class="contact-card" style="align-items:center">
+      <div class="contact-copy">
+        <h2>Make Client Documents Secure</h2>
+        <p>Agencies: send me a test project. Business owners: tell me what you need and get a fixed quote within 24 hours.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-gold btn-lg" href="/#contact">Get a fixed quote →</a>
+        <a class="btn btn-ghost btn-lg" href="https://wa.me/923077138743" target="_blank" rel="noopener">WhatsApp me</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Hamid Ali Asad · hamidbuilds.dev · Lahore, Pakistan</span>
+    <nav aria-label="Footer"><a href="/">Home</a><a href="/industries/">Industries</a><a href="/work.html">Work</a><a href="/blog/">Blog</a><a href="mailto:info@hamidbuilds.dev">info@hamidbuilds.dev</a><a href="#" data-cookie-settings>Cookie settings</a></nav>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/923077138743" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
